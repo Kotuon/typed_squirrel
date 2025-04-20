@@ -1,0 +1,24 @@
+^C:\USERS\KELSON\DOCUMENTS\PROJECTS\TYPED_SQUIRREL\BUILD\LIBRARIES\GLFW\DOCS\DOXYFILE
+setlocal
+cd C:\Users\Kelson\Documents\Projects\typed_squirrel\build\libraries\glfw\docs
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\doxygen\bin\doxygen.exe"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\KELSON\DOCUMENTS\PROJECTS\TYPED_SQUIRREL\LIBRARIES\GLFW\DOCS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/typed_squirrel -BC:/Users/Kelson/Documents/Projects/typed_squirrel/build --check-stamp-file C:/Users/Kelson/Documents/Projects/typed_squirrel/build/libraries/glfw/docs/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
