@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\build\CMakeFiles\888f1beaca7cfef0c2e40c3d3f70124c\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\build\libraries\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C287C700-478B-3ED8-BE9C-B2E5D5CA72BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71DD8CBE-6A77-3B87-9E1E-8274BB81C05F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
