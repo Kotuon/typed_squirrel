@@ -14,7 +14,12 @@ class SystemContainer {
 public:
     SystemContainer();
 
-    void addComponent( std::unique_ptr< System > t_component );
+    /**
+     * @brief Add system to list
+     *
+     * @param t_component
+     */
+    void addSystem( std::unique_ptr< System > t_component );
 
     template < typename T > T* getSystem() {
         // Search for system
@@ -27,6 +32,9 @@ public:
 
         return ( T* )found->second.get();
     }
+
+    std::unordered_map< enum SystemType, std::unique_ptr< System > >&
+    getSystemList();
 
 private:
     std::unordered_map< enum SystemType, std::unique_ptr< System > >

@@ -9,7 +9,7 @@ TimeManager::TimeManager(Engine* t_engine)
     : System( t_engine, SystemType::ST_TimeManager ), m_lastTime( steady_clock::now() ),
       m_accumulator( 0.f ), m_time( 0.f ), m_deltaTime( 0.f ) {}
 
-void TimeManager::update() {
+void TimeManager::increment() {
     m_currTime = steady_clock::now();
     m_timeTaken = m_currTime - m_lastTime;
     m_deltaTime = static_cast< float >( m_timeTaken.count() ) *

@@ -4,6 +4,10 @@
 #pragma once
 
 namespace SquirrelEngine {
+// Forward declarations of enums
+enum StartupErrors : unsigned;
+
+// Forward declarations of classes
 class Engine;
 
 enum SystemType : unsigned {
@@ -15,6 +19,10 @@ class System {
 public:
     System( Engine* t_engine, const SystemType t_type );
     virtual ~System();
+
+    virtual StartupErrors initialize();
+    virtual void update();
+    virtual void shutdown();
 
     SystemType getType() const;
 

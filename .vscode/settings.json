@@ -88,5 +88,9 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.configureArgs": ["-DCMAKE_BUILD_TYPE=${buildType}"],
+    "doxygen_runner.configuration_file_override": "${workspaceFolder}/docs/doxygen/Doxyfile"
 }

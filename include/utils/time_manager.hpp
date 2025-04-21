@@ -13,7 +13,7 @@ class TimeManager : public System {
 public:
     TimeManager( Engine* t_engine );
 
-    void update();
+    void increment();
     bool needsFixedUpdate();
 
     void resetLastTime();

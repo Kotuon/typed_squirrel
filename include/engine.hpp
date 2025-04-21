@@ -48,8 +48,14 @@ public:
      */
     void shutdown();
 
+    /**
+     * @brief Initiates shutdown of engine
+     * 
+     */
+    void triggerShutdown();
+
 private:
-    std::unique_ptr<SystemContainer> m_systemContainer;
+    std::unique_ptr< SystemContainer > m_systemContainer;
 
     bool m_isRunning = false; //!< If update loop is currently running
 };
