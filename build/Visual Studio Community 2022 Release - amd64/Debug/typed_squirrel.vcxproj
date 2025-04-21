@@ -325,11 +325,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\camera.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\engine.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\graphics.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\main.cpp" />
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp" />
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system_container.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\module.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\module_container.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\transform.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\crash_handler.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\profiler.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\time_manager.cpp" />

@@ -4,12 +4,12 @@
 #pragma once
 
 #include <chrono>
-#include "system.hpp"
+#include "module.hpp"
 
 namespace SquirrelEngine {
 class Engine;
 
-class TimeManager : public System {
+class TimeManager : public Module {
 public:
     TimeManager( Engine* t_engine );
 
@@ -21,7 +21,7 @@ public:
     const float getFixedDt() const;
     const float getDeltaTime() const;
 
-    static SystemType getType();
+    static ModuleType getType();
 
 private:
     std::chrono::steady_clock::time_point m_lastTime;

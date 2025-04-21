@@ -12,7 +12,7 @@
 namespace SquirrelEngine {
 
 Graphics::Graphics( Engine* t_engine, const int t_width, const int t_height )
-    : System( t_engine, SystemType::ST_Graphics ), m_width( t_width ),
+    : Module( t_engine, ModuleType::MT_Graphics ), m_width( t_width ),
       m_height( t_height ) {}
 
 Graphics::~Graphics() {}
@@ -152,6 +152,6 @@ void Graphics::printDeviceInfo() {
         castToString( glGetString( GL_SHADING_LANGUAGE_VERSION ) ) ) );
 }
 
-SystemType Graphics::getType() { return SystemType::ST_Graphics; }
+ModuleType Graphics::getType() { return ModuleType::MT_Graphics; }
 
 } // namespace SquirrelEngine

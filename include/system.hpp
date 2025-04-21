@@ -3,34 +3,18 @@
 #define SYSTEM_HPP
 #pragma once
 
+#include "object.hpp"
+
 namespace SquirrelEngine {
-// Forward declarations of enums
-enum StartupErrors : unsigned;
 
-// Forward declarations of classes
-class Engine;
-
-enum SystemType : unsigned {
-    ST_Graphics = 0,
-    ST_TimeManager = 1,
-};
-
-class System {
+class System : Object {
 public:
-    System( Engine* t_engine, const SystemType t_type );
-    virtual ~System();
+    System() = default;
+    virtual ~System() = default;
 
-    virtual StartupErrors initialize();
-    virtual void update();
-    virtual void shutdown();
-
-    SystemType getType() const;
-
-protected:
-    Engine* m_engine;
-
-private:
-    SystemType m_type;
+    virtual void initialize() {}
+    virtual void update( float delta ) {}
+    virtual void shutdown() {}
 };
 
 } // namespace SquirrelEngine

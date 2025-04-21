@@ -4,14 +4,14 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include "system.hpp"
+#include "module.hpp"
 
 class GLFWwindow;
 
 namespace SquirrelEngine {
 class Engine;
 
-class Graphics : public System {
+class Graphics : public Module {
 public:
     /**
      * @brief Construct a new Graphics object
@@ -35,7 +35,7 @@ public:
      */
     StartupErrors initialize();
 
-    static SystemType getType();
+    static ModuleType getType();
 
 private:
     /**

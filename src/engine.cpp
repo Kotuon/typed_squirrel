@@ -7,14 +7,14 @@ namespace SquirrelEngine {
 Engine::~Engine() {}
 
 enum StartupErrors Engine::initialize() {
-    m_systemContainer = std::make_unique< SystemContainer >();
+    m_moduleContainer = std::make_unique< ModuleContainer >();
 
     // Create essential systems
-    m_systemContainer->addSystem( std::make_unique< Graphics >( this ) );
-    m_systemContainer->addSystem( std::make_unique< TimeManager >( this ) );
+    m_moduleContainer->addModule( std::make_unique< Graphics >( this ) );
+    m_moduleContainer->addModule( std::make_unique< TimeManager >( this ) );
 
     // Initialize each system that was created
-    for ( auto& it : m_systemContainer->getSystemList() ) {
+    for ( auto& it : m_moduleContainer->getModuleList() ) {
         const StartupErrors result = it.second->initialize();
         if ( result != SE_Success ) {
             return result;
@@ -27,10 +27,10 @@ enum StartupErrors Engine::initialize() {
 }
 
 void Engine::update() {
-    auto* timeManager = m_systemContainer->getSystem< TimeManager >();
+    auto* timeManager = m_moduleContainer->getModule< TimeManager >();
     timeManager->resetLastTime();
 
-    auto* graphicsInstance = m_systemContainer->getSystem< Graphics >();
+    auto* graphicsInstance = m_moduleContainer->getModule< Graphics >();
 
     // Main update loop
     while ( m_isRunning ) {

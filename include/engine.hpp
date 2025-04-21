@@ -17,11 +17,11 @@
 namespace SquirrelEngine {
 // Forward declarations of enums
 enum StartupErrors : unsigned;
-enum SystemType : unsigned;
+enum ModuleType : unsigned;
 
 // Forward declarations of classes
-class System;
-class SystemContainer;
+class Module;
+class ModuleContainer;
 class TimeManager;
 
 class Engine {
@@ -55,7 +55,7 @@ public:
     void triggerShutdown();
 
 private:
-    std::unique_ptr< SystemContainer > m_systemContainer;
+    std::unique_ptr< ModuleContainer > m_moduleContainer;
 
     bool m_isRunning = false; //!< If update loop is currently running
 };
