@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/typed_squirrel.exe"
+			"path" : "Debug/typed_squirrel.exe"
 		},
 		{
-			"path" : "RelWithDebInfo/typed_squirrel.pdb"
+			"path" : "Debug/typed_squirrel.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /W4 /std:c++latest /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++20"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /W4 /std:c++latest /MDd /Zi /Ob0 /Od /RTC1 -std:c++20"
 				},
 				{
 					"backtrace" : 2,
@@ -129,7 +129,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MD /Zi /O2 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1"
 				}
 			],
 			"includes" : 
@@ -179,15 +179,15 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "glfw::@7d8f67159c48f691a52d"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "fmt::@02464759dd67601a9918"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "glfw::@7d8f67159c48f691a52d"
 		}
 	],
 	"id" : "typed_squirrel::@6890427a1f51a3e7e1df",
@@ -196,7 +196,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /W4 /std:c++latest /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /W4 /std:c++latest /MDd /Zi /Ob0 /Od /RTC1",
 				"role" : "flags"
 			},
 			{
@@ -205,12 +205,12 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "libraries\\fmt\\RelWithDebInfo\\fmt.lib",
+				"fragment" : "libraries\\fmt\\Debug\\fmtd.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "libraries\\glfw\\src\\RelWithDebInfo\\glfw3.lib",
+				"fragment" : "libraries\\glfw\\src\\Debug\\glfw3.lib",
 				"role" : "libraries"
 			},
 			{

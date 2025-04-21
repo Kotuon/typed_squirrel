@@ -17,13 +17,13 @@
 	"dependencies" : 
 	[
 		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "glfw::@7d8f67159c48f691a52d"
 		},
 		{
 			"id" : "docs::@8059a9236cfad5662190"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 
