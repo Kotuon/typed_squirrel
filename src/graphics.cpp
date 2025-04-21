@@ -6,6 +6,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/gtx/transform.hpp>
+
 namespace SquirrelEngine {
 
 Graphics::Graphics( Engine* t_engine, const int t_width, const int t_height )
@@ -74,6 +77,12 @@ StartupErrors Graphics::initialize() {
     glfwSetWindowUserPointer( m_window, this );
     glfwSetWindowCloseCallback( m_window, Graphics::closeWindowCallback );
 
+    // Pre computing initial perspective projection matrix
+    m_projection = glm::perspective< float >(
+        glm::pi< float >() / 4.f,
+        static_cast< float >( m_width ) / static_cast< float >( m_height ),
+        0.1f, 100.f );
+
     return SE_Success;
 }
 
@@ -81,7 +90,7 @@ void Graphics::render() {
     // TODO: Setup camera system
 
     // TODO: setup shaders system
-    
+
     // Clear colour and depth buffers
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |
              GL_STENCIL_BUFFER_BIT );
@@ -94,6 +103,8 @@ void Graphics::render() {
     // Handle other events
     glfwPollEvents();
 }
+
+void Graphics::shutdown() { glfwTerminate(); }
 
 void Graphics::GLFWErrorCallback( int Error, const char* Description ) {
     std::string message =

@@ -3,6 +3,7 @@
 #define GRAPHICS_HPP
 #pragma once
 
+#include <glm/glm.hpp>
 #include "system.hpp"
 
 class GLFWwindow;
@@ -24,6 +25,7 @@ public:
     virtual ~Graphics();
 
     void render();
+    virtual void shutdown();
 
     /**
      * @brief Initializes graphics window and settings
@@ -53,6 +55,8 @@ private:
     static void printDeviceInfo();
 
     GLFWwindow* m_window; //!< Application window pointer
+
+    glm::mat4 m_projection;
 
     int m_width;  //!< Window width
     int m_height; //!< Window height
