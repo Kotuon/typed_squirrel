@@ -1,13 +1,15 @@
 
+#include <thread>
+
 #include "utils/time_manager.hpp"
 
 namespace SquirrelEngine {
 
 using namespace std::chrono;
 
-TimeManager::TimeManager(Engine* t_engine)
-    : System( t_engine, SystemType::ST_TimeManager ), m_lastTime( steady_clock::now() ),
-      m_accumulator( 0.f ), m_time( 0.f ), m_deltaTime( 0.f ) {}
+TimeManager::TimeManager()
+    : m_lastTime( steady_clock::now() ), m_accumulator( 0.f ), m_time( 0.f ),
+      m_deltaTime( 0.f ) {}
 
 void TimeManager::increment() {
     m_currTime = steady_clock::now();
@@ -35,6 +37,8 @@ const float TimeManager::getFixedDt() const { return m_fixedDt; }
 
 const float TimeManager::getDeltaTime() const { return m_deltaTime; }
 
-SystemType TimeManager::getType() { return SystemType::ST_TimeManager; }
+void TimeManager::sleep( const int milliseconds ) {
+    std::this_thread::sleep_for( std::chrono::milliseconds( milliseconds ) );
+}
 
 } // namespace SquirrelEngine

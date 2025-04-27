@@ -325,15 +325,22 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\cameraComponent.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\component.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\engine.cpp" />
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\graphics.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\eventSystem.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputAction.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputSystem.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\main.cpp" />
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp" />
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system_container.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\modelManager.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shaderManager.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\transform.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\crash_handler.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\profiler.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\time_manager.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\trace.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\window.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\world.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glad\src\glad.c" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\imgui\imgui.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\imgui\imgui_demo.cpp" />

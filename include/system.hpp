@@ -1,36 +1,27 @@
-
 #ifndef SYSTEM_HPP
 #define SYSTEM_HPP
 #pragma once
 
-namespace SquirrelEngine {
-// Forward declarations of enums
-enum StartupErrors : unsigned;
+#include "error_codes.hpp"
+#include "object.hpp"
 
-// Forward declarations of classes
+namespace SquirrelEngine {
 class Engine;
 
-enum SystemType : unsigned {
-    ST_Graphics = 0,
-    ST_TimeManager = 1,
-};
-
-class System {
+class System : public Object {
 public:
-    System( Engine* t_engine, const SystemType t_type );
-    virtual ~System();
+    System() = default;
+    virtual ~System() = default;
 
-    virtual StartupErrors initialize();
-    virtual void update();
-    virtual void shutdown();
-
-    SystemType getType() const;
+    virtual StartupErrors initialize( Engine* t_owner ) {
+        owner = t_owner;
+        return StartupErrors::SE_Success;
+    }
+    virtual void update( const float ) {}
+    virtual void shutdown() {}
 
 protected:
-    Engine* m_engine;
-
-private:
-    SystemType m_type;
+    Engine* owner;
 };
 
 } // namespace SquirrelEngine
