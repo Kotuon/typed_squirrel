@@ -15,12 +15,17 @@
 #include <fmt/core.h>
 
 // From source
+#include "cameraComponent.hpp"
 #include "engine.hpp"
-#include "error_codes.hpp"
-#include "graphics.hpp"
+#include "entity.hpp"
+#include "modelManager.hpp"
+#include "shaderManager.hpp"
 #include "system.hpp"
-#include "system_container.hpp"
-#include "utils/time_manager.hpp"
+#include "window.hpp"
+#include "world.hpp"
+
+#include "error_codes.hpp"
 #include "utils/trace.hpp"
+#include "utils/time_manager.hpp"
 
 #endif

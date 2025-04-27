@@ -11,21 +11,29 @@
 #define ENGINE_HPP
 #pragma once
 
+#include <functional>
 #include <memory>
 #include <string>
+#include <vector>
+
+#include "error_codes.hpp"
+#include "object.hpp"
+
+#include "system.hpp"
+
+#include "utils/trace.hpp"
 
 namespace SquirrelEngine {
 // Forward declarations of enums
 enum StartupErrors : unsigned;
-enum SystemType : unsigned;
 
 // Forward declarations of classes
-class System;
-class SystemContainer;
-class TimeManager;
+class Window;
+class World;
 
-class Engine {
+class Engine : public Object {
 public:
+    Engine();
     virtual ~Engine();
 
     /**
@@ -40,7 +48,7 @@ public:
      * @brief Handles updates for all systems in engine
      *
      */
-    void update();
+    void update( World* world );
 
     /**
      * @brief Properly shuts all systems down on engine close
@@ -49,15 +57,75 @@ public:
     void shutdown();
 
     /**
-     * @brief Initiates shutdown of engine
-     * 
+     * @brief Get the Window Handle object
+     *
+     * @return Window*
      */
-    void triggerShutdown();
+    Window* getWindowHandle();
+
+    /**
+     * @brief Create a System object owned by the engine
+     *
+     * @tparam T
+     * @return true
+     * @return false
+     */
+    template < class T > bool createSystem() {
+        m_systems.emplace_back( std::make_unique< T >() );
+        auto& system = m_systems.back();
+
+        if ( system->initialize( this ) != StartupErrors::SE_Success ) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @brief Get the System object
+     *
+     * @tparam T
+     * @return T*
+     */
+    template < class T > T* getSystem() {
+        for ( auto it = m_systems.begin(); it != m_systems.end(); ++it ) {
+            T* system = dynamic_cast< T* >( ( *it ).get() );
+            if ( system ) {
+                return system;
+            }
+        }
+
+        return nullptr;
+    }
+
+    /**
+     * @brief Adds fixed update function to call
+     *
+     * @tparam TCallback
+     * @param callback
+     */
+    template < typename TCallback >
+    void addFixedUpdateCallback( TCallback&& callback ) {
+        fixedUpdateCallbacks.insert( fixedUpdateCallbacks.begin(), callback );
+    }
+
+    /**
+     * @brief Adds regular update function to call
+     *
+     * @tparam TCallback
+     * @param callback
+     */
+    template < typename TCallback >
+    void addUpdateCallback( TCallback&& callback ) {
+        updateCallbacks.insert( updateCallbacks.begin(), callback );
+    }
 
 private:
-    std::unique_ptr< SystemContainer > m_systemContainer;
+    std::vector< std::function< void() > > updateCallbacks;
+    std::vector< std::function< void() > > fixedUpdateCallbacks;
 
-    bool m_isRunning = false; //!< If update loop is currently running
+    std::vector< std::unique_ptr< System > > m_systems;
+    std::unique_ptr< Window > m_window;
 };
 
 } // namespace SquirrelEngine

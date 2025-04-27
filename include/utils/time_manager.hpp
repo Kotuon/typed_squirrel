@@ -4,6 +4,7 @@
 #pragma once
 
 #include <chrono>
+
 #include "system.hpp"
 
 namespace SquirrelEngine {
@@ -11,7 +12,7 @@ class Engine;
 
 class TimeManager : public System {
 public:
-    TimeManager( Engine* t_engine );
+    TimeManager();
 
     void increment();
     bool needsFixedUpdate();
@@ -21,7 +22,7 @@ public:
     const float getFixedDt() const;
     const float getDeltaTime() const;
 
-    static SystemType getType();
+    void sleep( const int milliseconds );
 
 private:
     std::chrono::steady_clock::time_point m_lastTime;
