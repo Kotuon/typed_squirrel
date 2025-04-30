@@ -16,14 +16,25 @@
 
 // From source
 #include "cameraComponent.hpp"
+//// Engine
 #include "engine.hpp"
-#include "entity.hpp"
-#include "modelManager.hpp"
-#include "shaderManager.hpp"
 #include "system.hpp"
-#include "window.hpp"
 #include "world.hpp"
 
+#include "entity.hpp"
+#include "eventSystem.hpp"
+
+//// Input
+#include "inputSystem.hpp"
+#include "keyboard.hpp"
+#include "mouse.hpp"
+
+//// Graphics
+#include "modelManager.hpp"
+#include "shaderManager.hpp"
+#include "window.hpp"
+
+//// Utilities
 #include "error_codes.hpp"
 #include "utils/trace.hpp"
 #include "utils/time_manager.hpp"

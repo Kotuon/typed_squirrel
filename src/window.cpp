@@ -68,6 +68,8 @@ StartupErrors Window::create( const std::string title, const int width,
     glClearColor( 0.2f, 0.2f, 0.2f, 1.0f );
     glClearStencil( 0 );
 
+    glfwSetWindowCloseCallback( m_window, Window::closeWindowCallback );
+
     return StartupErrors::SE_Success;
 }
 
@@ -85,6 +87,10 @@ void Window::frameBufferSize( int& width, int& height ) {
     glfwGetFramebufferSize( m_window, &width, &height );
 }
 
-GLFWwindow* Window::handle() { return m_window; }
+GLFWwindow* Window::getHandle() { return m_window; }
+
+void Window::closeWindowCallback( GLFWwindow* t_window ) {
+    glfwSetWindowShouldClose( t_window, GL_TRUE );
+}
 
 } // namespace SquirrelEngine

@@ -42,14 +42,13 @@ void Transform::setRotation( const quat& t_rotation ) {
 const quat& Transform::getRotation() const { return m_rotation; }
 
 void Transform::rotate( const quat& rotation ) {
-    m_rotation *= rotation;
+    m_rotation = rotation * m_rotation;
     m_isDirty = true;
 }
 
 void Transform::rotate( const vector3& axis, const float angle ) {
-    quat newRotation = glm::angleAxis( angle, axis );
-    m_rotation = m_rotation * newRotation;
-    m_isDirty = true;
+    quat newRotation = glm::angleAxis( glm::radians( angle ), axis );
+    rotate( newRotation );
 }
 
 // Direction vectors

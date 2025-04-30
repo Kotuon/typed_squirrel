@@ -33,7 +33,6 @@ class World;
 
 class Engine : public Object {
 public:
-    Engine();
     virtual ~Engine();
 
     /**
@@ -70,15 +69,15 @@ public:
      * @return true
      * @return false
      */
-    template < class T > bool createSystem() {
+    template < class T > T* createSystem() {
         m_systems.emplace_back( std::make_unique< T >() );
         auto& system = m_systems.back();
 
         if ( system->initialize( this ) != StartupErrors::SE_Success ) {
-            return false;
+            return nullptr;
         }
 
-        return true;
+        return dynamic_cast< T* >( system.get() );
     }
 
     /**
@@ -120,13 +119,22 @@ public:
         updateCallbacks.insert( updateCallbacks.begin(), callback );
     }
 
+    static Engine* instance();
+
 private:
-    std::vector< std::function< void() > > updateCallbacks;
+    Engine();
+
+    std::vector< std::function< void( const float ) > > updateCallbacks;
     std::vector< std::function< void() > > fixedUpdateCallbacks;
 
     std::vector< std::unique_ptr< System > > m_systems;
     std::unique_ptr< Window > m_window;
 };
+
+template < class T > T* getSystem() {
+    Engine* engineInstance = Engine::instance();
+    return engineInstance->getSystem< T >();
+}
 
 } // namespace SquirrelEngine
 #endif

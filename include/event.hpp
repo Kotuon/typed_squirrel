@@ -3,7 +3,7 @@
 #define EVENT_HPP
 #pragma once
 
-#include "object.hpp";
+#include "object.hpp"
 
 namespace SquirrelEngine {
 

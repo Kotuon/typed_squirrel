@@ -25,10 +25,51 @@ enum StartupErrors Engine::initialize() {
     return StartupErrors::SE_Success;
 }
 
+static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
+                        InputSystem* inputSystem ) {
+    cameraC->transform.move( cameraC->transform.forwardVector() *
+                             timeManager->getDeltaTime() * 100.f *
+                             inputSystem->getActionState( "move forward" ) );
+
+    cameraC->transform.move( cameraC->transform.forwardVector() *
+                             timeManager->getDeltaTime() * -100.f *
+                             inputSystem->getActionState( "move backward" ) );
+
+    cameraC->transform.move( cameraC->transform.rightVector() *
+                             timeManager->getDeltaTime() * -100.f *
+                             inputSystem->getActionState( "move left" ) );
+
+    cameraC->transform.move( cameraC->transform.rightVector() *
+                             timeManager->getDeltaTime() * 100.f *
+                             inputSystem->getActionState( "move right" ) );
+
+    cameraC->transform.move( cameraC->transform.upVector() *
+                             timeManager->getDeltaTime() * 100.f *
+                             inputSystem->getActionState( "move up" ) );
+
+    cameraC->transform.move( cameraC->transform.upVector() *
+                             timeManager->getDeltaTime() * -100.f *
+                             inputSystem->getActionState( "move down" ) );
+
+    Mouse* mouse = inputSystem->findInputDevice< Mouse >();
+    vector2 mouseDelta = mouse->getCursorDelta();
+
+    cameraC->rotatePitch(
+        glm::radians( cameraC->getSensitivity() * -mouseDelta.y *
+                      timeManager->getDeltaTime() ) );
+
+    cameraC->rotateYaw(
+        glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
+                      timeManager->getDeltaTime() ) );
+}
+
 void Engine::update( World* world ) {
     TimeManager* timeManager = getSystem< TimeManager >();
     ShaderManager* shaderManager = getSystem< ShaderManager >();
+    InputSystem* inputSystem = getSystem< InputSystem >();
 
+    glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR,
+                      GLFW_CURSOR_DISABLED );
     CameraComponent* cameraC =
         world->findEntity( "Main camera" )->findComponent< CameraComponent >();
 
@@ -53,6 +94,12 @@ void Engine::update( World* world ) {
         // Gather inputs
         m_window->pollEvents();
 
+        if ( inputSystem->getActionState( "close window" ) ) {
+            glfwSetWindowShouldClose( m_window->getHandle(), GL_TRUE );
+        }
+
+        moveCamera( cameraC, timeManager, inputSystem );
+
         // Fixed update loop
         while ( timeManager->needsFixedUpdate() ) {
             // Fixed update callbacks
@@ -63,7 +110,7 @@ void Engine::update( World* world ) {
 
         // Non-fixed update callbacks
         for ( auto& func : updateCallbacks ) {
-            func();
+            func( timeManager->getDeltaTime() );
         }
 
         // TODO: call render function
@@ -101,5 +148,10 @@ void Engine::shutdown() {
 }
 
 Window* Engine::getWindowHandle() { return m_window.get(); }
+
+Engine* Engine::instance() {
+    static Engine engineInstance;
+    return &engineInstance;
+}
 
 } // namespace SquirrelEngine

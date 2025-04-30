@@ -6,6 +6,7 @@
 #include "object.hpp"
 
 namespace SquirrelEngine {
+class Engine;
 
 class InputDevice : public Object {
 public:
@@ -22,8 +23,8 @@ public:
     virtual const int getType() = 0;
 
 protected:
-    enum InputDevicetype : unsigned {
-        UD_Keyborad = 1,
+    enum InputDeviceType : unsigned {
+        UD_Keyboard = 1,
         UD_Mouse = 2,
         UD_Gamepad = 3
     };
