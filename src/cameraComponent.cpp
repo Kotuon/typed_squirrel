@@ -20,7 +20,6 @@ matrix4 CameraComponent::viewMatrix() {
     vector3 up = transform.upVector();
 
     return glm::lookAt( position, position + fwd, up );
-    // return glm::lookAt( position, vector3( 0.f, 0.f, 0.f ), up );
 }
 
 matrix4 CameraComponent::projectionMatrix() {
@@ -63,5 +62,9 @@ const vector3& CameraComponent::getEulerRotation() const {
 }
 
 const float CameraComponent::getSensitivity() const { return m_sensitivity; }
+
+void CameraComponent::setSensitivity( const float sensitivity ) {
+    m_sensitivity = sensitivity;
+}
 
 } // namespace SquirrelEngine

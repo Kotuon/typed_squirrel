@@ -19,8 +19,9 @@ StartupErrors Window::create( const std::string title, const int width,
 
     // Specify the minimum OpenGL version
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 4 );
-    glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
+    glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 6 );
     glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
+    glfwWindowHint( GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE );
 
     glfwWindowHint( GLFW_SAMPLES, 4 );
 
@@ -65,7 +66,7 @@ StartupErrors Window::create( const std::string title, const int width,
     glPointSize( 3.0 );
 
     // Set default colour after clearing the colour buffer
-    glClearColor( 0.2f, 0.2f, 0.2f, 1.0f );
+    glClearColor( 0.6f, 0.6f, 0.6f, 1.0f );
     glClearStencil( 0 );
 
     glfwSetWindowCloseCallback( m_window, Window::closeWindowCallback );

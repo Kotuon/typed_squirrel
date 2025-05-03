@@ -31,7 +31,7 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shaderManager.cpp">
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp">

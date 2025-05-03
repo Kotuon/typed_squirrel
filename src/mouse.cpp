@@ -32,7 +32,8 @@ static void mouseScrollCallback( GLFWwindow*, double, double yoffset ) {
                                 static_cast< float >( yoffset ) );
 }
 
-Mouse::Mouse() : m_lastCursorPosition( 0.f ) {}
+Mouse::Mouse()
+    : m_lastCursorPosition( 0.f ), m_cursorMode( GLFW_CURSOR_NORMAL ) {}
 
 void Mouse::initialize() {
     Window* window = Engine::instance()->getWindowHandle();
@@ -81,6 +82,19 @@ const vector2 Mouse::getCursorDelta() {
     m_lastCursorPosition = currPosition;
 
     return currPosition - lastPosition;
+}
+
+void Mouse::setCursorMode( const int t_cursorMode ) {
+    if ( t_cursorMode == m_cursorMode ) {
+        return;
+    }
+
+    GLFWwindow* window = Engine::instance()->getWindowHandle()->getHandle();
+
+    glfwSetInputMode( window, GLFW_CURSOR, t_cursorMode );
+    m_cursorMode = t_cursorMode;
+
+    m_lastCursorPosition = getCursorPosition();
 }
 
 } // namespace SquirrelEngine

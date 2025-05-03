@@ -33,6 +33,7 @@ public:
     const vector3& getEulerRotation() const;
 
     const float getSensitivity() const;
+    void setSensitivity( const float sensitivity );
 
     Transform transform;
 

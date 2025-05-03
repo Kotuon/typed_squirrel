@@ -31,7 +31,7 @@
 
 //// Graphics
 #include "modelManager.hpp"
-#include "shaderManager.hpp"
+#include "shader.hpp"
 #include "window.hpp"
 
 //// Utilities

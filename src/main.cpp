@@ -21,20 +21,7 @@ int main( int, char** ) {
     int frameWidth, frameHeight;
     windowHandle->frameBufferSize( frameWidth, frameHeight );
 
-    // Init systems
-    if ( !engineInstance->createSystem< TimeManager >() ) {
-        Trace::message( "Failed to create time manager." );
-    }
-
-    engineInstance->createSystem< ShaderManager >();
-    if ( !engineInstance->createSystem< ShaderManager >() ) {
-        Trace::message( "Failed to create shader manager." );
-    }
-
-    if ( !engineInstance->createSystem< EventSystem >() ) {
-        Trace::message( "Failed to create event system." );
-    }
-
+    // Init inputs
     InputSystem* inputSystem = engineInstance->createSystem< InputSystem >();
     if ( !inputSystem ) {
         Trace::message( "Failed to create input system." );
@@ -49,8 +36,11 @@ int main( int, char** ) {
     inputSystem->registerActionMapping( keyboard, KEY_S, "move backward" );
     inputSystem->registerActionMapping( keyboard, KEY_A, "move left" );
     inputSystem->registerActionMapping( keyboard, KEY_D, "move right" );
-    inputSystem->registerActionMapping( keyboard, KEY_SPACE, "move up" );
-    inputSystem->registerActionMapping( keyboard, KEY_LEFT_CTRL, "move down" );
+    inputSystem->registerActionMapping( keyboard, KEY_E, "move up" );
+    inputSystem->registerActionMapping( keyboard, KEY_Q, "move down" );
+
+    inputSystem->registerActionMapping( keyboard, KEY_LEFT_SHIFT,
+                                        "enable camera movement" );
 
     // Engine binds
     inputSystem->registerActionMapping( keyboard, KEY_ESCAPE, "close window" );
@@ -64,7 +54,7 @@ int main( int, char** ) {
 
     cameraComp->aspect = static_cast< float >( frameWidth ) /
                          static_cast< float >( frameHeight );
-    cameraComp->transform.setPosition( vector3( 0.f, 0.f, 50.f ) );
+    cameraComp->transform.setPosition( vector3( 0.f, 0.f, 20.f ) );
 
     engineInstance->update( worldInstance.get() );
     engineInstance->shutdown();

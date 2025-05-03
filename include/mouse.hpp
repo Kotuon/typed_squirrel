@@ -34,9 +34,13 @@ public:
 
     const vector2 getCursorDelta();
 
+    void setCursorMode( const int t_cursorMode );
+
 protected:
     std::array< int, BUTTON_MOUSE_LAST > m_buttonStates = { 0 };
     vector2 m_lastCursorPosition;
+
+    int m_cursorMode;
 };
 
 } // namespace SquirrelEngine

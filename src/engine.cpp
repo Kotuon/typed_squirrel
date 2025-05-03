@@ -22,36 +22,53 @@ Engine::~Engine() {}
 enum StartupErrors Engine::initialize() {
     m_window = std::make_unique< Window >();
 
+    if ( !createSystem< TimeManager >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
+    if ( !createSystem< EventSystem >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
+
     return StartupErrors::SE_Success;
 }
 
 static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
                         InputSystem* inputSystem ) {
+
+    Mouse* mouse = inputSystem->findInputDevice< Mouse >();
+
+    if ( !inputSystem->getActionState( "enable camera movement" ) ) {
+        mouse->setCursorMode( GLFW_CURSOR_NORMAL );
+        return;
+    }
+    mouse->setCursorMode( GLFW_CURSOR_DISABLED );
+
+    const float speed = 10.f;
+
     cameraC->transform.move( cameraC->transform.forwardVector() *
-                             timeManager->getDeltaTime() * 100.f *
+                             timeManager->getDeltaTime() * speed *
                              inputSystem->getActionState( "move forward" ) );
 
     cameraC->transform.move( cameraC->transform.forwardVector() *
-                             timeManager->getDeltaTime() * -100.f *
+                             timeManager->getDeltaTime() * -speed *
                              inputSystem->getActionState( "move backward" ) );
 
     cameraC->transform.move( cameraC->transform.rightVector() *
-                             timeManager->getDeltaTime() * -100.f *
+                             timeManager->getDeltaTime() * -speed *
                              inputSystem->getActionState( "move left" ) );
 
     cameraC->transform.move( cameraC->transform.rightVector() *
-                             timeManager->getDeltaTime() * 100.f *
+                             timeManager->getDeltaTime() * speed *
                              inputSystem->getActionState( "move right" ) );
 
     cameraC->transform.move( cameraC->transform.upVector() *
-                             timeManager->getDeltaTime() * 100.f *
+                             timeManager->getDeltaTime() * speed *
                              inputSystem->getActionState( "move up" ) );
 
     cameraC->transform.move( cameraC->transform.upVector() *
-                             timeManager->getDeltaTime() * -100.f *
+                             timeManager->getDeltaTime() * -speed *
                              inputSystem->getActionState( "move down" ) );
 
-    Mouse* mouse = inputSystem->findInputDevice< Mouse >();
     vector2 mouseDelta = mouse->getCursorDelta();
 
     cameraC->rotatePitch(
@@ -62,29 +79,29 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
         glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
                       timeManager->getDeltaTime() ) );
 }
+struct PerFrameData {
+    matrix4 view;
+    matrix4 proj;
+    vector4 cameraPos;
+};
 
 void Engine::update( World* world ) {
     TimeManager* timeManager = getSystem< TimeManager >();
-    ShaderManager* shaderManager = getSystem< ShaderManager >();
     InputSystem* inputSystem = getSystem< InputSystem >();
 
-    glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR,
-                      GLFW_CURSOR_DISABLED );
+    glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR, GLFW_CURSOR_NORMAL );
+
     CameraComponent* cameraC =
         world->findEntity( "Main camera" )->findComponent< CameraComponent >();
 
-    Model* model = ModelManager::instance().getModel(
-        "models/cube.obj", GL_TRIANGLES,
-        shaderManager->getShader( "shaders/base_vertex.glsl",
-                                  "shaders/base_fragment.glsl" ),
-        false );
+    Program baseProgram( "shaders/base.vert", "shaders/base.frag" );
 
-    const float scale = 20.f;
+    Model* model = ModelManager::instance().getModel(
+        "models/cube.obj", GL_TRIANGLES, baseProgram.getHandle(), false );
+
+    const float scale = 0.5f;
 
     matrix4 matrix = glm::scale( glm::mat4( 1.f ), { scale, scale, scale } );
-
-    // unsigned gridShader =
-    //     shaderManager->getShader( "shaders/grid.vert", "shaders/grid.frag" );
 
     // Main update loop
     while ( !m_window->isClosing() ) {
@@ -114,8 +131,7 @@ void Engine::update( World* world ) {
         }
 
         // TODO: call render function
-        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |
-                 GL_STENCIL_BUFFER_BIT );
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
         glUseProgram( model->getShader() );
 
