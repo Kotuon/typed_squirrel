@@ -26,7 +26,9 @@ public:
     void size( int& width, int& height );
     void frameBufferSize( int& width, int& height );
 
-    GLFWwindow* handle();
+    GLFWwindow* getHandle();
+
+    static void closeWindowCallback( GLFWwindow* t_window );
 
 protected:
     GLFWwindow* m_window;

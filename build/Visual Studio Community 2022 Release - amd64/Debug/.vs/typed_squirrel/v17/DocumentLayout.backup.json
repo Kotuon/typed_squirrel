@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A034B9D-D0CE-3757-8611-CC2957825E4D}|typed_squirrel.vcxproj|C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\keyboard.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A034B9D-D0CE-3757-8611-CC2957825E4D}|typed_squirrel.vcxproj|C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -18,12 +21,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "keyboard.cpp",
+              "DocumentMoniker": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\keyboard.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\src\\keyboard.cpp",
+              "ToolTip": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\keyboard.cpp",
+              "RelativeToolTip": "..\\..\\..\\src\\keyboard.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T19:03:29.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "engine.cpp",
               "DocumentMoniker": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\engine.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\src\\engine.cpp",
               "ToolTip": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\engine.cpp",
               "RelativeToolTip": "..\\..\\..\\src\\engine.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-26T22:31:44.34Z",
               "EditorCaption": ""

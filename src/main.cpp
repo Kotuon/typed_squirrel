@@ -9,18 +9,10 @@ int main( int, char** ) {
 
     setupDump();
 
-    std::unique_ptr< Engine > engineInstance = std::make_unique< Engine >();
+    Engine* engineInstance = Engine::instance();
     if ( engineInstance->initialize() != StartupErrors::SE_Success ) {
         Trace::message( "Failed to start." );
         return EXIT_FAILURE;
-    }
-
-    if ( !engineInstance->createSystem< TimeManager >() ) {
-        Trace::message( "Failed to create time manager." );
-    }
-
-    if ( !engineInstance->createSystem< ShaderManager >() ) {
-        Trace::message( "Failed to create shader manager." );
     }
 
     Window* windowHandle = engineInstance->getWindowHandle();
@@ -29,17 +21,40 @@ int main( int, char** ) {
     int frameWidth, frameHeight;
     windowHandle->frameBufferSize( frameWidth, frameHeight );
 
+    // Init inputs
+    InputSystem* inputSystem = engineInstance->createSystem< InputSystem >();
+    if ( !inputSystem ) {
+        Trace::message( "Failed to create input system." );
+    }
+
+    // Keyboard setup
+    Keyboard* keyboard = inputSystem->createInputDevice< Keyboard >();
+    keyboard->initialize();
+
+    // Movement binds
+    inputSystem->registerActionMapping( keyboard, KEY_W, "move forward" );
+    inputSystem->registerActionMapping( keyboard, KEY_S, "move backward" );
+    inputSystem->registerActionMapping( keyboard, KEY_A, "move left" );
+    inputSystem->registerActionMapping( keyboard, KEY_D, "move right" );
+    inputSystem->registerActionMapping( keyboard, KEY_E, "move up" );
+    inputSystem->registerActionMapping( keyboard, KEY_Q, "move down" );
+
+    inputSystem->registerActionMapping( keyboard, KEY_LEFT_SHIFT,
+                                        "enable camera movement" );
+
+    // Engine binds
+    inputSystem->registerActionMapping( keyboard, KEY_ESCAPE, "close window" );
+
+    // Mouse setup
+    inputSystem->createInputDevice< Mouse >();
+
     std::unique_ptr< World > worldInstance = std::make_unique< World >();
     Entity* camera = worldInstance->createEntity( "Main camera" );
     CameraComponent* cameraComp = camera->createComponent< CameraComponent >();
 
     cameraComp->aspect = static_cast< float >( frameWidth ) /
                          static_cast< float >( frameHeight );
-    cameraComp->transform.setPosition( vector3( 50.f, 30.f, 50.f ) );
-    cameraComp->transform.rotate( vector3( 0.f, 1.f, 0.f ),
-                                  glm::radians( 45.f ) );
-    cameraComp->transform.rotate( vector3( 1.f, 0.f, 0.f ),
-                                  glm::radians( -20.f ) );
+    cameraComp->transform.setPosition( vector3( 0.f, 0.f, 20.f ) );
 
     engineInstance->update( worldInstance.get() );
     engineInstance->shutdown();

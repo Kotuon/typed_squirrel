@@ -1,6 +1,6 @@
-shaderManager.cpp( 40:16 ): Vertex Shader shaders/grid.vert: 0(13) : error C1048: invalid character 'p' in swizzle "proj"
-0(13) : error C1048: invalid character 'p' in swizzle "proj"
-0(13) : error C1048: invalid character 'v' in swizzle "view"
-0(13) : error C1048: invalid character 'v' in swizzle "view"
+shader.cpp( 45:16 ): Vertex Shader shaders/base.vert: 0(1) : error C0000: syntax error, unexpected $undefined at token "<undefined>"
+
+
+shader.cpp( 45:16 ): Vertex Shader shaders/base.frag: 0(1) : error C0000: syntax error, unexpected $undefined at token "<undefined>"
 
 

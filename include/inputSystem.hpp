@@ -13,18 +13,19 @@
 namespace SquirrelEngine {
 
 class InputSystem : public System {
+public:
     InputSystem() = default;
     ~InputSystem() = default;
 
     void update( const float delta );
 
     template < class T > T* createInputDevice() {
-        m_devices.emplace_back( std::make_unique< InputDevice >() );
+        m_devices.emplace_back( std::make_unique< T >() );
 
-        auto newDevice = m_devices.back();
+        auto& newDevice = m_devices.back();
         newDevice->initialize();
 
-        return newDevice.get();
+        return dynamic_cast< T* >( newDevice.get() );
     }
 
     template < class T > T* findInputDevice( const int offset = 0 ) {

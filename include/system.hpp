@@ -13,10 +13,7 @@ public:
     System() = default;
     virtual ~System() = default;
 
-    virtual StartupErrors initialize( Engine* t_owner ) {
-        owner = t_owner;
-        return StartupErrors::SE_Success;
-    }
+    virtual StartupErrors initialize( Engine* t_owner );
     virtual void update( const float ) {}
     virtual void shutdown() {}
 

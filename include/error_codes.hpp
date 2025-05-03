@@ -9,6 +9,7 @@ enum StartupErrors : unsigned {
     SE_Success = 0,
     SE_GLFWFailedInit = 1,
     SE_GraphicsWindowFailedInit = 2,
+    SE_SystemFailedInit = 3,
 };
 
 } // namespace SquirrelEngine
