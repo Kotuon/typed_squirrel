@@ -1,3 +1,12 @@
+/**
+ *
+ * @file trace.hpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Provides the Trace class for logging messages to an output file and
+ * console in SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #ifndef TRACE_HPP
 #define TRACE_HPP
@@ -12,11 +21,12 @@
 #include <source_location>
 
 namespace SquirrelEngine {
+
 /*! Trace class */
 class Trace {
 public:
     /**
-     * @brief Prints a message into the output file
+     * @brief Prints a message into the output file and console
      *
      * @param message Message to be printed
      * @param src Source location information
@@ -27,7 +37,7 @@ public:
              std::source_location Src = std::source_location::current() );
 
     /**
-     * @brief Destroy the Trace:: Trace object
+     * @brief Close output file
      *
      */
     ~Trace();
@@ -52,6 +62,7 @@ private:
 private:
     std::fstream TraceStream; //!< Output file
 };
+
 } // namespace SquirrelEngine
 
 #endif

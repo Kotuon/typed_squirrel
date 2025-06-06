@@ -1,3 +1,12 @@
+/**
+ *
+ * @file window.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Implements the Window class, which manages the application window and
+ * its properties in SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -8,8 +17,19 @@
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Default constructor for Window.
+ */
 Window::Window() : m_window( nullptr ) {}
 
+/**
+ * @brief Creates the window with the specified parameters.
+ * @param title The window title.
+ * @param width The window width.
+ * @param height The window height.
+ * @param isFullscreen Whether the window should be fullscreen.
+ * @return StartupErrors indicating success or failure.
+ */
 StartupErrors Window::create( const std::string title, const int width,
                               const int height, bool isFullscreen ) {
     if ( !glfwInit() ) {
@@ -74,22 +94,50 @@ StartupErrors Window::create( const std::string title, const int width,
     return StartupErrors::SE_Success;
 }
 
+/**
+ * @brief Polls window events (input, close, etc.).
+ */
 void Window::pollEvents() { glfwPollEvents(); }
 
+/**
+ * @brief Swaps the window's front and back buffers.
+ */
 void Window::swapBuffer() { glfwSwapBuffers( m_window ); }
 
+/**
+ * @brief Checks if the window is closing.
+ * @return True if the window is closing, false otherwise.
+ */
 bool Window::isClosing() { return ( glfwWindowShouldClose( m_window ) ); }
 
+/**
+ * @brief Gets the current window size.
+ * @param width Reference to store the width.
+ * @param height Reference to store the height.
+ */
 void Window::size( int& width, int& height ) {
     glfwGetWindowSize( m_window, &width, &height );
 }
 
+/**
+ * @brief Gets the current framebuffer size.
+ * @param width Reference to store the framebuffer width.
+ * @param height Reference to store the framebuffer height.
+ */
 void Window::frameBufferSize( int& width, int& height ) {
     glfwGetFramebufferSize( m_window, &width, &height );
 }
 
+/**
+ * @brief Gets the underlying GLFW window handle.
+ * @return Pointer to the GLFWwindow.
+ */
 GLFWwindow* Window::getHandle() { return m_window; }
 
+/**
+ * @brief GLFW callback for window close event.
+ * @param t_window Pointer to the GLFWwindow.
+ */
 void Window::closeWindowCallback( GLFWwindow* t_window ) {
     glfwSetWindowShouldClose( t_window, GL_TRUE );
 }

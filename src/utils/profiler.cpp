@@ -2,7 +2,8 @@
  *
  * @file profiler.cpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief
+ * @brief Implements the Profiler class, which takes execution snapshots and
+ * outputs profiling data for SquirrelEngine.
  * @date 2025-06-06
  *
  */
@@ -61,8 +62,8 @@ struct Profiler::InteralProfiler {
 
     /**
      * @brief Write the output csv
-     * 
-     * @param FunctionInfo 
+     *
+     * @param FunctionInfo
      */
     void writeMessage( std::tuple< DWORD64, char*, int >& FunctionInfo ) {
         float HitCount = ( float )std::get< 2 >( FunctionInfo );

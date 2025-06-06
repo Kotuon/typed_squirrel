@@ -2,7 +2,8 @@
  *
  * @file engine.hpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief Class for handing startup, update, and shutdown of engine
+ * @brief Defines the Engine class, which manages core systems, update loops,
+ * and the main application flow for SquirrelEngine.
  * @date 2025-04-20
  *
  */
@@ -32,6 +33,9 @@ class Window;
 
 class Engine : public Object {
 public:
+    /**
+     * @brief Virtual destructor for Engine.
+     */
     virtual ~Engine();
 
     /**
@@ -44,29 +48,25 @@ public:
 
     /**
      * @brief Handles updates for all systems in engine
-     *
      */
     void update();
 
     /**
      * @brief Properly shuts all systems down on engine close
-     *
      */
     void shutdown();
 
     /**
      * @brief Get the Window Handle object
-     *
-     * @return Window*
+     * @return Window* Pointer to the window handle.
      */
     Window* getWindowHandle();
 
     /**
      * @brief Create a System object owned by the engine
      *
-     * @tparam T
-     * @return true
-     * @return false
+     * @tparam T System type to create.
+     * @return Pointer to the created system, or nullptr on failure.
      */
     template < class T > T* createSystem() {
         m_systems.emplace_back( std::make_unique< T >() );
@@ -82,8 +82,8 @@ public:
     /**
      * @brief Get the System object
      *
-     * @tparam T
-     * @return T*
+     * @tparam T System type to retrieve.
+     * @return Pointer to the system, or nullptr if not found.
      */
     template < class T > T* getSystem() {
         for ( auto it = m_systems.begin(); it != m_systems.end(); ++it ) {
@@ -99,8 +99,8 @@ public:
     /**
      * @brief Adds fixed update function to call
      *
-     * @tparam TCallback
-     * @param callback
+     * @tparam TCallback Callback function type.
+     * @param callback The callback function to add.
      */
     template < typename TCallback >
     void addFixedUpdateCallback( TCallback&& callback ) {
@@ -110,17 +110,24 @@ public:
     /**
      * @brief Adds regular update function to call
      *
-     * @tparam TCallback
-     * @param callback
+     * @tparam TCallback Callback function type.
+     * @param callback The callback function to add.
      */
     template < typename TCallback >
     void addUpdateCallback( TCallback&& callback ) {
         updateCallbacks.insert( updateCallbacks.begin(), callback );
     }
 
+    /**
+     * @brief Get the singleton instance of the Engine.
+     * @return Pointer to the Engine instance.
+     */
     static Engine* instance();
 
 private:
+    /**
+     * @brief Default constructor for Engine.
+     */
     Engine();
 
     std::vector< std::function< void( const float ) > > updateCallbacks;
@@ -130,6 +137,11 @@ private:
     std::unique_ptr< Window > m_window;
 };
 
+/**
+ * @brief Helper function to get a system from the Engine singleton.
+ * @tparam T System type to retrieve.
+ * @return Pointer to the system, or nullptr if not found.
+ */
 template < class T > T* getSystem() {
     Engine* engineInstance = Engine::instance();
     return engineInstance->getSystem< T >();

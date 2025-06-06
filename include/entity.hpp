@@ -1,3 +1,12 @@
+/**
+ *
+ * @file entity.hpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Declares the Entity class, which represents game objects and manages
+ * their components in SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
@@ -14,11 +23,28 @@
 namespace SquirrelEngine {
 class Entity : public Object {
 public:
+    /**
+     * @brief Default constructor for Entity.
+     */
     Entity() : id( 0 ) {}
+
+    /**
+     * @brief Constructs an Entity with a given ID.
+     * @param t_id The entity's unique identifier.
+     */
     Entity( const uint32_t t_id ) : id( t_id ) {}
+
+    /**
+     * @brief Constructs an Entity with a given ID and name.
+     * @param t_id The entity's unique identifier.
+     * @param t_name The entity's name.
+     */
     Entity( const uint32_t t_id, const std::string t_name )
         : id( t_id ), name( t_name ) {}
 
+    /**
+     * @brief Default virtual destructor for Entity.
+     */
     ~Entity() = default;
 
     /**
@@ -82,12 +108,25 @@ public:
         }
     }
 
+    /**
+     * @brief The unique identifier for this entity.
+     */
     uint32_t id;
+
+    /**
+     * @brief The name of this entity.
+     */
     std::string name;
 
+    /**
+     * @brief The transform associated with this entity.
+     */
     Transform transform;
 
 protected:
+    /**
+     * @brief The list of components attached to this entity.
+     */
     std::vector< std::unique_ptr< Component > > m_components;
 };
 

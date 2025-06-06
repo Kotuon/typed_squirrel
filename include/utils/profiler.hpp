@@ -2,7 +2,8 @@
  *
  * @file profiler.hpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief
+ * @brief Declares the Profiler class, which takes execution snapshots and
+ * outputs profiling data for SquirrelEngine.
  * @date 2025-06-06
  *
  */

@@ -1,39 +1,68 @@
 /**
- * 
+ *
  * @file mesh.cpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief 
+ * @brief Implements the Mesh class, which represents a renderable mesh and its
+ * associated data in SquirrelEngine.
  * @date 2025-06-06
- * 
+ *
  */
 
 #include "core.hpp"
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Default constructor for Mesh.
+ */
 Mesh::Mesh() {}
 
+/**
+ * @brief Copy constructor for Mesh.
+ * @param other Mesh to copy from.
+ */
 Mesh::Mesh( const Mesh& other ) : vao( other.vao ), vbo( other.vbo ) {
     for ( Vertex vert : other.m_vertices ) {
         m_vertices.emplace_back( vert );
     }
 }
 
+/**
+ * @brief Copy constructor from pointer for Mesh.
+ * @param other Pointer to Mesh to copy from.
+ */
 Mesh::Mesh( const Mesh* other ) : vao( other->vao ), vbo( other->vbo ) {
     for ( Vertex vert : other->m_vertices ) {
         m_vertices.emplace_back( vert );
     }
 }
 
+/**
+ * @brief Constructs a Mesh with a given Model.
+ * @param t_model Pointer to the Model.
+ */
 Mesh::Mesh( Model* t_model ) : m_model( t_model ) {}
 
+/**
+ * @brief Destructor for Mesh.
+ */
 Mesh::~Mesh() {
     glDeleteBuffers( 1, &vao );
     glDeleteBuffers( 1, &vbo );
 }
 
+/**
+ * @brief Loads mesh data from a model file.
+ * @param t_modelName Name of the model file.
+ * @return true if loaded successfully, false otherwise.
+ */
 bool Mesh::load( std::string t_modelName ) { return read( t_modelName ); }
 
+/**
+ * @brief Reads mesh data from a model file.
+ * @param t_modelName Name of the model file.
+ * @return true if read successfully, false otherwise.
+ */
 bool Mesh::read( std::string t_modelName ) {
     // Setting the name of the file (used in model_data_manager)
     m_modelName = t_modelName;
@@ -124,6 +153,13 @@ bool Mesh::read( std::string t_modelName ) {
     return true;
 }
 
+/**
+ * @brief Inserts vertex data from parsed model data.
+ * @param data Array of strings containing vertex data.
+ * @param v Vector of positions.
+ * @param vt Vector of texture coordinates.
+ * @param vn Vector of normals.
+ */
 void Mesh::insertData( char* data[3], std::vector< vector3 >& v,
                        std::vector< vector2 >& vt,
                        std::vector< vector3 >& vn ) {
@@ -132,6 +168,9 @@ void Mesh::insertData( char* data[3], std::vector< vector3 >& v,
                              vt[atoi( data[1] ) - 1] );
 }
 
+/**
+ * @brief Draws the mesh.
+ */
 void Mesh::draw() {
     Transform& transform = m_model->parent->transform;
     World* world = World::instance();
@@ -161,17 +200,34 @@ void Mesh::draw() {
     glBindVertexArray( 0 );
 }
 
+/**
+ * @brief Sets the shader program for this mesh.
+ * @param t_shader Pointer to the shader Program.
+ */
 void Mesh::setShader( Program* t_shader ) {
     m_shader = std::make_unique< Program >( t_shader );
 }
 
+/**
+ * @brief Gets the shader program associated with this mesh.
+ * @return Pointer to the shader Program.
+ */
 const Program* Mesh::getShader() const { return m_shader.get(); }
 
+/**
+ * @brief Loads and sets the shader from vertex and fragment shader files.
+ * @param vertName Vertex shader filename.
+ * @param fragName Fragment shader filename.
+ */
 void Mesh::loadShader( const std::string& vertName,
                        const std::string& fragName ) {
     m_shader = std::make_unique< Program >( vertName, fragName );
 }
 
+/**
+ * @brief Gets the model name associated with this mesh.
+ * @return The model name as a string.
+ */
 std::string Mesh::getModelName() const { return m_modelName; }
 
 } // namespace SquirrelEngine
