@@ -18,6 +18,8 @@ public:
 
     void getCompileStatus( const std::string& filename );
 
+    GLuint getLocation( const char* locationName );
+
 protected:
     GLuint m_handle;
 };
@@ -39,6 +41,8 @@ protected:
 
 class Program : public ShaderBase {
 public:
+    Program( const Program& other );
+    Program( const Program* other );
     Program( const Shader& first, const Shader& second );
     Program( const std::string& firstFile, const std::string& secondFile );
     ~Program();

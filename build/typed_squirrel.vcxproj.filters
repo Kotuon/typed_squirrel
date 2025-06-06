@@ -1,19 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\cameraComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\graphics.cpp">
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\eventSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\keyboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\mouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\objectRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system_container.cpp">
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\crash_handler.cpp">
@@ -26,6 +56,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\world.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glad\src\glad.c">

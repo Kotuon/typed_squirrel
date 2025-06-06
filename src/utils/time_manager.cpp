@@ -1,3 +1,11 @@
+/**
+ *
+ * @file time_manager.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief
+ * @date 2025-06-06
+ *
+ */
 
 #include <thread>
 

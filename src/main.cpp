@@ -48,7 +48,7 @@ int main( int, char** ) {
     // Mouse setup
     inputSystem->createInputDevice< Mouse >();
 
-    std::unique_ptr< World > worldInstance = std::make_unique< World >();
+    World* worldInstance = World::instance();
     Entity* camera = worldInstance->createEntity( "Main camera" );
     CameraComponent* cameraComp = camera->createComponent< CameraComponent >();
 
@@ -56,7 +56,13 @@ int main( int, char** ) {
                          static_cast< float >( frameHeight );
     cameraComp->transform.setPosition( vector3( 0.f, 0.f, 20.f ) );
 
-    engineInstance->update( worldInstance.get() );
+    Entity* cube = worldInstance->createEntity( "Cube01" );
+    Model* cubeModel = cube->createComponent< Model >();
+    cubeModel->initMesh( "models/cube.obj" );
+    cubeModel->initShader( "shaders/base.vert", "shaders/base.frag" );
+    // cube->transform.setScale( vector3( 0.5f ) );
+
+    engineInstance->update();
     engineInstance->shutdown();
 
     return EXIT_SUCCESS;

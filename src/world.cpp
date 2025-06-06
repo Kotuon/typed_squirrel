@@ -30,9 +30,13 @@ void World::removeEntity( const Entity* entity ) {
     m_entitesList.erase( m_entitesList.begin() + entity->id );
 }
 
-World& World::instance() {
+std::vector< std::unique_ptr< Entity > >& World::getEntityList() {
+    return m_entitesList;
+}
+
+World* World::instance() {
     static World m_instance;
-    return m_instance;
+    return &m_instance;
 }
 
 } // namespace SquirrelEngine

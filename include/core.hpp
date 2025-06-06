@@ -30,7 +30,9 @@
 #include "mouse.hpp"
 
 //// Graphics
-#include "modelManager.hpp"
+#include "mesh.hpp"
+#include "model.hpp"
+#include "objectRenderer.hpp"
 #include "shader.hpp"
 #include "window.hpp"
 

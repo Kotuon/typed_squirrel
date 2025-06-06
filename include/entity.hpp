@@ -28,7 +28,7 @@ public:
      * @return T*
      */
     template < class T > T* createComponent() {
-        m_components.emplace_back( std::make_unique< T >() );
+        m_components.emplace_back( std::make_unique< T >( this ) );
         return dynamic_cast< T* >( m_components.back().get() );
     }
 

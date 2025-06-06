@@ -28,6 +28,9 @@ enum StartupErrors Engine::initialize() {
     if ( !createSystem< EventSystem >() ) {
         return StartupErrors::SE_SystemFailedInit;
     }
+    if ( !createSystem< ObjectRenderer >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
 
     return StartupErrors::SE_Success;
 }
@@ -43,7 +46,7 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
     }
     mouse->setCursorMode( GLFW_CURSOR_DISABLED );
 
-    const float speed = 10.f;
+    const float speed = 5.f;
 
     cameraC->transform.move( cameraC->transform.forwardVector() *
                              timeManager->getDeltaTime() * speed *
@@ -79,29 +82,17 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
         glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
                       timeManager->getDeltaTime() ) );
 }
-struct PerFrameData {
-    matrix4 view;
-    matrix4 proj;
-    vector4 cameraPos;
-};
 
-void Engine::update( World* world ) {
+void Engine::update() {
     TimeManager* timeManager = getSystem< TimeManager >();
     InputSystem* inputSystem = getSystem< InputSystem >();
+    ObjectRenderer* objRenderer = getSystem< ObjectRenderer >();
 
     glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR, GLFW_CURSOR_NORMAL );
 
+    World* world = World::instance();
     CameraComponent* cameraC =
         world->findEntity( "Main camera" )->findComponent< CameraComponent >();
-
-    Program baseProgram( "shaders/base.vert", "shaders/base.frag" );
-
-    Model* model = ModelManager::instance().getModel(
-        "models/cube.obj", GL_TRIANGLES, baseProgram.getHandle(), false );
-
-    const float scale = 0.5f;
-
-    matrix4 matrix = glm::scale( glm::mat4( 1.f ), { scale, scale, scale } );
 
     // Main update loop
     while ( !m_window->isClosing() ) {
@@ -131,28 +122,7 @@ void Engine::update( World* world ) {
         }
 
         // TODO: call render function
-        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-
-        glUseProgram( model->getShader() );
-
-        glUniformMatrix4fv( glGetUniformLocation( model->getShader(), "model" ),
-                            1, GL_FALSE, &matrix[0][0] );
-
-        glUniformMatrix4fv( glGetUniformLocation( model->getShader(), "view" ),
-                            1, GL_FALSE, &cameraC->viewMatrix()[0][0] );
-        glUniformMatrix4fv(
-            glGetUniformLocation( model->getShader(), "projection" ), 1,
-            GL_FALSE, &cameraC->projectionMatrix()[0][0] );
-
-        glBindVertexArray( model->getMesh()->VAO );
-        glDrawArrays( model->getRenderMethod(), 0,
-                      model->getMesh()->NumVertices );
-
-        glUseProgram( 0 );
-        glBindVertexArray( 0 );
-
-        // Swap buffer (may move later)
-        m_window->swapBuffer();
+        objRenderer->render();
 
         // Don't use whole cpu
         timeManager->sleep( 1 );

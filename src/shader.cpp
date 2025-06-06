@@ -48,6 +48,10 @@ void ShaderBase::getCompileStatus( const std::string& filename ) {
     }
 }
 
+GLuint ShaderBase::getLocation( const char* locationName ) {
+    return glGetUniformLocation( m_handle, locationName );
+}
+
 //---------- Shader ----------//
 Shader::Shader( const std::string& filename )
     : m_type( typeFromName( filename ) ) {
@@ -91,6 +95,10 @@ GLenum Shader::typeFromName( const std::string& filename ) {
 }
 
 //---------- Program ----------//
+Program::Program( const Program& other ) : ShaderBase( other.m_handle ) {}
+
+Program::Program( const Program* other ) : ShaderBase( other->m_handle ) {}
+
 Program::Program( const Shader& first, const Shader& second )
     : ShaderBase( glCreateProgram() ) {
     glAttachShader( m_handle, first.getHandle() );

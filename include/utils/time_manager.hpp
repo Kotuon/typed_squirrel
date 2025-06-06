@@ -1,3 +1,11 @@
+/**
+ * 
+ * @file time_manager.hpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief 
+ * @date 2025-06-06
+ * 
+ */
 
 #ifndef TIME_MANAGER_HPP
 #define TIME_MANAGER_HPP
@@ -8,8 +16,12 @@
 #include "system.hpp"
 
 namespace SquirrelEngine {
-class Engine;
+// class Engine; // Fwd declare
 
+/**
+ * @brief Manages update loops. Has a regular update and fixed update
+ * 
+ */
 class TimeManager : public System {
 public:
     TimeManager();

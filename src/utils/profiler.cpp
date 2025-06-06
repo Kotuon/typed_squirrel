@@ -1,4 +1,11 @@
-
+/**
+ *
+ * @file profiler.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief
+ * @date 2025-06-06
+ *
+ */
 
 #include <Windows.h>
 #include <dbghelp.h>
@@ -52,6 +59,11 @@ struct Profiler::InteralProfiler {
         return -1;
     }
 
+    /**
+     * @brief Write the output csv
+     * 
+     * @param FunctionInfo 
+     */
     void writeMessage( std::tuple< DWORD64, char*, int >& FunctionInfo ) {
         float HitCount = ( float )std::get< 2 >( FunctionInfo );
         float TotalHits = ( float )EipList.size();
