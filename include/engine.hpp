@@ -29,7 +29,6 @@ enum StartupErrors : unsigned;
 
 // Forward declarations of classes
 class Window;
-class World;
 
 class Engine : public Object {
 public:
@@ -47,7 +46,7 @@ public:
      * @brief Handles updates for all systems in engine
      *
      */
-    void update( World* world );
+    void update();
 
     /**
      * @brief Properly shuts all systems down on engine close

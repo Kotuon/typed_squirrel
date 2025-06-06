@@ -41,6 +41,10 @@ void Transform::setRotation( const quat& t_rotation ) {
 
 const quat& Transform::getRotation() const { return m_rotation; }
 
+const vector3 Transform::getEulerRotation() const {
+    return glm::eulerAngles( m_rotation );
+}
+
 void Transform::rotate( const quat& rotation ) {
     m_rotation = rotation * m_rotation;
     m_isDirty = true;

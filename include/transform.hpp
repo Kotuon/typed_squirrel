@@ -21,6 +21,7 @@ public:
 
     void setRotation( const quat& t_rotation );
     const quat& getRotation() const;
+    const vector3 getEulerRotation() const;
 
     void move( const vector3& amount );
 

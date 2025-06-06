@@ -15,7 +15,6 @@ class Entity;
 
 class World : public Object {
 public:
-    World();
     ~World();
 
     Entity* createEntity( const std::string name = "", const uint32_t id = 0 );
@@ -25,7 +24,12 @@ public:
 
     void removeEntity( const Entity* entity );
 
-    static World& instance();
+    std::vector<std::unique_ptr<Entity>>& getEntityList();
+
+    static World* instance();
+
+private:
+    World();
 
 protected:
     std::vector< std::unique_ptr< Entity > > m_entitesList;

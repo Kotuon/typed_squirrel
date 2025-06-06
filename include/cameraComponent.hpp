@@ -13,7 +13,7 @@ class DataRecord;
 
 class CameraComponent : public Component {
 public:
-    CameraComponent();
+    CameraComponent( Entity* t_parent );
     ~CameraComponent() = default;
 
     matrix4 viewMatrix();

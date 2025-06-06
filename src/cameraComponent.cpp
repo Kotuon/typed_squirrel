@@ -4,9 +4,10 @@
 
 namespace SquirrelEngine {
 
-CameraComponent::CameraComponent()
-    : fov( 45.f ), fnear( 0.1f ), ffar( 1000.f ), aspect( 4.f / 3.f ),
-      primary( true ), m_eulerRotation( 0.f ), m_rotationIsDirty( false ) {}
+CameraComponent::CameraComponent( Entity* t_parent )
+    : Component( t_parent ), fov( 45.f ), fnear( 0.1f ), ffar( 1000.f ),
+      aspect( 4.f / 3.f ), primary( true ), m_eulerRotation( 0.f ),
+      m_rotationIsDirty( false ) {}
 
 matrix4 CameraComponent::viewMatrix() {
     vector3 position = transform.getPosition();
