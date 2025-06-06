@@ -1,3 +1,12 @@
+/**
+ *
+ * @file inputSystem.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Implements the InputSystem class, which manages input devices, action
+ * mappings, and input events in SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #include "engine.hpp"
 #include "eventSystem.hpp"
@@ -6,12 +15,22 @@
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Updates the input system and all input devices.
+ * @param delta Time elapsed since last update.
+ */
 void InputSystem::update( const float ) {
     for ( auto it = m_devices.begin(); it != m_devices.end(); ++it ) {
         ( *it )->update();
     }
 }
 
+/**
+ * @brief Finds an input device by type and optional offset.
+ * @param type The device type (see InputDeviceType).
+ * @param offset Index offset for multiple devices of the same type.
+ * @return Pointer to the found input device, or nullptr if not found.
+ */
 InputDevice* InputSystem::findInputDevice( const int type, const int offset ) {
     int counter = 0;
 
@@ -28,6 +47,12 @@ InputDevice* InputSystem::findInputDevice( const int type, const int offset ) {
     return nullptr;
 }
 
+/**
+ * @brief Registers an action mapping for a device and button.
+ * @param device Pointer to the input device.
+ * @param button Button index.
+ * @param name Name of the action.
+ */
 void InputSystem::registerActionMapping( InputDevice* device, const int button,
                                          const std::string name ) {
     auto it = m_actions.find( name );
@@ -40,6 +65,12 @@ void InputSystem::registerActionMapping( InputDevice* device, const int button,
     m_deviceActions[device].push_back( m_actions[name].back().get() );
 }
 
+/**
+ * @brief Triggers an action for a device and button with a given amount.
+ * @param device Pointer to the input device.
+ * @param button Button index.
+ * @param amount Value or amount of the action.
+ */
 void InputSystem::triggerAction( InputDevice* device, const int button,
                                  const float amount ) {
     EventSystem* eventSystem = owner->getSystem< EventSystem >();
@@ -62,6 +93,11 @@ void InputSystem::triggerAction( InputDevice* device, const int button,
     }
 }
 
+/**
+ * @brief Gets the current state of an action.
+ * @param action Name of the action.
+ * @return The state of the action as a float.
+ */
 const float InputSystem::getActionState( const std::string action ) {
     auto thisAction = m_actions.find( action );
     if ( thisAction == m_actions.end() ) {

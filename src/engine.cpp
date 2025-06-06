@@ -2,7 +2,8 @@
  *
  * @file engine.cpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief
+ * @brief Implements the Engine class, which manages core systems, update loops,
+ * and the main application flow for SquirrelEngine.
  * @date 2025-04-25
  *
  */
@@ -15,10 +16,20 @@
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Default constructor for Engine.
+ */
 Engine::Engine() {}
 
+/**
+ * @brief Virtual destructor for Engine.
+ */
 Engine::~Engine() {}
 
+/**
+ * @brief Starts all essential systems for the engine.
+ * @return StartupErrors indicating success or failure.
+ */
 enum StartupErrors Engine::initialize() {
     m_window = std::make_unique< Window >();
 
@@ -35,6 +46,12 @@ enum StartupErrors Engine::initialize() {
     return StartupErrors::SE_Success;
 }
 
+/**
+ * @brief Moves the camera based on input and delta time.
+ * @param cameraC Pointer to the CameraComponent.
+ * @param timeManager Pointer to the TimeManager system.
+ * @param inputSystem Pointer to the InputSystem.
+ */
 static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
                         InputSystem* inputSystem ) {
 
@@ -74,15 +91,16 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
 
     vector2 mouseDelta = mouse->getCursorDelta();
 
-    cameraC->rotatePitch(
-        glm::radians( cameraC->getSensitivity() * -mouseDelta.y *
-                      timeManager->getDeltaTime() ) );
+    cameraC->addPitch( glm::radians( cameraC->getSensitivity() * -mouseDelta.y *
+                                     timeManager->getDeltaTime() ) );
 
-    cameraC->rotateYaw(
-        glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
-                      timeManager->getDeltaTime() ) );
+    cameraC->addYaw( glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
+                                   timeManager->getDeltaTime() ) );
 }
 
+/**
+ * @brief Handles updates for all systems in engine.
+ */
 void Engine::update() {
     TimeManager* timeManager = getSystem< TimeManager >();
     InputSystem* inputSystem = getSystem< InputSystem >();
@@ -129,12 +147,23 @@ void Engine::update() {
     }
 }
 
+/**
+ * @brief Properly shuts all systems down on engine close.
+ */
 void Engine::shutdown() {
     // TODO: shutdown each of the systems
 }
 
+/**
+ * @brief Get the Window Handle object.
+ * @return Pointer to the window handle.
+ */
 Window* Engine::getWindowHandle() { return m_window.get(); }
 
+/**
+ * @brief Get the singleton instance of the Engine.
+ * @return Pointer to the Engine instance.
+ */
 Engine* Engine::instance() {
     static Engine engineInstance;
     return &engineInstance;

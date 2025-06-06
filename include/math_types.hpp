@@ -1,3 +1,12 @@
+/**
+ *
+ * @file math_types.hpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Defines common math types and aliases (vectors, matrices, quaternions)
+ * for SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #ifndef MATH_TYPES_HPP
 #define MATH_TYPES_HPP

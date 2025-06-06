@@ -2,7 +2,8 @@
  *
  * @file crash_handler.cpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief
+ * @brief Implements utilities for handling application crashes and writing dump
+ * files in SquirrelEngine.
  * @date 2025-06-06
  *
  */

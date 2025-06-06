@@ -1,17 +1,38 @@
+/**
+ *
+ * @file shader.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Implements the Shader, ShaderBase, and Program classes, which handle
+ * OpenGL shader compilation and linking for SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #include <fstream>
 
 #include "core.hpp"
-
 #include "shader.hpp"
 
 namespace SquirrelEngine {
 
 //---------- Shader Base ----------//
+
+/**
+ * @brief Default constructor for ShaderBase.
+ */
 ShaderBase::ShaderBase() {}
 
+/**
+ * @brief Constructs a ShaderBase with a given OpenGL handle.
+ * @param t_handle OpenGL shader or program handle.
+ */
 ShaderBase::ShaderBase( GLuint t_handle ) : m_handle( t_handle ) {}
 
+/**
+ * @brief Reads the contents of a shader file.
+ * @param FileName Path to the shader file.
+ * @return Contents of the file as a string.
+ */
 const std::string ShaderBase::readFile( const std::string& FileName ) {
     std::string content;
 
@@ -32,6 +53,10 @@ const std::string ShaderBase::readFile( const std::string& FileName ) {
     return content;
 }
 
+/**
+ * @brief Checks and prints the compile status of a shader.
+ * @param filename Name of the shader file.
+ */
 void ShaderBase::getCompileStatus( const std::string& filename ) {
     GLint success = 0;
     GLint logSize = 0;
@@ -48,11 +73,21 @@ void ShaderBase::getCompileStatus( const std::string& filename ) {
     }
 }
 
+/**
+ * @brief Gets the location of a uniform or attribute in the shader program.
+ * @param locationName Name of the uniform or attribute.
+ * @return Location as GLuint.
+ */
 GLuint ShaderBase::getLocation( const char* locationName ) {
     return glGetUniformLocation( m_handle, locationName );
 }
 
 //---------- Shader ----------//
+
+/**
+ * @brief Constructs a Shader from a file.
+ * @param filename Path to the shader file.
+ */
 Shader::Shader( const std::string& filename )
     : m_type( typeFromName( filename ) ) {
     m_handle = glCreateShader( m_type );
@@ -70,12 +105,28 @@ Shader::Shader( const std::string& filename )
     getCompileStatus( filename );
 }
 
+/**
+ * @brief Destructor for Shader.
+ */
 Shader::~Shader() { glDeleteShader( m_handle ); }
 
+/**
+ * @brief Gets the type of the shader (e.g., GL_VERTEX_SHADER).
+ * @return Shader type as GLenum.
+ */
 GLenum Shader::getType() const { return m_type; }
 
+/**
+ * @brief Gets the OpenGL handle for the shader.
+ * @return Shader handle as GLuint.
+ */
 GLuint Shader::getHandle() const { return m_handle; }
 
+/**
+ * @brief Determines the shader type from the filename extension.
+ * @param filename Path to the shader file.
+ * @return Shader type as GLenum.
+ */
 GLenum Shader::typeFromName( const std::string& filename ) {
     if ( filename.ends_with( ".vert" ) ) {
         return GL_VERTEX_SHADER;
@@ -95,10 +146,24 @@ GLenum Shader::typeFromName( const std::string& filename ) {
 }
 
 //---------- Program ----------//
+
+/**
+ * @brief Copy constructor for Program.
+ * @param other Program to copy from.
+ */
 Program::Program( const Program& other ) : ShaderBase( other.m_handle ) {}
 
+/**
+ * @brief Copy constructor from pointer for Program.
+ * @param other Pointer to Program to copy from.
+ */
 Program::Program( const Program* other ) : ShaderBase( other->m_handle ) {}
 
+/**
+ * @brief Constructs a Program from two shaders.
+ * @param first First shader.
+ * @param second Second shader.
+ */
 Program::Program( const Shader& first, const Shader& second )
     : ShaderBase( glCreateProgram() ) {
     glAttachShader( m_handle, first.getHandle() );
@@ -107,6 +172,11 @@ Program::Program( const Shader& first, const Shader& second )
     glLinkProgram( m_handle );
 }
 
+/**
+ * @brief Constructs a Program from two shader files.
+ * @param firstFile Vertex shader file.
+ * @param secondFile Fragment shader file.
+ */
 Program::Program( const std::string& firstFile, const std::string& secondFile )
     : ShaderBase( glCreateProgram() ) {
     Shader first( firstFile );
@@ -118,8 +188,15 @@ Program::Program( const std::string& firstFile, const std::string& secondFile )
     glLinkProgram( m_handle );
 }
 
+/**
+ * @brief Destructor for Program.
+ */
 Program::~Program() { glDeleteProgram( m_handle ); }
 
+/**
+ * @brief Gets the OpenGL handle for the program.
+ * @return Program handle as GLuint.
+ */
 GLuint Program::getHandle() const { return m_handle; }
 
 } // namespace SquirrelEngine

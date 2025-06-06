@@ -2,7 +2,8 @@
  *
  * @file objectRenderer.cpp
  * @author Kelson Wysocki (kelson.wysocki@gmail.com)
- * @brief
+ * @brief Implements the ObjectRenderer class, which handles rendering of
+ * entities in SquirrelEngine.
  * @date 2025-05-05
  *
  */
@@ -19,8 +20,15 @@
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Default constructor for ObjectRenderer.
+ */
 ObjectRenderer::ObjectRenderer() {}
 
+/**
+ * @brief Renders all entities in the world by drawing their models and swapping
+ * the window buffer.
+ */
 void ObjectRenderer::render() {
     World* world = World::instance();
 

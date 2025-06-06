@@ -1,3 +1,12 @@
+/**
+ *
+ * @file keyboard.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief Implements the Keyboard class, which represents a keyboard input
+ * device for SquirrelEngine.
+ * @date 2025-06-06
+ *
+ */
 
 #include <GLFW/glfw3.h>
 
@@ -7,8 +16,20 @@
 #include "window.hpp"
 
 namespace SquirrelEngine {
+
+/**
+ * @brief Array mapping GLFW key codes to internal key codes.
+ */
 std::array< int, GLFW_KEY_LAST > keyMappings;
 
+/**
+ * @brief GLFW key callback for keyboard input.
+ * @param window Pointer to the GLFW window.
+ * @param key Key code.
+ * @param scancode Platform-specific scancode.
+ * @param action Key action (press, release, repeat).
+ * @param mods Modifier keys.
+ */
 static void keyboardCallback( GLFWwindow*, int key, int, int action, int ) {
     InputSystem* inputSystem = getSystem< InputSystem >();
 
@@ -22,8 +43,14 @@ static void keyboardCallback( GLFWwindow*, int key, int, int action, int ) {
                                 static_cast< float >( state ) );
 }
 
+/**
+ * @brief Default constructor for Keyboard.
+ */
 Keyboard::Keyboard() {}
 
+/**
+ * @brief Initializes the keyboard device and sets up key mappings.
+ */
 void Keyboard::initialize() {
     Window* window = Engine::instance()->getWindowHandle();
     glfwSetKeyCallback( window->getHandle(), keyboardCallback );
@@ -120,6 +147,11 @@ void Keyboard::initialize() {
     keyMappings[GLFW_KEY_F12] = KEY_FUNC_F12;
 }
 
+/**
+ * @brief Gets the state of a keyboard button.
+ * @param button The button index.
+ * @return The state of the button as a float.
+ */
 const float Keyboard::getButtonState( const int button ) {
     if ( button < 0 || KEY_LAST <= button ) {
         Trace::message( "Button outside of range." );
@@ -129,6 +161,11 @@ const float Keyboard::getButtonState( const int button ) {
     return static_cast< float >( m_keyStates[button] );
 }
 
+/**
+ * @brief Sets the state of a keyboard button.
+ * @param button The button index.
+ * @param state The new state of the button.
+ */
 void Keyboard::setButtonState( const int button, const float state ) {
     if ( button < 0 || KEY_LAST <= button ) {
         Trace::message( "Button outside of range." );
