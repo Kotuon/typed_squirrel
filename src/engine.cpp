@@ -46,7 +46,7 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
     }
     mouse->setCursorMode( GLFW_CURSOR_DISABLED );
 
-    const float speed = 10.f;
+    const float speed = 5.f;
 
     cameraC->transform.move( cameraC->transform.forwardVector() *
                              timeManager->getDeltaTime() * speed *
@@ -82,11 +82,6 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
         glm::radians( cameraC->getSensitivity() * -mouseDelta.x *
                       timeManager->getDeltaTime() ) );
 }
-struct PerFrameData {
-    matrix4 view;
-    matrix4 proj;
-    vector4 cameraPos;
-};
 
 void Engine::update() {
     TimeManager* timeManager = getSystem< TimeManager >();
@@ -128,9 +123,6 @@ void Engine::update() {
 
         // TODO: call render function
         objRenderer->render();
-
-        // Swap buffer (may move later)
-        m_window->swapBuffer();
 
         // Don't use whole cpu
         timeManager->sleep( 1 );

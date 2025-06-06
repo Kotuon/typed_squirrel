@@ -23,6 +23,15 @@ namespace SquirrelEngine {
 class Model;
 class Program;
 
+struct Vertex {
+    Vertex( vector3 position_, vector3 normal_, vector2 uv_ )
+        : position( position_ ), normal( normal_ ), uv( uv_ ) {}
+
+    vector3 position;
+    vector3 normal;
+    vector2 uv;
+};
+
 class Mesh : public Object {
 public:
     Mesh();
@@ -51,13 +60,20 @@ private:
     Model* m_model;
     std::unique_ptr< Program > m_shader;
 
-    std::vector< float > m_vertices; //!< Contains vertices of model
-    std::vector< float > m_normals;  //!< Contains normals of model
-    std::vector< float > m_uvs;      //!< Contains uv data of model
-    std::string m_modelName;         //!< Name of the file for the model
-    GLuint m_vertexbuffer;           //!< Vertex buffer of model
-    GLuint m_normalbuffer;           //!< Normal buffer of model
-    GLuint m_uvbuffer;               //!< UV buffer of model
+    std::vector< Vertex > m_vertices;
+
+    // std::vector< float > m_vertices; //!< Contains vertices of model
+    // std::vector< float > m_normals; //!< Contains normals of model
+    // std::vector< float > m_uvs;     //!< Contains uv data of model
+    std::string m_modelName; //!< Name of the file for the model
+    // GLuint m_vertexbuffer;          //!< Vertex buffer of model
+    // GLuint m_normalbuffer;          //!< Normal buffer of model
+    // GLuint m_uvbuffer;              //!< UV buffer of model
+
+    GLsizei vertCount;
+
+    GLuint vao;
+    GLuint vbo;
 };
 
 } // namespace SquirrelEngine

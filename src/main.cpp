@@ -60,7 +60,7 @@ int main( int, char** ) {
     Model* cubeModel = cube->createComponent< Model >();
     cubeModel->initMesh( "models/cube.obj" );
     cubeModel->initShader( "shaders/base.vert", "shaders/base.frag" );
-    cube->transform.setScale( vector3( 0.5f ) );
+    // cube->transform.setScale( vector3( 0.5f ) );
 
     engineInstance->update();
     engineInstance->shutdown();

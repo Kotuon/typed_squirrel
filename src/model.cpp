@@ -37,10 +37,10 @@ void Model::setMesh( Mesh* t_mesh ) {
 
 Mesh* Model::getMesh() const { return m_mesh.get(); }
 
-void Model::setRenderMethod( unsigned t_renderMethod ) {
+void Model::setRenderMethod( GLuint t_renderMethod ) {
     m_renderMethod = t_renderMethod;
 }
 
-unsigned Model::getRenderMethod() const { return m_renderMethod; }
+GLuint Model::getRenderMethod() const { return m_renderMethod; }
 
 } // namespace SquirrelEngine

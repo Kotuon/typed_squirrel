@@ -1,3 +1,11 @@
+/**
+ * 
+ * @file mesh.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief 
+ * @date 2025-06-06
+ * 
+ */
 
 #include "core.hpp"
 
@@ -5,40 +13,23 @@ namespace SquirrelEngine {
 
 Mesh::Mesh() {}
 
-Mesh::Mesh( const Mesh& other )
-    : m_vertexbuffer( other.m_vertexbuffer ),
-      m_normalbuffer( other.m_normalbuffer ), m_uvbuffer( other.m_uvbuffer ) {
-    for ( float vert : other.m_vertices ) {
+Mesh::Mesh( const Mesh& other ) : vao( other.vao ), vbo( other.vbo ) {
+    for ( Vertex vert : other.m_vertices ) {
         m_vertices.emplace_back( vert );
-    }
-    for ( float norm : other.m_normals ) {
-        m_normals.emplace_back( norm );
-    }
-    for ( float uv : other.m_uvs ) {
-        m_uvs.emplace_back( uv );
     }
 }
 
-Mesh::Mesh( const Mesh* other )
-    : m_vertexbuffer( other->m_vertexbuffer ),
-      m_normalbuffer( other->m_normalbuffer ), m_uvbuffer( other->m_uvbuffer ) {
-    for ( float vert : other->m_vertices ) {
+Mesh::Mesh( const Mesh* other ) : vao( other->vao ), vbo( other->vbo ) {
+    for ( Vertex vert : other->m_vertices ) {
         m_vertices.emplace_back( vert );
-    }
-    for ( float norm : other->m_normals ) {
-        m_normals.emplace_back( norm );
-    }
-    for ( float uv : other->m_uvs ) {
-        m_uvs.emplace_back( uv );
     }
 }
 
 Mesh::Mesh( Model* t_model ) : m_model( t_model ) {}
 
 Mesh::~Mesh() {
-    glDeleteBuffers( 1, &m_vertexbuffer );
-    glDeleteBuffers( 1, &m_uvbuffer );
-    glDeleteBuffers( 1, &m_normalbuffer );
+    glDeleteBuffers( 1, &vao );
+    glDeleteBuffers( 1, &vbo );
 }
 
 bool Mesh::load( std::string t_modelName ) { return read( t_modelName ); }
@@ -101,23 +92,34 @@ bool Mesh::read( std::string t_modelName ) {
         }
     }
 
-    // Bind vertex data to buffers
-    glGenBuffers( 1, &m_vertexbuffer );
-    glBindBuffer( GL_ARRAY_BUFFER, m_vertexbuffer );
-    glBufferData( GL_ARRAY_BUFFER, m_vertices.size() * sizeof( float ),
-                  &m_vertices[0], GL_STATIC_DRAW );
+    vertCount = static_cast< GLsizei >( m_vertices.size() );
 
-    // Bind uv data to buffers
-    glGenBuffers( 1, &m_uvbuffer );
-    glBindBuffer( GL_ARRAY_BUFFER, m_uvbuffer );
-    glBufferData( GL_ARRAY_BUFFER, m_uvs.size() * sizeof( float ), &m_uvs[0],
-                  GL_STATIC_DRAW );
+    glGenVertexArrays( 1, &vao );
+    glBindVertexArray( vao );
 
-    // Bind m_normals data to buffers
-    glGenBuffers( 1, &m_normalbuffer );
-    glBindBuffer( GL_ARRAY_BUFFER, m_normalbuffer );
-    glBufferData( GL_ARRAY_BUFFER, m_normals.size() * sizeof( float ),
-                  &m_normals[0], GL_STATIC_DRAW );
+    glGenBuffers( 1, &vbo );
+
+    glBindBuffer( GL_ARRAY_BUFFER, vbo );
+    glBufferData( GL_ARRAY_BUFFER, sizeof( Vertex ) * vertCount,
+                  m_vertices.data(), GL_STATIC_DRAW );
+
+    // Positions
+    glEnableVertexAttribArray( 0 );
+    glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE, sizeof( Vertex ),
+                           ( void* )0 );
+
+    // Normals
+    glEnableVertexAttribArray( 1 );
+    glVertexAttribPointer( 1, 3, GL_FLOAT, GL_FALSE, sizeof( Vertex ),
+                           ( void* )offsetof( Vertex, normal ) );
+
+    // Texture coords
+    glEnableVertexAttribArray( 2 );
+    glVertexAttribPointer( 2, 2, GL_FLOAT, GL_FALSE, sizeof( Vertex ),
+                           ( void* )offsetof( Vertex, uv ) );
+
+    glBindBuffer( GL_ARRAY_BUFFER, 0 );
+    glBindVertexArray( 0 );
 
     return true;
 }
@@ -125,15 +127,9 @@ bool Mesh::read( std::string t_modelName ) {
 void Mesh::insertData( char* data[3], std::vector< vector3 >& v,
                        std::vector< vector2 >& vt,
                        std::vector< vector3 >& vn ) {
-    m_vertices.push_back( v[atoi( data[0] ) - 1].x );
-    m_vertices.push_back( v[atoi( data[0] ) - 1].y );
-    m_vertices.push_back( v[atoi( data[0] ) - 1].z );
 
-    m_uvs.push_back( vt[atoi( data[1] ) - 1].x );
-    m_uvs.push_back( vt[atoi( data[1] ) - 1].y );
-
-    m_normals.push_back( vn[atoi( data[2] ) - 1].x );
-    m_normals.push_back( vn[atoi( data[2] ) - 1].y );
+    m_vertices.emplace_back( v[atoi( data[0] ) - 1], vn[atoi( data[2] ) - 1],
+                             vt[atoi( data[1] ) - 1] );
 }
 
 void Mesh::draw() {
@@ -156,45 +152,13 @@ void Mesh::draw() {
     glUniformMatrix4fv( m_shader->getLocation( "view" ), 1, GL_FALSE,
                         &camera->viewMatrix()[0][0] );
 
-    // glm::mat4 MVP = projection * view * model;
-    // glUniformMatrix4fv( Shader::GetMatrixId(), 1, GL_FALSE, &MVP[0][0] );
-    // glUniformMatrix4fv( Shader::GetModelMatrixId(), 1, GL_FALSE, &model[0][0]
-    // ); glUniformMatrix4fv( Shader::GetViewMatrixId(), 1, GL_FALSE,
-    // &view[0][0] );
+    glBindVertexArray( vao );
 
-    // // Sending light data to the shaders
-    // vector3lightPos = Engine::GetLightPos();
-    // glUniform3f( Shader::GetLightId(), lightPos.x, lightPos.y, lightPos.z );
-    // glUniform1f( Shader::GetLightPowerId(), Engine::GetLightPower() );
-
-    // Setup texture for drawing if it exists
-    // if ( parent->GetTexture() ) parent->GetTexture()->Display();
-
-    // Setup the model m_vertices
-    glEnableVertexAttribArray( 0 );
-    glBindBuffer( GL_ARRAY_BUFFER, m_vertexbuffer );
-    glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE, 0, ( void* )0 );
-
-    // Setup the model uv
-    glEnableVertexAttribArray( 1 );
-    glBindBuffer( GL_ARRAY_BUFFER, m_uvbuffer );
-    glVertexAttribPointer( 1, 2, GL_FLOAT, GL_FALSE, 0, ( void* )0 );
-
-    // Setup the model m_normals
-    glEnableVertexAttribArray( 2 );
-    glBindBuffer( GL_ARRAY_BUFFER, m_normalbuffer );
-    glVertexAttribPointer( 2, 3, GL_FLOAT, GL_FALSE, 0, ( void* )0 );
-
-    // Draw the object
-    glDrawArrays( GL_TRIANGLES, 0,
-                  static_cast< GLsizei >( m_vertices.size() ) );
-
-    // Disable data sent to shaders
-    glDisableVertexAttribArray( 0 );
-    glDisableVertexAttribArray( 1 );
-    glDisableVertexAttribArray( 2 );
+    glDrawArrays( m_model->getRenderMethod(), 0, vertCount );
 
     glUseProgram( 0 );
+
+    glBindVertexArray( 0 );
 }
 
 void Mesh::setShader( Program* t_shader ) {

@@ -1,4 +1,11 @@
-
+/**
+ *
+ * @file crash_handler.cpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief
+ * @date 2025-06-06
+ *
+ */
 
 #include <Windows.h>
 #include <dbghelp.h>
@@ -9,6 +16,12 @@
 
 namespace SquirrelEngine {
 
+/**
+ * @brief Writes dump file if program crashes
+ *
+ * @param Exception
+ * @return LONG
+ */
 LONG WINAPI writeDump( EXCEPTION_POINTERS* Exception ) {
     MINIDUMP_EXCEPTION_INFORMATION Information = MINIDUMP_EXCEPTION_INFORMATION{
         GetCurrentThreadId(), Exception, FALSE };
@@ -26,6 +39,10 @@ LONG WINAPI writeDump( EXCEPTION_POINTERS* Exception ) {
     return EXCEPTION_CONTINUE_SEARCH;
 }
 
+/**
+ * @brief Setup up writing of dump file in case of crash
+ *
+ */
 void setupDump() {
     ULONG GuaranteedStackSize = 17000;
     SetUnhandledExceptionFilter( writeDump );

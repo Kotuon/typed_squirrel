@@ -15,6 +15,7 @@
 #include "model.hpp"
 #include "entity.hpp"
 #include "objectRenderer.hpp"
+#include "window.hpp"
 
 namespace SquirrelEngine {
 
@@ -36,6 +37,10 @@ void ObjectRenderer::render() {
 
         model->draw();
     }
+
+    // Swap buffer (may move later)
+    Window* window = Engine::instance()->getWindowHandle();
+    window->swapBuffer();
 }
 
 } // namespace SquirrelEngine

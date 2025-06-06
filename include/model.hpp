@@ -1,3 +1,11 @@
+/**
+ * 
+ * @file model.hpp
+ * @author Kelson Wysocki (kelson.wysocki@gmail.com)
+ * @brief 
+ * @date 2025-06-06
+ * 
+ */
 
 #ifndef MODEL_HPP
 #define MODEL_HPP
@@ -24,8 +32,8 @@ public:
     void setMesh( Mesh* t_mesh );
     Mesh* getMesh() const;
 
-    void setRenderMethod( unsigned t_renderMethod );
-    unsigned getRenderMethod() const;
+    void setRenderMethod( GLuint t_renderMethod );
+    GLuint getRenderMethod() const;
 
 private:
     std::unique_ptr< Mesh > m_mesh;
