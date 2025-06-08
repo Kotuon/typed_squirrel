@@ -36,6 +36,7 @@ file(GLOB_RECURSE PROJECT_SOURCES
     src/*.cc
     src/*.c
     src/utils/*.cpp
+    src/tests/*.cpp
 )
 
 file(COPY assets/shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})

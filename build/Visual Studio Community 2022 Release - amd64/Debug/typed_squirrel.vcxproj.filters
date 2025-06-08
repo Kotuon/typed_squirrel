@@ -37,10 +37,19 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\objectRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\quaternion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\glmQuaternionTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\quaternionTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\transform.cpp">
@@ -53,6 +62,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\time_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\utils\trace.cpp">

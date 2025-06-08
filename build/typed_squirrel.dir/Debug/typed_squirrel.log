@@ -1,5 +1,4 @@
-﻿  Building Custom Rule C:/Users/Kelson/Documents/Projects/typed_squirrel/CMakeLists.txt
-  cameraComponent.cpp
+﻿  cameraComponent.cpp
   component.cpp
   engine.cpp
   eventSystem.cpp
@@ -11,24 +10,20 @@
   model.cpp
   mouse.cpp
   objectRenderer.cpp
+  quaternion.cpp
   shader.cpp
   system.cpp
+  glmQuaternionTests.cpp
+  quaternionTests.cpp
   transform.cpp
   crash_handler.cpp
   profiler.cpp
-  time_manager.cpp
-  trace.cpp
-  window.cpp
   Generating Code...
   Compiling...
+  time_manager.cpp
+  timer.cpp
+  trace.cpp
+  window.cpp
   world.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_impl_glfw.cpp
-  imgui_impl_opengl3.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
   Generating Code...
-  glad.c
   typed_squirrel.vcxproj -> C:\Users\Kelson\Documents\Projects\typed_squirrel\build\Debug\typed_squirrel.exe
