@@ -7,6 +7,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #include "tests/glmQuaternionTests.hpp"
 #include "tests/quaternionTests.hpp"
+#include "simdQuaternionTests.hpp"
 #include "utils/timer.hpp"
 
 void compareQuats() {
@@ -59,6 +60,32 @@ void compareQuats() {
     GLMQuatTests::fromEuler();
     GLMQuatTests::fromAxisAngle();
     GLMQuatTests::end();
+
+    
+
+    SIMDQuatTests::init();
+    SIMDQuatTests::construction();
+    SIMDQuatTests::copyConstruct();
+    SIMDQuatTests::assignment();
+    SIMDQuatTests::addAssign();
+    SIMDQuatTests::subAssign();
+    SIMDQuatTests::mulQuatAssign();
+    SIMDQuatTests::mulScaleAssign();
+    SIMDQuatTests::negation();
+    SIMDQuatTests::add();
+    SIMDQuatTests::sub();
+    SIMDQuatTests::mulQuat();
+    SIMDQuatTests::mulScale();
+    SIMDQuatTests::dot();
+    SIMDQuatTests::norm();
+    SIMDQuatTests::normSquared();
+    SIMDQuatTests::normalize();
+    SIMDQuatTests::conjugate();
+    SIMDQuatTests::rotateVectorFromFloats();
+    SIMDQuatTests::rotateVectorFromArray();
+    SIMDQuatTests::fromEuler();
+    SIMDQuatTests::fromAxisAngle();
+    SIMDQuatTests::end();
 }
 
 #include "quaternion.hpp"
@@ -67,21 +94,21 @@ void compareQuats() {
 int main( int, char** ) {
     using namespace SquirrelEngine;
     setupDump();
-    // compareQuats();
+compareQuats();
 
-    Quaternion q1( 1.f, 2.f, 3.f, 4.f );
-    Quaternion q2( 10.f, 20.f, 30.f, 40.f );
-    Quaternion q3 = q1 * q2;
+    // Quaternion q1( 1.f, 2.f, 3.f, 4.f );
+    // Quaternion q2( 10.f, 20.f, 30.f, 40.f );
+    // Quaternion q3 = q1 * q2;
 
-    Trace::message(
-        fmt::format( "( {}, {}, {}, {} )", q3.w, q3.i, q3.j, q3.k ) );
+    // Trace::message(
+    //     fmt::format( "( {}, {}, {}, {} )", q3.w, q3.i, q3.j, q3.k ) );
 
-    SIMDQuaternion sq1( 1.f, 2.f, 3.f, 4.f );
-    SIMDQuaternion sq2( 10.f, 20.f, 30.f, 40.f );
-    SIMDQuaternion sq3 = sq1 * sq2;
+    // SIMDQuaternion sq1( 1.f, 2.f, 3.f, 4.f );
+    // SIMDQuaternion sq2( 10.f, 20.f, 30.f, 40.f );
+    // SIMDQuaternion sq3 = sq1 * sq2;
 
-    Trace::message(
-        fmt::format( "( {}, {}, {}, {} )", sq3.w, sq3.i, sq3.j, sq3.k ) );
+    // Trace::message(
+    //     fmt::format( "( {}, {}, {}, {} )", sq3.w, sq3.i, sq3.j, sq3.k ) );
 }
 ////////////////////////////////////////////////////////////////////////////////
 

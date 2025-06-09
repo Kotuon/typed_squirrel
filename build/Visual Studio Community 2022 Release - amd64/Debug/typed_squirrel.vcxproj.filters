@@ -55,6 +55,9 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\quaternionTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\simdQuaternionTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\transform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
