@@ -12,8 +12,6 @@
 #define QUATERNION_HPP
 #pragma once
 
-#include "math_types.hpp"
-
 namespace SquirrelEngine {
 
 /**

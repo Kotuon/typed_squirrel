@@ -339,6 +339,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\objectRenderer.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\quaternion.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\simdQuaternion.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\glmQuaternionTests.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\quaternionTests.cpp" />

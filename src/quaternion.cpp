@@ -8,6 +8,8 @@
  *
  */
 
+#include <cmath>
+
 #include "quaternion.hpp"
 
 namespace SquirrelEngine {
@@ -152,8 +154,6 @@ const Quaternion Quaternion::operator-( const Quaternion& rhs ) const {
  * @return Resulting quaternion.
  */
 const Quaternion Quaternion::operator*( const Quaternion& rhs ) const {
-    // return Quaternion( *this ) *= rhs;
-
     return Quaternion(
         ( w * rhs.w ) - ( i * rhs.i ) - ( j * rhs.j ) - ( k * rhs.k ),
         ( w * rhs.i ) + ( i * rhs.w ) + ( j * rhs.k ) - ( k * rhs.j ),

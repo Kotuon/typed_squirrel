@@ -43,6 +43,9 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\simdQuaternion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
