@@ -1,0 +1,22 @@
+File name, Function name, Time taken
+quaternionOldTests.cpp,construction(void),211.9
+quaternionOldTests.cpp,copyConstruct(void),194.1
+quaternionOldTests.cpp,assignment(void),339.6
+quaternionOldTests.cpp,addAssign(void),225.6
+quaternionOldTests.cpp,subAssign(void),225.2
+quaternionOldTests.cpp,mulQuatAssign(void),613.1
+quaternionOldTests.cpp,mulScaleAssign(void),229.9
+quaternionOldTests.cpp,negation(void),595.2
+quaternionOldTests.cpp,add(void),594.1
+quaternionOldTests.cpp,sub(void),538.4
+quaternionOldTests.cpp,mulQuat(void),1016.2
+quaternionOldTests.cpp,mulScale(void),556.7
+quaternionOldTests.cpp,dot(void),183.3
+quaternionOldTests.cpp,norm(void),308
+quaternionOldTests.cpp,normSquared(void),172.2
+quaternionOldTests.cpp,normalize(void),1607.1
+quaternionOldTests.cpp,conjugate(void),471.7
+quaternionOldTests.cpp,rotateVectorFromFloats(void),1309.7
+quaternionOldTests.cpp,rotateVectorFromArray(void),1002
+quaternionOldTests.cpp,fromEuler(void),2316.7
+quaternionOldTests.cpp,fromAxisAngle(void),1200.6

@@ -7,6 +7,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #include "tests/glmQuaternionTests.hpp"
 #include "tests/quaternionTests.hpp"
+#include "tests/quaternionOldTests.hpp"
 #include "utils/timer.hpp"
 
 void compareQuats() {
@@ -35,6 +36,30 @@ void compareQuats() {
     QuatTests::fromEuler();
     QuatTests::fromAxisAngle();
     QuatTests::end();
+
+    QuatOldTests::init();
+    QuatOldTests::construction();
+    QuatOldTests::copyConstruct();
+    QuatOldTests::assignment();
+    QuatOldTests::addAssign();
+    QuatOldTests::subAssign();
+    QuatOldTests::mulQuatAssign();
+    QuatOldTests::mulScaleAssign();
+    QuatOldTests::negation();
+    QuatOldTests::add();
+    QuatOldTests::sub();
+    QuatOldTests::mulQuat();
+    QuatOldTests::mulScale();
+    QuatOldTests::dot();
+    QuatOldTests::norm();
+    QuatOldTests::normSquared();
+    QuatOldTests::normalize();
+    QuatOldTests::conjugate();
+    QuatOldTests::rotateVectorFromFloats();
+    QuatOldTests::rotateVectorFromArray();
+    QuatOldTests::fromEuler();
+    QuatOldTests::fromAxisAngle();
+    QuatOldTests::end();
 
     GLMQuatTests::init();
     GLMQuatTests::construction();

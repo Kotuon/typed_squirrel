@@ -37,7 +37,7 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\objectRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\quaternion.cpp">
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\quaternionOld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\shader.cpp">
@@ -47,6 +47,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\glmQuaternionTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\quaternionOldTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\tests\quaternionTests.cpp">
