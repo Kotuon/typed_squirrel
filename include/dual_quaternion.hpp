@@ -18,6 +18,9 @@ public:
     constexpr DualQuaternion( const DualQuaternion& other )
         : real( other.real ), dual( other.dual ) {}
 
+    constexpr DualQuaternion( const Quaternion real_, const Quaternion dual_ )
+        : real( real_ ), dual( dual_ ) {}
+
     constexpr DualQuaternion& operator=( const DualQuaternion& other ) {
         real = other.real;
         dual = other.dual;
@@ -51,6 +54,19 @@ public:
         dual *= scaler;
 
         return *this;
+    }
+
+    constexpr const DualQuaternion operator-() const {
+        return DualQuaternion( -real, -dual );
+    }
+
+    constexpr const DualQuaternion
+    operator+( const DualQuaternion& rhs ) const {
+        return DualQuaternion( real + rhs.real, dual + rhs.dual );
+    }
+
+    constexpr const DualQuaternion operator-( const DualQuaternion& rhs ) {
+        return DualQuaternion( real - rhs.real, dual - rhs.dual );
     }
 
 public:
