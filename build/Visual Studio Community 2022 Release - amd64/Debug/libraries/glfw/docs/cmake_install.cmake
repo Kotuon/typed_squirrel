@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/glfw/docs
+# Install script for directory: C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,5 +30,9 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/GLFW" TYPE DIRECTORY FILES "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/docs/html")
 endif()
 

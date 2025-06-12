@@ -1,6 +1,6 @@
-^C:\USERS\KELSO\DOCUMENTS\PROJECTS\TYPED_SQUIRREL\LIBRARIES\FMT\CMAKELISTS.TXT
+^C:\USERS\KELSON\DOCUMENTS\PROJECTS\TYPED_SQUIRREL\LIBRARIES\FMT\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/kelso/Documents/Projects/typed_squirrel "-BC:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/typed_squirrel "-BC:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

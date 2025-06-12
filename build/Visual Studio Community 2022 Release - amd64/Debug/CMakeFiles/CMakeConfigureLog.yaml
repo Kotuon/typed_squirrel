@@ -4,26 +4,16 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      The system is: Windows - 10.0.19045 - AMD64
-
----
-events:
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
       - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Windows - 10.0.19045 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
@@ -33,10 +23,10 @@ events:
       
       The output was:
       0
-      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-      Build started 6/10/2025 3:47:38 PM.
+      MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+      Build started 6/12/2025 1:21:26 PM.
       
-      Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -45,25 +35,25 @@ events:
         Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
         CMakeCCompilerId.c
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.exe
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.44
+      Time Elapsed 00:00:00.61
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -71,14 +61,14 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/3.30.4/CompilerIdC/CompilerIdC.exe
+        C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/3.28.0-rc3/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
@@ -88,10 +78,10 @@ events:
       
       The output was:
       0
-      MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-      Build started 6/10/2025 3:47:40 PM.
+      MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+      Build started 6/12/2025 1:21:27 PM.
       
-      Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -100,25 +90,25 @@ events:
         Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
       ClCompile:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
         CMakeCXXCompilerId.cpp
       Link:
-        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.exe
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
-        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\3.28.0-rc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.35
+      Time Elapsed 00:00:00.38
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -126,19 +116,19 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/3.30.4/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/3.28.0-rc3/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-47m77m"
-      binary: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-47m77m"
+      source: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-umaj55"
+      binary: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-umaj55"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -146,327 +136,270 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-47m77m'
+        Change Dir: 'C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-umaj55'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5e062.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 6/10/2025 3:47:42 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b6396.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 6/12/2025 1:21:27 PM.
         
-        Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-47m77m\\cmTC_5e062.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-umaj55\\cmTC_b6396.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_5e062.dir\\Debug\\".
+          Creating directory "cmTC_b6396.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-47m77m\\Debug\\".
-          Creating directory "cmTC_5e062.dir\\Debug\\cmTC_5e062.tlog\\".
+          Creating directory "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-umaj55\\Debug\\".
+          Creating directory "cmTC_b6396.dir\\Debug\\cmTC_b6396.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_5e062.dir\\Debug\\cmTC_5e062.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_5e062.dir\\Debug\\cmTC_5e062.tlog\\unsuccessfulbuild".
+          Creating "cmTC_b6396.dir\\Debug\\cmTC_b6396.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_b6396.dir\\Debug\\cmTC_b6396.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e062.dir\\Debug\\\\" /Fd"cmTC_5e062.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b6396.dir\\Debug\\\\" /Fd"cmTC_b6396.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33145 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e062.dir\\Debug\\\\" /Fd"cmTC_5e062.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b6396.dir\\Debug\\\\" /Fd"cmTC_b6396.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-47m77m\\Debug\\cmTC_5e062.exe" /INCREMENTAL /ILK:"cmTC_5e062.dir\\Debug\\cmTC_5e062.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-47m77m/Debug/cmTC_5e062.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-47m77m/Debug/cmTC_5e062.lib" /MACHINE:X64  /machine:x64 cmTC_5e062.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_5e062.vcxproj -> C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-47m77m\\Debug\\cmTC_5e062.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-umaj55\\Debug\\cmTC_b6396.exe" /INCREMENTAL /ILK:"cmTC_b6396.dir\\Debug\\cmTC_b6396.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-umaj55/Debug/cmTC_b6396.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-umaj55/Debug/cmTC_b6396.lib" /MACHINE:X64  /machine:x64 cmTC_b6396.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_b6396.vcxproj -> C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-umaj55\\Debug\\cmTC_b6396.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_5e062.dir\\Debug\\cmTC_5e062.tlog\\unsuccessfulbuild".
-          Touching "cmTC_5e062.dir\\Debug\\cmTC_5e062.tlog\\cmTC_5e062.lastbuildstate".
-        Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-47m77m\\cmTC_5e062.vcxproj" (default targets).
+          Deleting file "cmTC_b6396.dir\\Debug\\cmTC_b6396.tlog\\unsuccessfulbuild".
+          Touching "cmTC_b6396.dir\\Debug\\cmTC_b6396.tlog\\cmTC_b6396.lastbuildstate".
+        Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-umaj55\\cmTC_b6396.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.42
+        Time Elapsed 00:00:00.34
         
       exitCode: 0
   -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.41.34120.0
-      Copyright (C) Microsoft Corporation.  All rights reserved.
-  -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yztlty"
-      binary: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yztlty"
+      source: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-rlbcw4"
+      binary: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-rlbcw4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
-      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yztlty'
+        Change Dir: 'C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-rlbcw4'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9e1c2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 6/10/2025 3:47:44 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_75d0f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 6/12/2025 1:21:28 PM.
         
-        Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yztlty\\cmTC_9e1c2.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rlbcw4\\cmTC_75d0f.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_9e1c2.dir\\Debug\\".
+          Creating directory "cmTC_75d0f.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yztlty\\Debug\\".
-          Creating directory "cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.tlog\\".
+          Creating directory "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rlbcw4\\Debug\\".
+          Creating directory "cmTC_75d0f.dir\\Debug\\cmTC_75d0f.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.tlog\\unsuccessfulbuild".
+          Creating "cmTC_75d0f.dir\\Debug\\cmTC_75d0f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_75d0f.dir\\Debug\\cmTC_75d0f.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9e1c2.dir\\Debug\\\\" /Fd"cmTC_9e1c2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_75d0f.dir\\Debug\\\\" /Fd"cmTC_75d0f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33145 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9e1c2.dir\\Debug\\\\" /Fd"cmTC_9e1c2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_75d0f.dir\\Debug\\\\" /Fd"cmTC_75d0f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yztlty\\Debug\\cmTC_9e1c2.exe" /INCREMENTAL /ILK:"cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yztlty/Debug/cmTC_9e1c2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yztlty/Debug/cmTC_9e1c2.lib" /MACHINE:X64  /machine:x64 cmTC_9e1c2.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_9e1c2.vcxproj -> C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yztlty\\Debug\\cmTC_9e1c2.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rlbcw4\\Debug\\cmTC_75d0f.exe" /INCREMENTAL /ILK:"cmTC_75d0f.dir\\Debug\\cmTC_75d0f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-rlbcw4/Debug/cmTC_75d0f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-rlbcw4/Debug/cmTC_75d0f.lib" /MACHINE:X64  /machine:x64 cmTC_75d0f.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_75d0f.vcxproj -> C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rlbcw4\\Debug\\cmTC_75d0f.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.tlog\\unsuccessfulbuild".
-          Touching "cmTC_9e1c2.dir\\Debug\\cmTC_9e1c2.tlog\\cmTC_9e1c2.lastbuildstate".
-        Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yztlty\\cmTC_9e1c2.vcxproj" (default targets).
+          Deleting file "cmTC_75d0f.dir\\Debug\\cmTC_75d0f.tlog\\unsuccessfulbuild".
+          Touching "cmTC_75d0f.dir\\Debug\\cmTC_75d0f.tlog\\cmTC_75d0f.lastbuildstate".
+        Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rlbcw4\\cmTC_75d0f.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.31
+        Time Elapsed 00:00:00.38
         
       exitCode: 0
   -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
-    message: |
-      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.41.34120.0
-      Copyright (C) Microsoft Corporation.  All rights reserved.
-  -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
       - "libraries/glfw/CMakeLists.txt:52 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-sgn4mj"
-      binary: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-sgn4mj"
+      source: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3w1uvj"
+      binary: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3w1uvj"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-sgn4mj'
+        Change Dir: 'C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3w1uvj'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_67c98.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 6/10/2025 3:47:47 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ad188.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 6/12/2025 1:21:29 PM.
         
-        Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\cmTC_67c98.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\cmTC_ad188.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_67c98.dir\\Debug\\".
+          Creating directory "cmTC_ad188.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\Debug\\".
-          Creating directory "cmTC_67c98.dir\\Debug\\cmTC_67c98.tlog\\".
+          Creating directory "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\Debug\\".
+          Creating directory "cmTC_ad188.dir\\Debug\\cmTC_ad188.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_67c98.dir\\Debug\\cmTC_67c98.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_67c98.dir\\Debug\\cmTC_67c98.tlog\\unsuccessfulbuild".
+          Creating "cmTC_ad188.dir\\Debug\\cmTC_ad188.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ad188.dir\\Debug\\cmTC_ad188.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67c98.dir\\Debug\\\\" /Fd"cmTC_67c98.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\src.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ad188.dir\\Debug\\\\" /Fd"cmTC_ad188.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33145 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67c98.dir\\Debug\\\\" /Fd"cmTC_67c98.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\src.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ad188.dir\\Debug\\\\" /Fd"cmTC_ad188.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\src.c"
           src.c
-        C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\cmTC_67c98.vcxproj]
-        Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\cmTC_67c98.vcxproj" (default targets) -- FAILED.
+        C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\cmTC_ad188.vcxproj]
+        Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\cmTC_ad188.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\cmTC_67c98.vcxproj" (default target) (1) ->
+        "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\cmTC_ad188.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sgn4mj\\cmTC_67c98.vcxproj]
+          C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3w1uvj\\cmTC_ad188.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:01.25
+        Time Elapsed 00:00:00.24
         
       exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
       - "libraries/glfw/CMakeLists.txt:52 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-dvgjbb"
-      binary: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-dvgjbb"
+      source: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yajutw"
+      binary: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yajutw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-dvgjbb'
+        Change Dir: 'C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yajutw'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d38e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 6/10/2025 3:47:48 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7057c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 6/12/2025 1:21:29 PM.
         
-        Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\cmTC_d38e9.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\cmTC_7057c.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_d38e9.dir\\Debug\\".
+          Creating directory "cmTC_7057c.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\Debug\\".
-          Creating directory "cmTC_d38e9.dir\\Debug\\cmTC_d38e9.tlog\\".
+          Creating directory "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\Debug\\".
+          Creating directory "cmTC_7057c.dir\\Debug\\cmTC_7057c.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_d38e9.dir\\Debug\\cmTC_d38e9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_d38e9.dir\\Debug\\cmTC_d38e9.tlog\\unsuccessfulbuild".
+          Creating "cmTC_7057c.dir\\Debug\\cmTC_7057c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_7057c.dir\\Debug\\cmTC_7057c.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d38e9.dir\\Debug\\\\" /Fd"cmTC_d38e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\CheckFunctionExists.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7057c.dir\\Debug\\\\" /Fd"cmTC_7057c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33145 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d38e9.dir\\Debug\\\\" /Fd"cmTC_d38e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7057c.dir\\Debug\\\\" /Fd"cmTC_7057c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\Debug\\cmTC_d38e9.exe" /INCREMENTAL /ILK:"cmTC_d38e9.dir\\Debug\\cmTC_d38e9.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-dvgjbb/Debug/cmTC_d38e9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-dvgjbb/Debug/cmTC_d38e9.lib" /MACHINE:X64  /machine:x64 cmTC_d38e9.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\cmTC_d38e9.vcxproj]
-        Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\cmTC_d38e9.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\Debug\\cmTC_7057c.exe" /INCREMENTAL /ILK:"cmTC_7057c.dir\\Debug\\cmTC_7057c.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yajutw/Debug/cmTC_7057c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yajutw/Debug/cmTC_7057c.lib" /MACHINE:X64  /machine:x64 cmTC_7057c.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\cmTC_7057c.vcxproj]
+        Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\cmTC_7057c.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\cmTC_d38e9.vcxproj" (default target) (1) ->
+        "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\cmTC_7057c.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-dvgjbb\\cmTC_d38e9.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yajutw\\cmTC_7057c.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:01.32
+        Time Elapsed 00:00:00.28
         
       exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
       - "libraries/glfw/CMakeLists.txt:52 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3j3q3i"
-      binary: "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3j3q3i"
+      source: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yi6uqa"
+      binary: "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yi6uqa"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MODULE_PATH: "C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
+      CMAKE_MODULE_PATH: "C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3j3q3i'
+        Change Dir: 'C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yi6uqa'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_42284.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        MSBuild version 17.11.9+a69bbaaf5 for .NET Framework
-        Build started 6/10/2025 3:47:50 PM.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8b4f2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.13.19+0d9f5a35a for .NET Framework
+        Build started 6/12/2025 1:21:29 PM.
         
-        Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\cmTC_42284.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\cmTC_8b4f2.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_42284.dir\\Debug\\".
+          Creating directory "cmTC_8b4f2.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\Debug\\".
-          Creating directory "cmTC_42284.dir\\Debug\\cmTC_42284.tlog\\".
+          Creating directory "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\Debug\\".
+          Creating directory "cmTC_8b4f2.dir\\Debug\\cmTC_8b4f2.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_42284.dir\\Debug\\cmTC_42284.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_42284.dir\\Debug\\cmTC_42284.tlog\\unsuccessfulbuild".
+          Creating "cmTC_8b4f2.dir\\Debug\\cmTC_8b4f2.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8b4f2.dir\\Debug\\cmTC_8b4f2.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_42284.dir\\Debug\\\\" /Fd"cmTC_42284.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\CheckFunctionExists.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8b4f2.dir\\Debug\\\\" /Fd"cmTC_8b4f2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33145 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_42284.dir\\Debug\\\\" /Fd"cmTC_42284.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8b4f2.dir\\Debug\\\\" /Fd"cmTC_8b4f2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\Debug\\cmTC_42284.exe" /INCREMENTAL /ILK:"cmTC_42284.dir\\Debug\\cmTC_42284.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3j3q3i/Debug/cmTC_42284.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-3j3q3i/Debug/cmTC_42284.lib" /MACHINE:X64  /machine:x64 cmTC_42284.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\cmTC_42284.vcxproj]
-        Done Building Project "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\cmTC_42284.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\Debug\\cmTC_8b4f2.exe" /INCREMENTAL /ILK:"cmTC_8b4f2.dir\\Debug\\cmTC_8b4f2.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yi6uqa/Debug/cmTC_8b4f2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/CMakeScratch/TryCompile-yi6uqa/Debug/cmTC_8b4f2.lib" /MACHINE:X64  /machine:x64 cmTC_8b4f2.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\cmTC_8b4f2.vcxproj]
+        Done Building Project "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\cmTC_8b4f2.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\cmTC_42284.vcxproj" (default target) (1) ->
+        "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\cmTC_8b4f2.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\kelso\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-3j3q3i\\cmTC_42284.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\CMakeFiles\\CMakeScratch\\TryCompile-yi6uqa\\cmTC_8b4f2.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:01.23
+        Time Elapsed 00:00:00.27
         
       exitCode: 1
 ...

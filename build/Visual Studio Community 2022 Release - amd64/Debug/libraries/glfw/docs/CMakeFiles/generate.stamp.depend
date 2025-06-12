@@ -1,5 +1,6 @@
 # CMake generation dependency list for this directory.
-C:/Program Files/CMake/share/cmake-3.30/Modules/FindDoxygen.cmake
-C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake
-C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/glfw/docs/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindDoxygen.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/FindPackageMessage.cmake
+C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/docs/CMakeLists.txt
+C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/glfw/docs/Doxyfile.in

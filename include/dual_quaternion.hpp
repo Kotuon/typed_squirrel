@@ -69,6 +69,36 @@ public:
         return DualQuaternion( real - rhs.real, dual - rhs.dual );
     }
 
+    constexpr const DualQuaternion operator*( const DualQuaternion& rhs ) {
+        return DualQuaternion( real * rhs.real,
+                               real * rhs.dual + dual * rhs.real );
+    }
+
+    constexpr const DualQuaternion operator*( const float scaler ) {
+        return DualQuaternion( real * scaler, dual * scaler );
+    }
+
+    constexpr float dot( const DualQuaternion& other ) const {
+        return real.dot( other.real );
+    }
+
+    // constexpr float norm() const { return real.norm(); }
+
+    // constexpr float normSquared() const { return real.normSquared(); }
+
+    constexpr DualQuaternion& normalize() {
+        const float mag = real.dot( real );
+
+        real *= 1.f / mag;
+        dual *= 1.f / mag;
+
+        return *this;
+    }
+
+    constexpr const DualQuaternion conjugate() const {
+        return DualQuaternion( real.conjugate(), dual.conjugate() );
+    }
+
 public:
     Quaternion real;
     Quaternion dual;
