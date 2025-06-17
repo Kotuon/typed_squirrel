@@ -95,8 +95,16 @@ public:
         return *this;
     }
 
-    constexpr const DualQuaternion conjugate() const {
+    constexpr const DualQuaternion conjugateQuaternion() const {
         return DualQuaternion( real.conjugate(), dual.conjugate() );
+    }
+
+    constexpr const DualQuaternion conjugateDual() const {
+        return DualQuaternion( real, -dual );
+    }
+
+    constexpr const DualQuaternion conjugateCombined() const {
+        return DualQuaternion( real.conjugate(), -dual.conjugate() );
     }
 
 public:
