@@ -82,9 +82,9 @@ public:
         return real.dot( other.real );
     }
 
-    // constexpr float norm() const { return real.norm(); }
+    constexpr float norm() const { return real.norm(); }
 
-    // constexpr float normSquared() const { return real.normSquared(); }
+    constexpr float normSquared() const { return real.normSquared(); }
 
     constexpr DualQuaternion& normalize() {
         const float mag = real.dot( real );
