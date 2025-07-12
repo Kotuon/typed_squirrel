@@ -110,7 +110,7 @@ public:
     constexpr const Quaternion& getRotation() const { return real; }
 
     constexpr const vector3 getTranslation() const {
-        Quaternion t = ( dual * 2.f ) * real.conjugate();
+        const Quaternion t = ( dual * 2.f ) * real.conjugate();
         return vector3( t.i, t.j, t.k );
     }
 
