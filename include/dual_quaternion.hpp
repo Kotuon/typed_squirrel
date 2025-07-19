@@ -82,7 +82,7 @@ public:
         return real.dot( other.real );
     }
 
-    constexpr float norm() const { return real.norm(); }
+    float norm() const { return real.norm(); }
 
     constexpr float normSquared() const { return real.normSquared(); }
 
@@ -107,7 +107,23 @@ public:
         return DualQuaternion( real.conjugate(), -dual.conjugate() );
     }
 
+    constexpr void setRotation( const Quaternion t_rotation ) {
+        real = t_rotation;
+    }
+
     constexpr const Quaternion& getRotation() const { return real; }
+
+    constexpr const vector3 getEulerRotation() const {
+        
+    }
+
+    constexpr void setTranslation( const vector3 trans ) {
+        dual = ( Quaternion( 0.f, trans.x, trans.y, trans.z ) * 0.5f ) * real;
+    }
+
+    constexpr void addTranslation( const vector3 trans ) {
+        dual += ( Quaternion( 0.f, trans.x, trans.y, trans.z ) * 0.5f ) * real;
+    }
 
     constexpr const vector3 getTranslation() const {
         const Quaternion t = ( dual * 2.f ) * real.conjugate();

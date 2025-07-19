@@ -15,9 +15,7 @@ namespace SquirrelEngine {
 /**
  * @brief Default constructor for Transform.
  */
-Transform::Transform()
-    : m_position( 0.f ), m_scale( 1.f ), m_rotation( 1.f, 0.f, 0.f, 0.f ),
-      m_isDirty( true ) {}
+Transform::Transform() : m_transform(), m_scale( 1.f ), m_isDirty( true ) {}
 
 // Position functions
 
@@ -26,7 +24,7 @@ Transform::Transform()
  * @param t_position The new position.
  */
 void Transform::setPosition( const vector3& t_position ) {
-    m_position = t_position;
+    m_transform.setTranslation( t_position );
     m_isDirty = true;
 }
 
@@ -34,14 +32,16 @@ void Transform::setPosition( const vector3& t_position ) {
  * @brief Gets the position of the transform.
  * @return The current position.
  */
-const vector3& Transform::getPosition() const { return m_position; }
+const vector3& Transform::getPosition() const {
+    return m_transform.getTranslation();
+}
 
 /**
  * @brief Moves the transform by a given amount.
  * @param amount The amount to move.
  */
 void Transform::move( const vector3& amount ) {
-    m_position += amount;
+    m_transform.addTranslation( amount );
     m_isDirty = true;
 }
 
@@ -77,8 +77,8 @@ void Transform::scale( const float factor ) {
  * @brief Sets the rotation of the transform.
  * @param t_rotation The new rotation as a quaternion.
  */
-void Transform::setRotation( const quat& t_rotation ) {
-    m_rotation = t_rotation;
+void Transform::setRotation( const Quaternion& t_rotation ) {
+    m_transform.setRotation( t_rotation );
     m_isDirty = true;
 }
 
@@ -86,14 +86,17 @@ void Transform::setRotation( const quat& t_rotation ) {
  * @brief Gets the rotation of the transform.
  * @return The current rotation as a quaternion.
  */
-const quat& Transform::getRotation() const { return m_rotation; }
+const Quaternion& Transform::getRotation() const {
+    return m_transform.getRotation();
+}
 
 /**
  * @brief Gets the rotation of the transform as Euler angles.
  * @return The current rotation as Euler angles.
  */
 const vector3 Transform::getEulerRotation() const {
-    return glm::eulerAngles( m_rotation );
+    const Quaternion rotation = m_transform.getRotation();
+    return vector3();
 }
 
 /**
