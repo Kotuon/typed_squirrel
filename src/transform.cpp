@@ -173,7 +173,7 @@ const matrix4& Transform::matrix() {
         const matrix4 s = glm::scale( matrix4( 1.f ), m_scale );
         const matrix4 r = m_transform.getMatrix();
 
-        m_matrix = t * r * s;
+        m_matrix = r * s;
 
         m_isDirty = false;
     }

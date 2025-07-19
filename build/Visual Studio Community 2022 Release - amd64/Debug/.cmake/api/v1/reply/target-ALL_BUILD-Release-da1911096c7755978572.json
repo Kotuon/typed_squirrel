@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"libraries/glfw/CMakeLists.txt"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,23 +17,29 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"id" : "typed_squirrel::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "fmt::@02464759dd67601a9918"
 		},
 		{
 			"id" : "glfw::@7d8f67159c48f691a52d"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 
 	{
 		"name" : "CMakePredefinedTargets"
 	},
-	"id" : "ALL_BUILD::@35bb805c068f9c219110",
+	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
 	"name" : "ALL_BUILD",
 	"paths" : 
 	{
-		"build" : "libraries/glfw",
-		"source" : "libraries/glfw"
+		"build" : ".",
+		"source" : "."
 	},
 	"sources" : [],
 	"type" : "UTILITY"
