@@ -177,6 +177,11 @@ public:
         return Quaternion( w * scaler, i * scaler, j * scaler, k * scaler );
     }
 
+    constexpr const vector3 operator*( const vector3 vec ) const {
+        const vector3 t = 2.f * glm::cross( vector3( i, j, k ), vec );
+        return vec + t * w + glm::cross( vector3( i, j, k ), t );
+    }
+
     /**
      * @brief Computes the dot product with another quaternion.
      * @param other The other quaternion.

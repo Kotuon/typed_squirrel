@@ -85,7 +85,7 @@ public:
      * @brief Rotates the transform by a quaternion.
      * @param rotation The rotation quaternion.
      */
-    void rotate( const quat& rotation );
+    void rotate( const Quaternion& rotation );
 
     /**
      * @brief Rotates the transform around an axis by an angle.

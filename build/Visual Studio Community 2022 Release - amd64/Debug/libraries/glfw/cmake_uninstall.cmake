@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt" files)
+file(READ "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

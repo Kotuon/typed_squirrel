@@ -30,7 +30,8 @@ matrix4 CameraComponent::viewMatrix() {
     vector3 position = transform.getPosition();
 
     if ( m_rotationIsDirty ) {
-        transform.setRotation( m_eulerRotation );
+        transform.setRotation( Quaternion::fromEuler(
+            m_eulerRotation.x, m_eulerRotation.y, m_eulerRotation.z ) );
         m_rotationIsDirty = false;
     }
 

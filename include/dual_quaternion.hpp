@@ -9,6 +9,8 @@
 
 #include "quaternion.hpp"
 
+#include <numbers>
+
 namespace SquirrelEngine {
 
 class DualQuaternion {
@@ -107,14 +109,40 @@ public:
         return DualQuaternion( real.conjugate(), -dual.conjugate() );
     }
 
-    constexpr void setRotation( const Quaternion t_rotation ) {
+    constexpr void setRotation( const Quaternion& t_rotation ) {
         real = t_rotation;
+    }
+
+    constexpr void addRotation( const Quaternion& t_rotation ) {
+        real = t_rotation * real;
     }
 
     constexpr const Quaternion& getRotation() const { return real; }
 
-    constexpr const vector3 getEulerRotation() const {
-        
+    const vector3 getEulerRotation() const {
+        vector3 eulerRotation;
+
+        // Roll
+        const float sr = 2.f * ( real.w * real.i + real.j * real.k );
+        const float cr = 1.f - sr;
+
+        eulerRotation.x = std::atan2f( sr, cr );
+
+        // Pitch
+        const float sp =
+            std::sqrt( 1.f + 2.f * ( real.w * real.j - real.i * real.k ) );
+        const float cp = 1.f - sp;
+
+        eulerRotation.y = 2.f * std::atan2f( sp, cp ) -
+                          static_cast< float >( std::numbers::pi ) / 2.f;
+
+        // Yaw
+        const float sy = 2.f * ( real.w * real.i + real.k * real.j );
+        const float cy = 1.f - sy;
+
+        eulerRotation.z = std::atan2f( sy, cy );
+
+        return eulerRotation;
     }
 
     constexpr void setTranslation( const vector3 trans ) {
