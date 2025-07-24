@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

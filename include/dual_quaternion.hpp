@@ -158,6 +158,39 @@ public:
         return vector3( t.i, t.j, t.k );
     }
 
+    constexpr const matrix4 getRotationMatrix() {
+        normalize();
+
+        const float& w = real.w;
+        const float& i = real.i;
+        const float& j = real.j;
+        const float& k = real.k;
+
+        const float w2 = real.w * real.w;
+        const float i2 = real.i * real.i;
+        const float j2 = real.j * real.j;
+        const float k2 = real.k * real.k;
+
+        matrix4 result = { w2 + i2 - j2 - k2,
+                           2.f * i * j - 2.f * w * k,
+                           2.f * i * k + 2.f * w * j,
+                           1.f,
+                           2.f * i * j + 2.f * w * k,
+                           w2 - i2 + j2 - k2,
+                           2.f * j * k - 2.f * w * i,
+                           1.f,
+                           2.f * i * k - 2.f * w * j,
+                           2.f * j * k + 2.f * w * i,
+                           w2 - i2 - j2 + k2,
+                           1.f,
+                           0.f,
+                           0.f,
+                           0.f,
+                           1.f };
+
+        return result;
+    }
+
     constexpr const matrix4 getMatrix() {
         normalize();
 

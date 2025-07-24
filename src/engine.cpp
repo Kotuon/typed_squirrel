@@ -32,6 +32,7 @@ Engine::~Engine() {}
  */
 enum StartupErrors Engine::initialize() {
     m_window = std::make_unique< Window >();
+    m_window->create( "SquirrelEngine", 1280, 720, false );
 
     if ( !createSystem< TimeManager >() ) {
         return StartupErrors::SE_SystemFailedInit;
@@ -39,7 +40,20 @@ enum StartupErrors Engine::initialize() {
     if ( !createSystem< EventSystem >() ) {
         return StartupErrors::SE_SystemFailedInit;
     }
+    if ( InputSystem* inputSystem = createSystem< InputSystem >() ) {
+        Keyboard* keyboard = inputSystem->createInputDevice< Keyboard >();
+        keyboard->initialize();
+
+        Mouse* mouse = inputSystem->createInputDevice<Mouse>();
+        mouse->initialize();
+
+    } else {
+        return StartupErrors::SE_SystemFailedInit;
+    }
     if ( !createSystem< ObjectRenderer >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
+    if ( !createSystem< Editor >() ) {
         return StartupErrors::SE_SystemFailedInit;
     }
 
@@ -105,6 +119,7 @@ void Engine::update() {
     TimeManager* timeManager = getSystem< TimeManager >();
     InputSystem* inputSystem = getSystem< InputSystem >();
     ObjectRenderer* objRenderer = getSystem< ObjectRenderer >();
+    Editor* editor = getSystem< Editor >();
 
     glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR, GLFW_CURSOR_NORMAL );
 
@@ -141,9 +156,12 @@ void Engine::update() {
 
         // TODO: call render function
         objRenderer->render();
+        editor->render();
+
+        m_window->swapBuffer();
 
         // Don't use whole cpu
-        timeManager->sleep( 1 );
+        // timeManager->sleep( 1 );
     }
 }
 

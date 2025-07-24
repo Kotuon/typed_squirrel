@@ -37,6 +37,7 @@
 #include "window.hpp"
 
 //// Utilities
+#include "editor.hpp"
 #include "error_codes.hpp"
 #include "utils/trace.hpp"
 #include "utils/time_manager.hpp"
