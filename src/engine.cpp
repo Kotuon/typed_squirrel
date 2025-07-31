@@ -131,6 +131,44 @@ void Engine::update() {
     World* world = World::instance();
     Entity* camera = world->findEntity( "Main camera" );
 
+    // Texture test ////////////////////////////////////////////////////////////
+    int max_compute_work_group_count[3];
+    int max_compute_work_group_size[3];
+    int max_compute_work_group_invocations;
+
+    for ( int idx = 0; idx < 3; idx++ ) {
+        glGetIntegeri_v( GL_MAX_COMPUTE_WORK_GROUP_COUNT, idx,
+                         &max_compute_work_group_count[idx] );
+        glGetIntegeri_v( GL_MAX_COMPUTE_WORK_GROUP_SIZE, idx,
+                         &max_compute_work_group_size[idx] );
+    }
+    glGetIntegerv( GL_MAX_COMPUTE_WORK_GROUP_INVOCATIONS,
+                   &max_compute_work_group_invocations );
+
+    Program quad( "shaders/quad.vert", "shaders/quad.frag" );
+    glUseProgram( quad.getHandle() );
+    glUniform1i( quad.getLocation( "tex" ), 0 );
+
+    Program compute( "shaders/test.comp" );
+
+    const unsigned TEXTURE_WIDTH = 1000, TEXTURE_HEGIHT = 1000;
+    unsigned texture;
+    glGenTextures( 1, &texture );
+    glActiveTexture( GL_TEXTURE0 );
+    glBindTexture( GL_TEXTURE_2D, texture );
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+    glTexImage2D( GL_TEXTURE_2D, 0, GL_RGBA32F, TEXTURE_WIDTH, TEXTURE_HEGIHT,
+                  0, GL_RGBA, GL_FLOAT, NULL );
+
+    glBindImageTexture( 0, texture, 0, GL_FALSE, 0, GL_READ_ONLY, GL_RGBA32F );
+
+    glActiveTexture( GL_TEXTURE0 );
+    glBindTexture( GL_TEXTURE_2D, texture );
+    ////////////////////////////////////////////////////////////////////////////
+
     // Main update loop
     while ( !m_window->isClosing() ) {
         // Increment time values
@@ -158,8 +196,43 @@ void Engine::update() {
             func( timeManager->getDeltaTime() );
         }
 
+        // Compute test ////////////////////////////////////////////////////////
+        glUseProgram( compute.getHandle() );
+        glUniform1f( compute.getLocation( "t" ), timeManager->getTotalTime() );
+        glDispatchCompute( TEXTURE_WIDTH / 10, TEXTURE_HEGIHT / 10, 1 );
+        glMemoryBarrier( GL_SHADER_IMAGE_ACCESS_BARRIER_BIT );
+        ////////////////////////////////////////////////////////////////////////
         // TODO: call render function
-        objRenderer->render();
+        ///////////// objRenderer->render();
+        // Quad test ///////////////////////////////////////////////////////////
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+        glUseProgram( quad.getHandle() );
+        static unsigned quadVAO = 0;
+        static unsigned quadVBO;
+        if ( quadVAO == 0 ) {
+            float quadVertices[]{
+                -1.f, 1.f, 0.f, 0.f, 1.f, -1.f, -1.f, 0.f, 0.f, 0.f,
+                1.f,  1.f, 0.f, 1.f, 1.f, 1.f,  -1.f, 0.f, 1.f, 0.f,
+            };
+
+            glGenVertexArrays( 1, &quadVAO );
+            glGenBuffers( 1, &quadVBO );
+            glBindVertexArray( quadVAO );
+            glBindBuffer( GL_ARRAY_BUFFER, quadVBO );
+            glBufferData( GL_ARRAY_BUFFER, sizeof( quadVertices ),
+                          &quadVertices, GL_STATIC_DRAW );
+            glEnableVertexAttribArray( 0 );
+            glVertexAttribPointer( 0, 3, GL_FLOAT, GL_FALSE,
+                                   5 * sizeof( float ), ( void* )0 );
+            glEnableVertexAttribArray( 1 );
+            glVertexAttribPointer( 1, 2, GL_FLOAT, GL_FALSE,
+                                   5 * sizeof( float ),
+                                   ( void* )( 3 * sizeof( float ) ) );
+        }
+        glBindVertexArray( quadVAO );
+        glDrawArrays( GL_TRIANGLE_STRIP, 0, 4 );
+        glBindVertexArray( 0 );
+        ////////////////////////////////////////////////////////////////////////
         editor->render();
 
         m_window->swapBuffer();

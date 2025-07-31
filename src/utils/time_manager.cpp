@@ -70,6 +70,8 @@ const float TimeManager::getFixedDt() const { return m_fixedDt; }
  */
 const float TimeManager::getDeltaTime() const { return m_deltaTime; }
 
+const float TimeManager::getTotalTime() const { return m_time; }
+
 /**
  * @brief Sleeps main thread for given time in milliseconds
  *

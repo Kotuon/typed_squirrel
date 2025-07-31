@@ -39,7 +39,7 @@ StartupErrors Window::create( const std::string title, const int width,
 
     // Specify the minimum OpenGL version
     glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 4 );
-    glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 6 );
+    glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
     glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
     glfwWindowHint( GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE );
 
@@ -69,6 +69,7 @@ StartupErrors Window::create( const std::string title, const int width,
 
     // Let the Window be the current OpenGL context and initialise glad
     glfwMakeContextCurrent( m_window );
+    glfwSwapInterval( 0 );
     gladLoadGL();
 
     // Enable depth (Z) buffer (accept "closest" fragment)
