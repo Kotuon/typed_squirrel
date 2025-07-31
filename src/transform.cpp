@@ -32,7 +32,7 @@ void Transform::setPosition( const vector3& t_position ) {
  * @brief Gets the position of the transform.
  * @return The current position.
  */
-const vector3& Transform::getPosition() const {
+const vector3 Transform::getPosition() const {
     return m_transform.getTranslation();
 }
 
@@ -168,8 +168,8 @@ void Transform::look( const vector3& direction ) {
  */
 const matrix4& Transform::matrix() {
     if ( m_isDirty ) {
-        const matrix4 t =
-            glm::translate( matrix4( 1.f ), m_transform.getTranslation() );
+        // const matrix4 t =
+        //     glm::translate( matrix4( 1.f ), m_transform.getTranslation() );
         const matrix4 s = glm::scale( matrix4( 1.f ), m_scale );
         const matrix4 r = m_transform.getMatrix();
 

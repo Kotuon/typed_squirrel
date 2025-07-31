@@ -22,6 +22,6 @@ Component::Component() {}
  * @brief Constructs a Component with the given parent entity.
  * @param t_parent Pointer to the parent Entity.
  */
-Component::Component( Entity* t_parent ) : parent( t_parent ) {}
+Component::Component( Entity* t_parent ) : owner( t_parent ) {}
 
 } // namespace SquirrelEngine

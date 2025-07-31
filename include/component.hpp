@@ -35,7 +35,7 @@ public:
      */
     virtual ~Component() = default;
 
-    Entity* parent; //!< Pointer to the parent entity of this component.
+    Entity* owner; //!< Pointer to the owner entity of this component.
 };
 
 } // namespace SquirrelEngine

@@ -46,19 +46,14 @@ void Editor::update( const float ) {
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
+    displayDockspace();
+
     // Display the different windows
     for ( auto& func : m_displayMenuCallbacks ) {
         func();
     }
 
-    // ImGui::ShowDemoWindow();
-
-    // Testing
-    displayDockspace();
-
-    ImGui::Begin( "Dual Quaternion Data##1" );
-    ImGui::Text( "HERE" );
-    ImGui::End();
+    ImGui::ShowDemoWindow();
 }
 
 void Editor::render() {

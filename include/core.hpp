@@ -42,4 +42,7 @@
 #include "utils/trace.hpp"
 #include "utils/time_manager.hpp"
 
+//// Editor windows
+#include "editor_windows/world_editor.hpp"
+
 #endif

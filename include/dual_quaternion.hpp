@@ -110,7 +110,9 @@ public:
     }
 
     constexpr void setRotation( const Quaternion& t_rotation ) {
+        dual *= real.conjugate();
         real = t_rotation;
+        dual *= real;
     }
 
     constexpr void addRotation( const Quaternion& t_rotation ) {

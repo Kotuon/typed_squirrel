@@ -172,7 +172,7 @@ void Mesh::insertData( char* data[3], std::vector< vector3 >& v,
  * @brief Draws the mesh.
  */
 void Mesh::draw() {
-    Transform& transform = m_model->parent->transform;
+    Transform& transform = m_model->owner->transform;
     World* world = World::instance();
 
     CameraComponent* camera =
