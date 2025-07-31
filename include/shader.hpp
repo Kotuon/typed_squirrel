@@ -129,6 +129,10 @@ public:
      */
     Program( const std::string& firstFile, const std::string& secondFile );
 
+    Program( const Shader& computeShader );
+
+    Program( const std::string& computeFile );
+
     /**
      * @brief Destructor for Program.
      */

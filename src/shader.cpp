@@ -188,6 +188,22 @@ Program::Program( const std::string& firstFile, const std::string& secondFile )
     glLinkProgram( m_handle );
 }
 
+Program::Program( const Shader& computeShader )
+    : ShaderBase( glCreateProgram() ) {
+    glAttachShader( m_handle, computeShader.getHandle() );
+
+    glLinkProgram( m_handle );
+}
+
+Program::Program( const std::string& computeFile )
+    : ShaderBase( glCreateProgram() ) {
+    Shader computeShader( computeFile );
+
+    glAttachShader( m_handle, computeShader.getHandle() );
+
+    glLinkProgram( m_handle );
+}
+
 /**
  * @brief Destructor for Program.
  */

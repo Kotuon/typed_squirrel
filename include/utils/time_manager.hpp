@@ -65,6 +65,8 @@ public:
      */
     const float getDeltaTime() const;
 
+    const float getTotalTime() const;
+
     /**
      * @brief Sleeps main thread for given time in milliseconds
      *
