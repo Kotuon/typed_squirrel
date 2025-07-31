@@ -15,21 +15,9 @@ int main( int, char** ) {
         return EXIT_FAILURE;
     }
 
-    Window* windowHandle = engineInstance->getWindowHandle();
-    windowHandle->create( "SquirrelEngine", 1280, 720, false );
-
-    int frameWidth, frameHeight;
-    windowHandle->frameBufferSize( frameWidth, frameHeight );
-
     // Init inputs
-    InputSystem* inputSystem = engineInstance->createSystem< InputSystem >();
-    if ( !inputSystem ) {
-        Trace::message( "Failed to create input system." );
-    }
-
-    // Keyboard setup
-    Keyboard* keyboard = inputSystem->createInputDevice< Keyboard >();
-    keyboard->initialize();
+    InputSystem* inputSystem = getSystem< InputSystem >();
+    Keyboard* keyboard = inputSystem->findInputDevice< Keyboard >();
 
     // Movement binds
     inputSystem->registerActionMapping( keyboard, KEY_W, "move forward" );
@@ -46,15 +34,20 @@ int main( int, char** ) {
     inputSystem->registerActionMapping( keyboard, KEY_ESCAPE, "close window" );
 
     // Mouse setup
-    inputSystem->createInputDevice< Mouse >();
+    // inputSystem->createInputDevice< Mouse >();
 
     World* worldInstance = World::instance();
     Entity* camera = worldInstance->createEntity( "Main camera" );
     CameraComponent* cameraComp = camera->createComponent< CameraComponent >();
 
+    Window* windowHandle = engineInstance->getWindowHandle();
+
+    int frameWidth, frameHeight;
+    windowHandle->frameBufferSize( frameWidth, frameHeight );
+
     cameraComp->aspect = static_cast< float >( frameWidth ) /
                          static_cast< float >( frameHeight );
-    cameraComp->transform.setPosition( vector3( 0.f, 0.f, 20.f ) );
+    camera->transform.setPosition( vector3( 0.f, 0.f, 3.f ) );
 
     Entity* cube = worldInstance->createEntity( "Cube01" );
     Model* cubeModel = cube->createComponent< Model >();

@@ -9,6 +9,7 @@
  */
 
 #include "cameraComponent.hpp"
+#include "entity.hpp"
 #include "transform.hpp"
 
 namespace SquirrelEngine {
@@ -18,7 +19,7 @@ namespace SquirrelEngine {
  * @param t_parent Pointer to the parent Entity.
  */
 CameraComponent::CameraComponent( Entity* t_parent )
-    : Component( t_parent ), fov( 45.f ), fnear( 0.1f ), ffar( 1000.f ),
+    : WorldComponent( t_parent ), fov( 45.f ), fnear( 0.1f ), ffar( 1000.f ),
       aspect( 4.f / 3.f ), primary( true ), m_eulerRotation( 0.f ),
       m_rotationIsDirty( false ) {}
 
@@ -27,15 +28,17 @@ CameraComponent::CameraComponent( Entity* t_parent )
  * @return The view matrix as a matrix4.
  */
 matrix4 CameraComponent::viewMatrix() {
-    vector3 position = transform.getPosition();
+    vector3 position =
+        owner->transform.getPosition() + m_localTransform.getPosition();
 
     if ( m_rotationIsDirty ) {
-        transform.setRotation( m_eulerRotation );
+        m_localTransform.setRotation( Quaternion::fromEuler(
+            m_eulerRotation.x, m_eulerRotation.y, m_eulerRotation.z ) );
         m_rotationIsDirty = false;
     }
 
-    vector3 fwd = transform.forwardVector();
-    vector3 up = transform.upVector();
+    vector3 fwd = forwardVector();
+    vector3 up = upVector();
 
     return glm::lookAt( position, position + fwd, up );
 }
