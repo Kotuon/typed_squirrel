@@ -13,6 +13,7 @@
 #pragma once
 
 #include "math_types.hpp"
+#include <numbers>
 
 namespace SquirrelEngine {
 
@@ -25,6 +26,9 @@ public:
      * @brief Default constructor for Quaternion.
      */
     constexpr Quaternion() : w( 1.f ), i( 0.f ), j( 0.f ), k( 0.f ) {}
+
+    constexpr Quaternion( const float value )
+        : w( value ), i( value ), j( value ), k( value ) {}
 
     /**
      * @brief Copy constructor for Quaternion.
@@ -262,11 +266,36 @@ public:
         vec[2] = vec[2] + w * tk + ( i * vec[1] - j * vec[3] );
     }
 
+    const vector3 getEulerRotation() const {
+        vector3 eulerRotation;
+
+        // Pitch
+        const float sp = 2.f * ( w * i + j * k );
+        const float cp = 1.f - sp;
+
+        eulerRotation.x = std::atan2f( sp, cp );
+
+        // Yaw
+        const float sy = std::sqrt( 1.f + 2.f * ( w * j - i * k ) );
+        const float cy = std::sqrt( 1.f - 2.f * ( w * j - i * k ) );
+
+        eulerRotation.y = 2.f * std::atan2f( sy, cy ) -
+                          static_cast< float >( std::numbers::pi ) / 2.f;
+
+        // Roll
+        const float sr = 2.f * ( w * i + k * j );
+        const float cr = 1.f - sr;
+
+        eulerRotation.z = std::atan2f( sr, cr );
+
+        return eulerRotation;
+    }
+
     /**
      * @brief Creates a quaternion from Euler angles.
-     * @param roll Rotation around X axis (radians).
-     * @param pitch Rotation around Y axis (radians).
-     * @param yaw Rotation around Z axis (radians).
+     * @param roll Rotation around Z axis (radians).
+     * @param pitch Rotation around X axis (radians).
+     * @param yaw Rotation around Y axis (radians).
      * @return The resulting quaternion.
      */
     static const Quaternion fromEuler( const float roll, const float pitch,

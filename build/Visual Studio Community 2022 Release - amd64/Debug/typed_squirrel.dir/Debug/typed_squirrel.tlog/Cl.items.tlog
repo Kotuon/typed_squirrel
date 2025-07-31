@@ -1,5 +1,7 @@
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\cameraComponent.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\cameraComponent.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\component.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\component.obj
+C:\Users\kelso\Documents\Projects\typed_squirrel\src\editor.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\editor.obj
+C:\Users\kelso\Documents\Projects\typed_squirrel\src\editor_windows\world_editor.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\world_editor.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\engine.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\engine.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\eventSystem.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\eventSystem.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\inputAction.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\inputAction.obj
@@ -22,6 +24,7 @@ C:\Users\kelso\Documents\Projects\typed_squirrel\src\utils\timer.cpp;C:\Users\ke
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\utils\trace.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\trace.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\window.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\window.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\src\world.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\world.obj
+C:\Users\kelso\Documents\Projects\typed_squirrel\src\world_component.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\world_component.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\glad\src\glad.c;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\glad.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\imgui\imgui.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\imgui.obj
 C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\imgui\imgui_demo.cpp;C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\typed_squirrel.dir\Debug\imgui_demo.obj

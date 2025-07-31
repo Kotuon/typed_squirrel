@@ -342,6 +342,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\cameraComponent.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\component.cpp" />
+    <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\editor.cpp" />
+    <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\editor_windows\world_editor.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\engine.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\eventSystem.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\inputAction.cpp" />
@@ -364,6 +366,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\utils\trace.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\window.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\world.cpp" />
+    <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\src\world_component.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\glad\src\glad.c" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\imgui\imgui.cpp" />
     <ClCompile Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\imgui\imgui_demo.cpp" />

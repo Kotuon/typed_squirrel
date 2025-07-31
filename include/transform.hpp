@@ -43,7 +43,7 @@ public:
      * @brief Gets the position of the transform.
      * @return The current position.
      */
-    const vector3& getPosition() const;
+    const vector3 getPosition() const;
 
     /**
      * @brief Sets the scale of the transform.

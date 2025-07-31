@@ -32,6 +32,7 @@ Engine::~Engine() {}
  */
 enum StartupErrors Engine::initialize() {
     m_window = std::make_unique< Window >();
+    m_window->create( "SquirrelEngine", 1280, 720, false );
 
     if ( !createSystem< TimeManager >() ) {
         return StartupErrors::SE_SystemFailedInit;
@@ -39,7 +40,23 @@ enum StartupErrors Engine::initialize() {
     if ( !createSystem< EventSystem >() ) {
         return StartupErrors::SE_SystemFailedInit;
     }
+    if ( InputSystem* inputSystem = createSystem< InputSystem >() ) {
+        Keyboard* keyboard = inputSystem->createInputDevice< Keyboard >();
+        keyboard->initialize();
+
+        Mouse* mouse = inputSystem->createInputDevice< Mouse >();
+        mouse->initialize();
+
+    } else {
+        return StartupErrors::SE_SystemFailedInit;
+    }
     if ( !createSystem< ObjectRenderer >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
+    if ( !createSystem< Editor >() ) {
+        return StartupErrors::SE_SystemFailedInit;
+    }
+    if ( !createSystem< WorldEditor >() ) {
         return StartupErrors::SE_SystemFailedInit;
     }
 
@@ -52,9 +69,8 @@ enum StartupErrors Engine::initialize() {
  * @param timeManager Pointer to the TimeManager system.
  * @param inputSystem Pointer to the InputSystem.
  */
-static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
+static void moveCamera( Entity* camera, TimeManager* timeManager,
                         InputSystem* inputSystem ) {
-
     Mouse* mouse = inputSystem->findInputDevice< Mouse >();
 
     if ( !inputSystem->getActionState( "enable camera movement" ) ) {
@@ -63,33 +79,36 @@ static void moveCamera( CameraComponent* cameraC, TimeManager* timeManager,
     }
     mouse->setCursorMode( GLFW_CURSOR_DISABLED );
 
+    CameraComponent* cCamera = camera->findComponent< CameraComponent >();
+
     const float speed = 5.f;
 
-    cameraC->transform.move( cameraC->transform.forwardVector() *
-                             timeManager->getDeltaTime() * speed *
-                             inputSystem->getActionState( "move forward" ) );
+    camera->transform.move( cCamera->forwardVector() *
+                            timeManager->getDeltaTime() * speed *
+                            inputSystem->getActionState( "move forward" ) );
 
-    cameraC->transform.move( cameraC->transform.forwardVector() *
-                             timeManager->getDeltaTime() * -speed *
-                             inputSystem->getActionState( "move backward" ) );
+    camera->transform.move( cCamera->forwardVector() *
+                            timeManager->getDeltaTime() * -speed *
+                            inputSystem->getActionState( "move backward" ) );
 
-    cameraC->transform.move( cameraC->transform.rightVector() *
-                             timeManager->getDeltaTime() * -speed *
-                             inputSystem->getActionState( "move left" ) );
+    camera->transform.move( cCamera->rightVector() *
+                            timeManager->getDeltaTime() * -speed *
+                            inputSystem->getActionState( "move left" ) );
 
-    cameraC->transform.move( cameraC->transform.rightVector() *
-                             timeManager->getDeltaTime() * speed *
-                             inputSystem->getActionState( "move right" ) );
+    camera->transform.move( cCamera->rightVector() *
+                            timeManager->getDeltaTime() * speed *
+                            inputSystem->getActionState( "move right" ) );
 
-    cameraC->transform.move( cameraC->transform.upVector() *
-                             timeManager->getDeltaTime() * speed *
-                             inputSystem->getActionState( "move up" ) );
+    camera->transform.move( cCamera->upVector() * timeManager->getDeltaTime() *
+                            speed * inputSystem->getActionState( "move up" ) );
 
-    cameraC->transform.move( cameraC->transform.upVector() *
-                             timeManager->getDeltaTime() * -speed *
-                             inputSystem->getActionState( "move down" ) );
+    camera->transform.move( cCamera->upVector() * timeManager->getDeltaTime() *
+                            -speed *
+                            inputSystem->getActionState( "move down" ) );
 
     vector2 mouseDelta = mouse->getCursorDelta();
+
+    CameraComponent* cameraC = camera->findComponent< CameraComponent >();
 
     cameraC->addPitch( glm::radians( cameraC->getSensitivity() * -mouseDelta.y *
                                      timeManager->getDeltaTime() ) );
@@ -105,12 +124,12 @@ void Engine::update() {
     TimeManager* timeManager = getSystem< TimeManager >();
     InputSystem* inputSystem = getSystem< InputSystem >();
     ObjectRenderer* objRenderer = getSystem< ObjectRenderer >();
+    Editor* editor = getSystem< Editor >();
 
     glfwSetInputMode( m_window->getHandle(), GLFW_CURSOR, GLFW_CURSOR_NORMAL );
 
     World* world = World::instance();
-    CameraComponent* cameraC =
-        world->findEntity( "Main camera" )->findComponent< CameraComponent >();
+    Entity* camera = world->findEntity( "Main camera" );
 
     // Main update loop
     while ( !m_window->isClosing() ) {
@@ -124,7 +143,7 @@ void Engine::update() {
             glfwSetWindowShouldClose( m_window->getHandle(), GL_TRUE );
         }
 
-        moveCamera( cameraC, timeManager, inputSystem );
+        moveCamera( camera, timeManager, inputSystem );
 
         // Fixed update loop
         while ( timeManager->needsFixedUpdate() ) {
@@ -141,6 +160,9 @@ void Engine::update() {
 
         // TODO: call render function
         objRenderer->render();
+        editor->render();
+
+        m_window->swapBuffer();
 
         // Don't use whole cpu
         timeManager->sleep( 1 );

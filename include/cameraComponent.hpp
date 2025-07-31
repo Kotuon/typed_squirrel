@@ -12,16 +12,13 @@
 #define CAMERACOMPONENT_HPP
 #pragma once
 
-#include "component.hpp"
-#include "transform.hpp"
+#include "world_component.hpp"
 #include "math_types.hpp"
 
 namespace SquirrelEngine {
-
-class Transform;
 class DataRecord;
 
-class CameraComponent : public Component {
+class CameraComponent : public WorldComponent {
 public:
     /**
      * @brief Constructs a CameraComponent with the given parent entity.
@@ -112,7 +109,7 @@ public:
      */
     void setSensitivity( const float sensitivity );
 
-    Transform transform; //!< The transform associated with this camera.
+    // Transform transform; //!< The transform associated with this camera.
 
     float fov;    //!< Field of view angle for the camera.
     float fnear;  //!< Near clipping plane distance.
