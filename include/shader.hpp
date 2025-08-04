@@ -52,7 +52,11 @@ public:
      * @param locationName Name of the uniform or attribute.
      * @return Location as GLuint.
      */
-    GLuint getLocation( const char* locationName );
+    GLuint getLocation( const char* locationName ) const;
+
+    void setFloat( const char* locationName, const float value ) const;
+
+    void setInt( const char* locationName, const int value ) const;
 
 protected:
     GLuint m_handle; //!< OpenGL handle for the shader or program.
@@ -120,14 +124,20 @@ public:
      * @param first First shader.
      * @param second Second shader.
      */
-    Program( const Shader& first, const Shader& second );
+    Program( const Shader& vertex, const Shader& fragment );
+
+    Program( const Shader& vertex, const Shader& geometry,
+             const Shader& fragment );
 
     /**
      * @brief Constructs a Program from two shader files.
      * @param firstFile Vertex shader file.
      * @param secondFile Fragment shader file.
      */
-    Program( const std::string& firstFile, const std::string& secondFile );
+    Program( const std::string& vertexFile, const std::string& fragmentFile );
+
+    Program( const std::string& vertexFile, const std::string& geometryFile,
+             const std::string& fragmentFile );
 
     Program( const Shader& computeShader );
 
@@ -137,6 +147,8 @@ public:
      * @brief Destructor for Program.
      */
     ~Program();
+
+    void use() const;
 
     /**
      * @brief Gets the OpenGL handle for the program.

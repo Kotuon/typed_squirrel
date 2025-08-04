@@ -32,9 +32,9 @@ ObjectRenderer::ObjectRenderer() {}
 void ObjectRenderer::render() {
     World* world = World::instance();
 
-    // TODO: update shaders
-
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+
+    // TODO: update shaders
 
     auto& entityList = world->getEntityList();
     for ( auto& entity : entityList ) {
