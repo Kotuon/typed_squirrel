@@ -78,8 +78,16 @@ void ShaderBase::getCompileStatus( const std::string& filename ) {
  * @param locationName Name of the uniform or attribute.
  * @return Location as GLuint.
  */
-GLuint ShaderBase::getLocation( const char* locationName ) {
+GLuint ShaderBase::getLocation( const char* locationName ) const {
     return glGetUniformLocation( m_handle, locationName );
+}
+
+void ShaderBase::setFloat( const char* locationName, const float value ) const {
+    glUniform1f( getLocation( locationName ), value );
+}
+
+void ShaderBase::setInt( const char* locationName, const int value ) const {
+    glUniform1i( getLocation( locationName ), value );
 }
 
 //---------- Shader ----------//
@@ -164,10 +172,20 @@ Program::Program( const Program* other ) : ShaderBase( other->m_handle ) {}
  * @param first First shader.
  * @param second Second shader.
  */
-Program::Program( const Shader& first, const Shader& second )
+Program::Program( const Shader& vertex, const Shader& fragment )
     : ShaderBase( glCreateProgram() ) {
-    glAttachShader( m_handle, first.getHandle() );
-    glAttachShader( m_handle, second.getHandle() );
+    glAttachShader( m_handle, vertex.getHandle() );
+    glAttachShader( m_handle, fragment.getHandle() );
+
+    glLinkProgram( m_handle );
+}
+
+Program::Program( const Shader& vertex, const Shader& geometry,
+                  const Shader& fragment )
+    : ShaderBase( glCreateProgram() ) {
+    glAttachShader( m_handle, vertex.getHandle() );
+    glAttachShader( m_handle, geometry.getHandle() );
+    glAttachShader( m_handle, fragment.getHandle() );
 
     glLinkProgram( m_handle );
 }
@@ -177,13 +195,29 @@ Program::Program( const Shader& first, const Shader& second )
  * @param firstFile Vertex shader file.
  * @param secondFile Fragment shader file.
  */
-Program::Program( const std::string& firstFile, const std::string& secondFile )
+Program::Program( const std::string& vertexFile,
+                  const std::string& fragmentFile )
     : ShaderBase( glCreateProgram() ) {
-    Shader first( firstFile );
-    Shader second( secondFile );
+    Shader first( vertexFile );
+    Shader second( fragmentFile );
 
     glAttachShader( m_handle, first.getHandle() );
     glAttachShader( m_handle, second.getHandle() );
+
+    glLinkProgram( m_handle );
+}
+
+Program::Program( const std::string& vertexFile,
+                  const std::string& geometryFile,
+                  const std::string& fragmentFile )
+    : ShaderBase( glCreateProgram() ) {
+    Shader vertex( vertexFile );
+    Shader geometry( geometryFile );
+    Shader fragment( fragmentFile );
+
+    glAttachShader( m_handle, vertex.getHandle() );
+    glAttachShader( m_handle, geometry.getHandle() );
+    glAttachShader( m_handle, fragment.getHandle() );
 
     glLinkProgram( m_handle );
 }
@@ -208,6 +242,8 @@ Program::Program( const std::string& computeFile )
  * @brief Destructor for Program.
  */
 Program::~Program() { glDeleteProgram( m_handle ); }
+
+void Program::use() const { glUseProgram( m_handle ); }
 
 /**
  * @brief Gets the OpenGL handle for the program.

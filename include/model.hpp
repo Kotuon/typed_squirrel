@@ -48,6 +48,9 @@ public:
      */
     void initShader( const std::string& vertName, const std::string& fragName );
 
+    void initShader( const std::string& vertName, const std::string& geomName,
+                     const std::string& fragName );
+
     /**
      * @brief Draws the model.
      */

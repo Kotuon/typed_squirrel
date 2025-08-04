@@ -1,4 +1,6 @@
-shader.cpp( 70:16 ): Vertex Shader shaders/test.comp: ERROR: 0:18: ')' : syntax error syntax error
+shader.cpp( 70:16 ): Vertex Shader shaders/geoTest.vert: ERROR: 0:17: 'VS_OUT' : undeclared identifier 
+ERROR: 0:17: 'normal' : illegal vector field selection 
+ERROR: 0:17: 'assign' :  cannot convert from '3-component vector of highp float' to 'highp float'
 
 
 

@@ -54,6 +54,17 @@ void Model::initShader( const std::string& vertName,
     m_mesh->loadShader( vertName, fragName );
 }
 
+void Model::initShader( const std::string& vertName,
+                        const std::string& geomName,
+                        const std::string& fragName ) {
+    if ( !m_mesh ) {
+        Trace::message( "Failed to make shader: No mesh" );
+        return;
+    }
+
+    m_mesh->loadShader( vertName, geomName, fragName );
+}
+
 /**
  * @brief Draws the model.
  */

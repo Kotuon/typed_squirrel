@@ -181,19 +181,21 @@ void Mesh::draw() {
     // Creating the MVP (Model * View * Projection) matrix
     matrix4 model = transform.matrix();
 
-    glUseProgram( m_shader->getHandle() );
+    for ( auto& shader : m_shaders ) {
+        shader->use();
 
-    // Sending data to the shaders
-    glUniformMatrix4fv( m_shader->getLocation( "projection" ), 1, GL_FALSE,
-                        &camera->projectionMatrix()[0][0] );
-    glUniformMatrix4fv( m_shader->getLocation( "model" ), 1, GL_FALSE,
-                        &model[0][0] );
-    glUniformMatrix4fv( m_shader->getLocation( "view" ), 1, GL_FALSE,
-                        &camera->viewMatrix()[0][0] );
+        // Sending data to the shaders
+        glUniformMatrix4fv( shader->getLocation( "projection" ), 1, GL_FALSE,
+                            &camera->projectionMatrix()[0][0] );
+        glUniformMatrix4fv( shader->getLocation( "model" ), 1, GL_FALSE,
+                            &model[0][0] );
+        glUniformMatrix4fv( shader->getLocation( "view" ), 1, GL_FALSE,
+                            &camera->viewMatrix()[0][0] );
 
-    glBindVertexArray( vao );
+        glBindVertexArray( vao );
 
-    glDrawArrays( m_model->getRenderMethod(), 0, vertCount );
+        glDrawArrays( m_model->getRenderMethod(), 0, vertCount );
+    }
 
     glUseProgram( 0 );
 
@@ -204,15 +206,17 @@ void Mesh::draw() {
  * @brief Sets the shader program for this mesh.
  * @param t_shader Pointer to the shader Program.
  */
-void Mesh::setShader( Program* t_shader ) {
-    m_shader = std::make_unique< Program >( t_shader );
+void Mesh::addShader( Program* t_shader ) {
+    m_shaders.push_back( std::make_unique< Program >( t_shader ) );
 }
 
 /**
  * @brief Gets the shader program associated with this mesh.
  * @return Pointer to the shader Program.
  */
-const Program* Mesh::getShader() const { return m_shader.get(); }
+const Program* Mesh::getShader( const size_t id ) const {
+    return m_shaders[id].get();
+}
 
 /**
  * @brief Loads and sets the shader from vertex and fragment shader files.
@@ -221,7 +225,13 @@ const Program* Mesh::getShader() const { return m_shader.get(); }
  */
 void Mesh::loadShader( const std::string& vertName,
                        const std::string& fragName ) {
-    m_shader = std::make_unique< Program >( vertName, fragName );
+    m_shaders.push_back( std::make_unique< Program >( vertName, fragName ) );
+}
+
+void Mesh::loadShader( const std::string& vertName, const std::string& geomName,
+                       const std::string& fragName ) {
+    m_shaders.push_back(
+        std::make_unique< Program >( vertName, geomName, fragName ) );
 }
 
 /**

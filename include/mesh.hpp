@@ -91,13 +91,13 @@ public:
      * @brief Sets the shader program for this mesh.
      * @param t_shader Pointer to the shader Program.
      */
-    void setShader( Program* t_shader );
+    void addShader( Program* t_shader );
 
     /**
      * @brief Gets the shader program associated with this mesh.
      * @return Pointer to the shader Program.
      */
-    const Program* getShader() const;
+    const Program* getShader( const size_t id ) const;
 
     /**
      * @brief Loads and sets the shader from vertex and fragment shader files.
@@ -105,6 +105,9 @@ public:
      * @param fragName Fragment shader filename.
      */
     void loadShader( const std::string& vertName, const std::string& fragName );
+
+    void loadShader( const std::string& vertName, const std::string& geomName,
+                     const std::string& fragName );
 
     /**
      * @brief Gets the model name associated with this mesh.
@@ -130,13 +133,14 @@ private:
     void insertData( char* data[3], std::vector< vector3 >& v,
                      std::vector< vector2 >& vt, std::vector< vector3 >& vn );
 
-    Model* m_model = nullptr;            //!< Pointer to the associated Model.
-    std::unique_ptr< Program > m_shader; //!< Shader program for this mesh.
-    std::vector< Vertex > m_vertices;    //!< List of vertices for the mesh.
-    std::string m_modelName;             //!< Name of the file for the model.
-    GLsizei vertCount = 0;               //!< Number of vertices.
-    GLuint vao = 0;                      //!< Vertex Array Object.
-    GLuint vbo = 0;                      //!< Vertex Buffer Object.
+    Model* m_model = nullptr; //!< Pointer to the associated Model.
+    // std::unique_ptr< Program > m_shader; //!< Shader program for this mesh.
+    std::vector< std::unique_ptr< Program > > m_shaders;
+    std::vector< Vertex > m_vertices; //!< List of vertices for the mesh.
+    std::string m_modelName;          //!< Name of the file for the model.
+    GLsizei vertCount = 0;            //!< Number of vertices.
+    GLuint vao = 0;                   //!< Vertex Array Object.
+    GLuint vbo = 0;                   //!< Vertex Buffer Object.
 };
 
 } // namespace SquirrelEngine
