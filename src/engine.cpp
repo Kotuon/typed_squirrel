@@ -132,7 +132,7 @@ void Engine::update() {
     Entity* camera = world->findEntity( "Main camera" );
 
     // Texture test ////////////////////////////////////////////////////////////
-    Program compute( "shaders/test.comp" );
+    Program compute( { "shaders/test.comp" } );
 
     const unsigned TEXTURE_WIDTH = 1000, TEXTURE_HEGIHT = 1000;
     unsigned texture;
