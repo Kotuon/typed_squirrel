@@ -129,19 +129,9 @@ public:
     Program( const Shader& vertex, const Shader& geometry,
              const Shader& fragment );
 
-    /**
-     * @brief Constructs a Program from two shader files.
-     * @param firstFile Vertex shader file.
-     * @param secondFile Fragment shader file.
-     */
-    Program( const std::string& vertexFile, const std::string& fragmentFile );
-
-    Program( const std::string& vertexFile, const std::string& geometryFile,
-             const std::string& fragmentFile );
-
     Program( const Shader& computeShader );
 
-    Program( const std::string& computeFile );
+    Program( std::initializer_list< std::string > shaderFiles );
 
     /**
      * @brief Destructor for Program.
