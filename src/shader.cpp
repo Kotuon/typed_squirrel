@@ -167,36 +167,6 @@ Program::Program( const Program& other ) : ShaderBase( other.m_handle ) {}
  */
 Program::Program( const Program* other ) : ShaderBase( other->m_handle ) {}
 
-/**
- * @brief Constructs a Program from two shaders.
- * @param first First shader.
- * @param second Second shader.
- */
-Program::Program( const Shader& vertex, const Shader& fragment )
-    : ShaderBase( glCreateProgram() ) {
-    glAttachShader( m_handle, vertex.getHandle() );
-    glAttachShader( m_handle, fragment.getHandle() );
-
-    glLinkProgram( m_handle );
-}
-
-Program::Program( const Shader& vertex, const Shader& geometry,
-                  const Shader& fragment )
-    : ShaderBase( glCreateProgram() ) {
-    glAttachShader( m_handle, vertex.getHandle() );
-    glAttachShader( m_handle, geometry.getHandle() );
-    glAttachShader( m_handle, fragment.getHandle() );
-
-    glLinkProgram( m_handle );
-}
-
-Program::Program( const Shader& computeShader )
-    : ShaderBase( glCreateProgram() ) {
-    glAttachShader( m_handle, computeShader.getHandle() );
-
-    glLinkProgram( m_handle );
-}
-
 Program::Program( std::initializer_list< std::string > shaderFiles )
     : ShaderBase( glCreateProgram() ) {
     for ( auto& file : shaderFiles ) {

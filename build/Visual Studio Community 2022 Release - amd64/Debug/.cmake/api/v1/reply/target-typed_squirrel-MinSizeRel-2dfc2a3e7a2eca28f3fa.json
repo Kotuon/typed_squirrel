@@ -201,11 +201,11 @@
 			"id" : "fmt::@02464759dd67601a9918"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "glfw::@7d8f67159c48f691a52d"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "glfw::@7d8f67159c48f691a52d"
 		}
 	],
 	"id" : "typed_squirrel::@6890427a1f51a3e7e1df",
