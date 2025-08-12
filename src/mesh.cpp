@@ -225,13 +225,14 @@ const Program* Mesh::getShader( const size_t id ) const {
  */
 void Mesh::loadShader( const std::string& vertName,
                        const std::string& fragName ) {
-    m_shaders.push_back( std::make_unique< Program >( vertName, fragName ) );
+    m_shaders.push_back(
+        std::make_unique< Program >( new Program{ vertName, fragName } ) );
 }
 
 void Mesh::loadShader( const std::string& vertName, const std::string& geomName,
                        const std::string& fragName ) {
     m_shaders.push_back(
-        std::make_unique< Program >( vertName, geomName, fragName ) );
+        std::make_unique< Program >( new Program{ vertName, geomName, fragName } ) );
 }
 
 /**

@@ -119,18 +119,6 @@ public:
      */
     Program( const Program* other );
 
-    /**
-     * @brief Constructs a Program from two shaders.
-     * @param first First shader.
-     * @param second Second shader.
-     */
-    Program( const Shader& vertex, const Shader& fragment );
-
-    Program( const Shader& vertex, const Shader& geometry,
-             const Shader& fragment );
-
-    Program( const Shader& computeShader );
-
     Program( std::initializer_list< std::string > shaderFiles );
 
     /**
