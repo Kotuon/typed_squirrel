@@ -13,6 +13,7 @@
 
 #include "core.hpp"
 #include <memory>
+#include "compute_test.hpp"
 
 namespace SquirrelEngine {
 
@@ -132,7 +133,7 @@ void Engine::update() {
     Entity* camera = world->findEntity( "Main camera" );
 
     // Texture test ////////////////////////////////////////////////////////////
-    Program compute( { "shaders/test.comp" } );
+    // Program compute( { "shaders/test.comp" } );
 
     const unsigned TEXTURE_WIDTH = 1000, TEXTURE_HEGIHT = 1000;
     unsigned texture;
@@ -150,6 +151,10 @@ void Engine::update() {
 
     glActiveTexture( GL_TEXTURE0 );
     glBindTexture( GL_TEXTURE_2D, texture );
+    ////////////////////////////////////////////////////////////////////////////
+    // particle system test
+    Test::ParticlesTest pTest;
+    pTest.init();
     ////////////////////////////////////////////////////////////////////////////
 
     // Main update loop
@@ -180,10 +185,15 @@ void Engine::update() {
         }
 
         // Compute test ////////////////////////////////////////////////////////
-        compute.use();
-        compute.setFloat( "t", timeManager->getTotalTime() );
-        glDispatchCompute( TEXTURE_WIDTH / 10, TEXTURE_HEGIHT / 10, 1 );
-        glMemoryBarrier( GL_SHADER_IMAGE_ACCESS_BARRIER_BIT );
+        // compute.use();
+        // compute.setFloat( "t", timeManager->getTotalTime() );
+        // glDispatchCompute( TEXTURE_WIDTH / 10, TEXTURE_HEGIHT / 10, 1 );
+        // glMemoryBarrier( GL_SHADER_IMAGE_ACCESS_BARRIER_BIT );
+
+        ////////////////////////////////////////////////////////////////////////
+        // particle system test
+        pTest.update( timeManager->getDeltaTime() );
+        // }
         ////////////////////////////////////////////////////////////////////////
         // TODO: call render function
         objRenderer->render();

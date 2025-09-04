@@ -1,0 +1,76 @@
+#version 430 core
+
+struct Particle {
+    vec3 position;
+    vec3 velocity;
+    vec3 accel;
+    vec4 color;
+    float life;
+};
+
+struct EmitterSettings {
+    vec4 minColor, maxColor;
+    vec3 minOffset, maxOffset;
+    vec3 minVelocity, maxVelocity;
+    vec3 minAccel, maxAccel;
+    float minLife, maxLife;
+    vec3 position;
+};
+
+layout(std430, binding = 0) writeonly restrict buffer SSBO_0 {
+    Particle particles[];
+};
+
+layout(std430, binding = 1) coherent restrict buffer SSBO_1 {
+    int count;
+    int indices[];
+} freelist;
+
+layout(location = 0) uniform int particlesToSpawn;
+layout(location = 1) uniform EmitterSettings emitter;
+
+// Random functions
+float rand1(float f1, float f2){
+    return fract(sin(dot(vec2(f1, f2), vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+vec2 rand2(vec2 v1, vec2 v2){
+    return vec2(rand1(v1.x, v2.x), rand1(v1.y, v2.y));
+}
+
+vec3 rand3(vec3 v1, vec3 v2){
+    return vec3(rand1(v1.x, v2.x), rand1(v1.y, v2.y), rand1(v1.z, v2.z));
+}
+
+vec4 rand4(vec4 v1, vec4 v2){
+    return vec4(rand1(v1.r, v2.r), rand1(v1.g, v2.g), rand1(v1.b, v1.b),
+        rand1(v1.a, v2.a));
+}
+
+void makeParticle(out Particle particle) {
+    particle.life = rand1(emitter.minLife, emitter.maxLife);
+    particle.velocity = rand3(emitter.minVelocity, emitter.maxVelocity);
+    particle.accel = rand3(emitter.minAccel, emitter.maxAccel);
+    // particle.scale = rand2(emitter.minScale, emitter.maxScale);
+    particle.color = rand4(emitter.minColor, emitter.maxColor);
+
+    vec3 pos = rand3(emitter.minOffset, emitter.maxOffset);
+    particle.position = emitter.position + pos;
+}
+
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+void main() {
+    uint index = gl_GlobalInvocationID.x;
+
+    if (index >= particlesToSpawn) 
+        return;
+
+    int freeListIndex = atomicAdd(freelist.count, -1) - 1;
+    if (freeListIndex < 0) {
+        atomicAdd(freelist.count, 1);
+        return;
+    }
+
+    int particleIndex = freelist.indices[freeListIndex];
+    makeParticle(particles[particleIndex]);
+}

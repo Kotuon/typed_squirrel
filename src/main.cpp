@@ -55,6 +55,7 @@ int main( int, char** ) {
     cubeModel->initShader( "shaders/base.vert", "shaders/base.frag" );
     cubeModel->initShader( "shaders/geoTest.vert", "shaders/geoTest.geom",
                            "shaders/geoTest.frag" );
+    cube->transform.setPosition( vector3(-5.f, 0.f, 0.f) );
 
     engineInstance->update();
     engineInstance->shutdown();
