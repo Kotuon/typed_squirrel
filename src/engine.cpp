@@ -32,7 +32,7 @@ Engine::~Engine() {}
  */
 enum StartupErrors Engine::initialize() {
     m_window = std::make_unique< Window >();
-    m_window->create( "SquirrelEngine", 1280, 720, false );
+    m_window->create( "SquirrelEngine", 1920, 1080, false );
 
     if ( !createSystem< TimeManager >() ) {
         return StartupErrors::SE_SystemFailedInit;
