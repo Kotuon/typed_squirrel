@@ -15,7 +15,9 @@ namespace SquirrelEngine {
 /**
  * @brief Default constructor for Transform.
  */
-Transform::Transform() : m_transform(), m_scale( 1.f ), m_isDirty( true ) {}
+Transform::Transform()
+    : m_position( 0.f ), m_scale( 1.f ), m_rotation( 1.f, 0.f, 0.f, 0.f ),
+      m_isDirty( true ) {}
 
 // Position functions
 
@@ -24,7 +26,7 @@ Transform::Transform() : m_transform(), m_scale( 1.f ), m_isDirty( true ) {}
  * @param t_position The new position.
  */
 void Transform::setPosition( const vector3& t_position ) {
-    m_transform.setTranslation( t_position );
+    m_position = t_position;
     m_isDirty = true;
 }
 
@@ -32,16 +34,14 @@ void Transform::setPosition( const vector3& t_position ) {
  * @brief Gets the position of the transform.
  * @return The current position.
  */
-const vector3 Transform::getPosition() const {
-    return m_transform.getTranslation();
-}
+const vector3 Transform::getPosition() const { return m_position; }
 
 /**
  * @brief Moves the transform by a given amount.
  * @param amount The amount to move.
  */
 void Transform::move( const vector3& amount ) {
-    m_transform.addTranslation( amount );
+    m_position += amount;
     m_isDirty = true;
 }
 
@@ -75,35 +75,33 @@ void Transform::scale( const float factor ) {
 
 /**
  * @brief Sets the rotation of the transform.
- * @param t_rotation The new rotation as a quaternion.
+ * @param t_rotation The new rotation as a quat.
  */
-void Transform::setRotation( const Quaternion& t_rotation ) {
-    m_transform.setRotation( t_rotation );
+void Transform::setRotation( const quat& t_rotation ) {
+    m_rotation = t_rotation;
     m_isDirty = true;
 }
 
 /**
  * @brief Gets the rotation of the transform.
- * @return The current rotation as a quaternion.
+ * @return The current rotation as a quat.
  */
-const Quaternion& Transform::getRotation() const {
-    return m_transform.getRotation();
-}
+const quat& Transform::getRotation() const { return m_rotation; }
 
 /**
  * @brief Gets the rotation of the transform as Euler angles.
  * @return The current rotation as Euler angles.
  */
 const vector3 Transform::getEulerRotation() const {
-    return m_transform.getEulerRotation();
+    return glm::eulerAngles( m_rotation );
 }
 
 /**
- * @brief Rotates the transform by a quaternion.
- * @param rotation The rotation quaternion.
+ * @brief Rotates the transform by a quat.
+ * @param rotation The rotation quat.
  */
-void Transform::rotate( const Quaternion& rotation ) {
-    m_transform.addRotation( rotation );
+void Transform::rotate( const quat& rotation ) {
+    m_rotation = rotation * m_rotation;
     m_isDirty = true;
 }
 
@@ -113,8 +111,7 @@ void Transform::rotate( const Quaternion& rotation ) {
  * @param angle The angle in degrees.
  */
 void Transform::rotate( const vector3& axis, const float angle ) {
-    Quaternion newRotation = Quaternion::fromAxisAngle( axis.x, axis.y, axis.z,
-                                                        glm::radians( angle ) );
+    quat newRotation = glm::angleAxis( glm::radians( angle ), axis );
     rotate( newRotation );
 }
 
@@ -125,7 +122,7 @@ void Transform::rotate( const vector3& axis, const float angle ) {
  * @return The forward vector.
  */
 const vector3 Transform::forwardVector() const {
-    return m_transform.getRotation() * vector3( 0.f, 0.f, -1.f );
+    return m_rotation * vector3( 0.f, 0.f, -1.f );
 }
 
 /**
@@ -133,7 +130,7 @@ const vector3 Transform::forwardVector() const {
  * @return The right vector.
  */
 const vector3 Transform::rightVector() const {
-    return m_transform.getRotation() * vector3( 1.f, 0.f, 0.f );
+    return m_rotation * vector3( 1.f, 0.f, 0.f );
 }
 
 /**
@@ -141,7 +138,7 @@ const vector3 Transform::rightVector() const {
  * @return The up vector.
  */
 const vector3 Transform::upVector() const {
-    return m_transform.getRotation() * vector3( 0.f, 1.f, 0.f );
+    return m_rotation * vector3( 0.f, 1.f, 0.f );
 }
 
 /**
@@ -151,7 +148,7 @@ const vector3 Transform::upVector() const {
 void Transform::look( const vector3& direction ) {
     const float dot = glm::dot( vector3( 0.f, 0.f, -1.f ), direction );
     if ( dot > 0.999999f || dot < -0.999999f ) {
-        m_transform.setRotation( Quaternion( 0.f, 0.f, 0.f, 1.f ) );
+        m_rotation = { 0.f, 0.f, 0.f, 1.f };
         return;
     }
 
@@ -159,7 +156,7 @@ void Transform::look( const vector3& direction ) {
     float directionLength = glm::length( direction );
     float w = directionLength + dot;
 
-    m_transform.setRotation( { a.x, a.y, a.z, w } );
+    m_rotation = { a.x, a.y, a.z, w };
 }
 
 /**
@@ -168,10 +165,9 @@ void Transform::look( const vector3& direction ) {
  */
 const matrix4& Transform::matrix() {
     if ( m_isDirty ) {
-        // const matrix4 t =
-        //     glm::translate( matrix4( 1.f ), m_transform.getTranslation() );
+        const matrix4 t = glm::translate( matrix4( 1.f ), m_position );
         const matrix4 s = glm::scale( matrix4( 1.f ), m_scale );
-        const matrix4 r = m_transform.getMatrix();
+        const matrix4 r = glm::toMat4( m_rotation );
 
         m_matrix = r * s;
 

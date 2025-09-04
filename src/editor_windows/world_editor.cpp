@@ -72,18 +72,18 @@ void WorldEditor::showComponents( Entity* entity ) {
             ImGui::Text( "%f", position.z );
 
             //// Rotation
-            const Quaternion rotation = transform->getRotation();
+            const quat& rotation = transform->getRotation();
             const vector3 eulerRotation = transform->getEulerRotation();
 
             ImGui::Separator();
             ImGui::Text( "Quaternion Rotation" );
-            ImGui::Text( "%f", rotation.w );
+            ImGui::Text( "%f", rotation[0] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.i );
+            ImGui::Text( "%f", rotation[1] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.j );
+            ImGui::Text( "%f", rotation[2] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.k );
+            ImGui::Text( "%f", rotation[3] );
 
             ImGui::Text( "Euler Rotation" );
             ImGui::Text( "%f", eulerRotation.x );
@@ -103,7 +103,6 @@ void WorldEditor::showComponents( Entity* entity ) {
                     if ( j < 3 ) ImGui::SameLine();
                 }
             }
-            
         }
 
         // Camera Component
@@ -124,19 +123,19 @@ void WorldEditor::showComponents( Entity* entity ) {
             ImGui::Text( "%f", position.z );
 
             //// Rotation
-            const Quaternion rotation = cTransform->getRotation();
+            const quat& rotation = cTransform->getRotation();
             const vector3 eulerRotation = camera->getEulerRotation();
-            const vector3 convertRotation = rotation.getEulerRotation();
+            const vector3 convertRotation = glm::eulerAngles( rotation );
 
             ImGui::Separator();
             ImGui::Text( "Quaternion Rotation" );
-            ImGui::Text( "%f", rotation.w );
+            ImGui::Text( "%f", rotation[0] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.i );
+            ImGui::Text( "%f", rotation[1] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.j );
+            ImGui::Text( "%f", rotation[2] );
             ImGui::SameLine();
-            ImGui::Text( "%f", rotation.k );
+            ImGui::Text( "%f", rotation[3] );
 
             ImGui::Text( "Euler Rotation" );
             ImGui::Text( "%f", eulerRotation.x );

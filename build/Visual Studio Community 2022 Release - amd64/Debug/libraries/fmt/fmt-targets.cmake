@@ -3,17 +3,21 @@
 if("${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}" LESS 2.8)
    message(FATAL_ERROR "CMake >= 2.8.0 required")
 endif()
-if(CMAKE_VERSION VERSION_LESS "3.0.0")
-   message(FATAL_ERROR "CMake >= 3.0.0 required")
+if(CMAKE_VERSION VERSION_LESS "2.8.3")
+   message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 3.0.0...3.28)
+cmake_policy(VERSION 2.8.3...3.26)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
 
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
+
+if(CMAKE_VERSION VERSION_LESS 3.0.0)
+  message(FATAL_ERROR "This file relies on consumers using CMake 3.0.0 or greater.")
+endif()
 
 # Protect against multiple inclusion, which would fail when already imported targets are added once more.
 set(_cmake_targets_defined "")
@@ -52,7 +56,7 @@ add_library(fmt::fmt STATIC IMPORTED)
 set_target_properties(fmt::fmt PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANGUAGE:CXX>,\$<CXX_COMPILER_ID:MSVC>>:/utf-8>"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/fmt/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/fmt/include"
 )
 
 # Create imported target fmt::fmt-header-only
@@ -62,35 +66,35 @@ set_target_properties(fmt::fmt-header-only PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FMT_HEADER_ONLY=1"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANGUAGE:CXX>,\$<CXX_COMPILER_ID:MSVC>>:/utf-8>"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/kelso/Documents/Projects/typed_squirrel/libraries/fmt/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Kelson/Documents/Projects/typed_squirrel/libraries/fmt/include"
 )
 
 # Import target "fmt::fmt" for configuration "Debug"
 set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(fmt::fmt PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/Debug/fmtd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/Debug/fmtd.lib"
   )
 
 # Import target "fmt::fmt" for configuration "Release"
 set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(fmt::fmt PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/Release/fmt.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/Release/fmt.lib"
   )
 
 # Import target "fmt::fmt" for configuration "MinSizeRel"
 set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(fmt::fmt PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/MinSizeRel/fmt.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/MinSizeRel/fmt.lib"
   )
 
 # Import target "fmt::fmt" for configuration "RelWithDebInfo"
 set_property(TARGET fmt::fmt APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(fmt::fmt PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/kelso/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/RelWithDebInfo/fmt.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/Kelson/Documents/Projects/typed_squirrel/build/Visual Studio Community 2022 Release - amd64/Debug/libraries/fmt/RelWithDebInfo/fmt.lib"
   )
 
 # This file does not depend on other imported targets which have

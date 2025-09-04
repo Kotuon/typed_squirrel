@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\6320689062ebc5c1784b13b2296a6a90\update_mappings.rule">
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\1d60fd553f1c4cd4b29749f82ae556d6\update_mappings.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\glfw\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\glfw\src\mappings.h.in">
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\src\mappings.h.in">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="C:\Users\kelso\Documents\Projects\typed_squirrel\libraries\glfw\CMake\GenerateMappings.cmake" />
-    <None Include="C:\Users\kelso\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\glfw\src\CMakeFiles\update_mappings" />
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\libraries\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\glfw\src\CMakeFiles\update_mappings" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{295D4D54-D761-3DD6-9C26-1259B231DBB9}</UniqueIdentifier>
+      <UniqueIdentifier>{B6BBDA81-8D31-3FB8-802F-21015E50A7F1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{15057E87-703C-3F6A-A767-CC69CE8AA9D4}</UniqueIdentifier>
+      <UniqueIdentifier>{9B758AED-F102-35D6-9CA5-3ABC948AC768}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

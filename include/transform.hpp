@@ -14,7 +14,6 @@
 
 #include "math_types.hpp"
 #include "object.hpp"
-#include "dual_quaternion.hpp"
 
 namespace SquirrelEngine {
 
@@ -59,15 +58,15 @@ public:
 
     /**
      * @brief Sets the rotation of the transform.
-     * @param t_rotation The new rotation as a quaternion.
+     * @param t_rotation The new rotation as a quat.
      */
-    void setRotation( const Quaternion& t_rotation );
+    void setRotation( const quat& t_rotation );
 
     /**
      * @brief Gets the rotation of the transform.
-     * @return The current rotation as a quaternion.
+     * @return The current rotation as a quat.
      */
-    const Quaternion& getRotation() const;
+    const quat& getRotation() const;
 
     /**
      * @brief Gets the rotation of the transform as Euler angles.
@@ -82,10 +81,10 @@ public:
     void move( const vector3& amount );
 
     /**
-     * @brief Rotates the transform by a quaternion.
-     * @param rotation The rotation quaternion.
+     * @brief Rotates the transform by a quat.
+     * @param rotation The rotation quat.
      */
-    void rotate( const Quaternion& rotation );
+    void rotate( const quat& rotation );
 
     /**
      * @brief Rotates the transform around an axis by an angle.
@@ -131,10 +130,11 @@ public:
     const matrix4& matrix();
 
 private:
-    matrix4 m_matrix;           //!< Cached transformation matrix.
-    DualQuaternion m_transform; //!< dual quaternion for position and rotation
-    vector3 m_scale;            //!< Scale vector.
-    bool m_isDirty;             //!< Dirty flag for matrix recalculation.
+    matrix4 m_matrix;   //!< Cached transformation matrix.
+    vector3 m_position; //!< Position vector.
+    vector3 m_scale;    //!< Scale vector.
+    quat m_rotation;    //!< Rotation quaternion.
+    bool m_isDirty;     //!< Dirty flag for matrix recalculation.
 };
 
 } // namespace SquirrelEngine
