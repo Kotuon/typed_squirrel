@@ -327,6 +327,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\cameraComponent.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\component.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\compute_test.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\editor.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\editor_windows\world_editor.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\engine.cpp" />

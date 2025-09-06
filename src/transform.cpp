@@ -36,6 +36,11 @@ void Transform::setPosition( const vector3& t_position ) {
  */
 const vector3 Transform::getPosition() const { return m_position; }
 
+vector3& Transform::getPosition() {
+    m_isDirty = true;
+    return m_position;
+}
+
 /**
  * @brief Moves the transform by a given amount.
  * @param amount The amount to move.
