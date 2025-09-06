@@ -44,6 +44,8 @@ public:
      */
     const vector3 getPosition() const;
 
+    vector3& getPosition();
+
     /**
      * @brief Sets the scale of the transform.
      * @param t_scale The new scale.

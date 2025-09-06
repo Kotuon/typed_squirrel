@@ -43,7 +43,8 @@ void ParticlesTest::update( const float dt ) {
     // for ( auto& emitter : emitters ) {
     emitter->timer += dt;
 
-    unsigned particlesToSpawn = emitter->timer / emitter->spawnInterval;
+    unsigned particlesToSpawn =
+        static_cast< unsigned >( emitter->timer / emitter->spawnInterval );
     emitter->timer = fmodf( emitter->timer, emitter->spawnInterval );
 
     if ( particlesToSpawn > 0 ) {
