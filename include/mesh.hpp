@@ -20,6 +20,9 @@
 #include "math_types.hpp"
 #include "object.hpp"
 
+constexpr unsigned INSTANCE_STRIDE = 4;
+constexpr unsigned MAX_INSTANCES = 80000;
+
 namespace SquirrelEngine {
 class Model;
 class Program;
@@ -87,6 +90,8 @@ public:
      */
     void draw();
 
+    void drawInstanced( uint64_t count );
+
     /**
      * @brief Sets the shader program for this mesh.
      * @param t_shader Pointer to the shader Program.
@@ -115,6 +120,9 @@ public:
      */
     std::string getModelName() const;
 
+    void enabledInstanced();
+    void bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count );
+
 private:
     /**
      * @brief Reads mesh data from a model file.
@@ -141,6 +149,10 @@ private:
     GLsizei vertCount = 0;            //!< Number of vertices.
     GLuint vao = 0;                   //!< Vertex Array Object.
     GLuint vbo = 0;                   //!< Vertex Buffer Object.
+
+    // Instanced variables
+    GLuint posVBO = 0;
+    GLuint colVBO = 0;
 };
 
 } // namespace SquirrelEngine

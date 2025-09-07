@@ -70,6 +70,8 @@ void Model::initShader( const std::string& vertName,
  */
 void Model::draw() { m_mesh->draw(); }
 
+void Model::drawInstanced( uint64_t count ) { m_mesh->drawInstanced( count ); }
+
 /**
  * @brief Sets the mesh for this model.
  * @param t_mesh Pointer to the Mesh.
@@ -97,5 +99,12 @@ void Model::setRenderMethod( GLuint t_renderMethod ) {
  * @return The render method.
  */
 GLuint Model::getRenderMethod() const { return m_renderMethod; }
+
+void Model::enableInstanced() { m_mesh->enabledInstanced(); }
+
+void Model::bindInstanced( GLfloat* posData, GLubyte* colData,
+                           uint64_t count ) {
+    m_mesh->bindInstanced( posData, colData, count );
+}
 
 } // namespace SquirrelEngine

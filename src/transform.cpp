@@ -174,7 +174,7 @@ const matrix4& Transform::matrix() {
         const matrix4 s = glm::scale( matrix4( 1.f ), m_scale );
         const matrix4 r = glm::toMat4( m_rotation );
 
-        m_matrix = r * s;
+        m_matrix = t * r * s;
 
         m_isDirty = false;
     }

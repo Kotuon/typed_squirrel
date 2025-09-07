@@ -202,6 +202,33 @@ void Mesh::draw() {
     glBindVertexArray( 0 );
 }
 
+void Mesh::drawInstanced( uint64_t count ) {
+    World* world = World::instance();
+
+    CameraComponent* camera =
+        world->findEntity( "Main camera" )->findComponent< CameraComponent >();
+
+    for ( auto& shader : m_shaders ) {
+        shader->use();
+
+        // Sending data to the shaders
+        glUniformMatrix4fv( shader->getLocation( "projection" ), 1, GL_FALSE,
+                            &camera->projectionMatrix()[0][0] );
+
+        glUniformMatrix4fv( shader->getLocation( "view" ), 1, GL_FALSE,
+                            &camera->viewMatrix()[0][0] );
+
+        glBindVertexArray( vao );
+
+        glDrawArraysInstanced( m_model->getRenderMethod(), 0, vertCount,
+                               static_cast< GLsizei >( count ) );
+    }
+
+    glUseProgram( 0 );
+
+    glBindVertexArray( 0 );
+}
+
 /**
  * @brief Sets the shader program for this mesh.
  * @param t_shader Pointer to the shader Program.
@@ -231,8 +258,8 @@ void Mesh::loadShader( const std::string& vertName,
 
 void Mesh::loadShader( const std::string& vertName, const std::string& geomName,
                        const std::string& fragName ) {
-    m_shaders.push_back(
-        std::make_unique< Program >( new Program{ vertName, geomName, fragName } ) );
+    m_shaders.push_back( std::make_unique< Program >(
+        new Program{ vertName, geomName, fragName } ) );
 }
 
 /**
@@ -240,5 +267,44 @@ void Mesh::loadShader( const std::string& vertName, const std::string& geomName,
  * @return The model name as a string.
  */
 std::string Mesh::getModelName() const { return m_modelName; }
+
+void Mesh::enabledInstanced() {
+    // Position
+    glGenBuffers( 1, &( posVBO ) );
+    glBindBuffer( GL_ARRAY_BUFFER, posVBO );
+    glBufferData( GL_ARRAY_BUFFER,
+                  sizeof( GLfloat ) * INSTANCE_STRIDE * MAX_INSTANCES, NULL,
+                  GL_STREAM_DRAW );
+    glEnableVertexAttribArray( 3 );
+    glVertexAttribPointer( 3, 4, GL_FLOAT, GL_FALSE,
+                           INSTANCE_STRIDE * sizeof( GLfloat ), ( void* )0 );
+    glVertexAttribDivisor( 3, 1 );
+
+    // Color
+    glGenBuffers( 1, &( colVBO ) );
+    glBindBuffer( GL_ARRAY_BUFFER, colVBO );
+    glBufferData( GL_ARRAY_BUFFER,
+                  sizeof( GLubyte ) * INSTANCE_STRIDE * MAX_INSTANCES, NULL,
+                  GL_STREAM_DRAW );
+    glEnableVertexAttribArray( 4 );
+    glVertexAttribPointer( 4, 4, GL_FLOAT, GL_FALSE,
+                           INSTANCE_STRIDE * sizeof( float ), ( void* )0 );
+    glVertexAttribDivisor( 4, 1 );
+
+    glBindBuffer( GL_ARRAY_BUFFER, 0 );
+    glBindVertexArray( 0 );
+}
+
+void Mesh::bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count ) {
+    glBindBuffer( GL_ARRAY_BUFFER, posVBO );
+    glBufferSubData( GL_ARRAY_BUFFER, 0,
+                     sizeof( GLfloat ) * INSTANCE_STRIDE * count, posData );
+
+    glBindBuffer( GL_ARRAY_BUFFER, colVBO );
+    glBufferSubData( GL_ARRAY_BUFFER, 0,
+                     sizeof( GLubyte ) * INSTANCE_STRIDE * count, colData );
+
+    glBindBuffer( GL_ARRAY_BUFFER, 0 );
+}
 
 } // namespace SquirrelEngine

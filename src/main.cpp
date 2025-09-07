@@ -47,7 +47,7 @@ int main( int, char** ) {
 
     cameraComp->aspect = static_cast< float >( frameWidth ) /
                          static_cast< float >( frameHeight );
-    camera->transform.setPosition( vector3( 0.f, 0.f, 3.f ) );
+    camera->transform.setPosition( vector3( 0.f, 0.f, 15.f ) );
 
     Entity* cube = worldInstance->createEntity( "Cube01" );
     Model* cubeModel = cube->createComponent< Model >();
