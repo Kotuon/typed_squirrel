@@ -35,27 +35,17 @@ void ParticlesTest::update( const float ) {
         particlePos[posCounter++] = p->pos.z;
         particlePos[posCounter++] = 0.f;
 
-        particleCol[colCounter++] = static_cast< GLubyte >( p->r );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->g );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->b );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->a );
+        particleCol[colCounter++] = static_cast< GLubyte >( p->col.r );
+        particleCol[colCounter++] = static_cast< GLubyte >( p->col.g );
+        particleCol[colCounter++] = static_cast< GLubyte >( p->col.b );
+        particleCol[colCounter++] = static_cast< GLubyte >( p->col.a );
     }
 
     particleModel->bindInstanced( particlePos.data(), particleCol.data(),
                                   ParticleCount );
 }
 
-void ParticlesTest::render() {
-    const Program* shader = particleModel->getMesh()->getShader( 0 );
-    shader->use();
-
-    // glUniformMatrix4fv( shader->getLocation( "projection" ), 1, GL_FALSE,
-    //                     &camera->projectionMatrix()[0][0] );
-
-    glUniform1f( shader->getLocation( "scale" ), 10.f );
-
-    particleModel->drawInstanced( ParticleCount );
-}
+void ParticlesTest::render() { particleModel->drawInstanced( ParticleCount ); }
 
 } // namespace Test
 } // namespace SquirrelEngine

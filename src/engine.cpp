@@ -193,6 +193,8 @@ void Engine::update() {
         ////////////////////////////////////////////////////////////////////////
         // particle system test
         pTest.update( timeManager->getDeltaTime() );
+
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         pTest.render();
         // }
         ////////////////////////////////////////////////////////////////////////

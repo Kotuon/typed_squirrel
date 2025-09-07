@@ -21,7 +21,7 @@
 #include "object.hpp"
 
 constexpr unsigned INSTANCE_STRIDE = 4;
-constexpr unsigned MAX_INSTANCES = 80000;
+constexpr unsigned MAX_INSTANCES = 64;
 
 namespace SquirrelEngine {
 class Model;
@@ -121,7 +121,7 @@ public:
     std::string getModelName() const;
 
     void enabledInstanced();
-    void bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count );
+    void bindInstanced( GLfloat* posData, GLfloat* colData, uint64_t count );
 
 private:
     /**

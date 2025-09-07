@@ -32,7 +32,6 @@ ObjectRenderer::ObjectRenderer() {}
 void ObjectRenderer::render() {
     World* world = World::instance();
 
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
     // TODO: update shaders
 
