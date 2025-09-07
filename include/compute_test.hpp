@@ -7,34 +7,17 @@
 
 #include "math_types.hpp"
 #include "shader.hpp"
+#include "model.hpp"
 
 namespace SquirrelEngine {
 
+namespace Test {
+
 struct Particle {
-    vector3 position;
-    vector3 velocity;
-    vector3 accel;
-    vector4 color;
+    vector3 pos{ 0.f }, vel{ 0.f };
+    uint64_t r{1}, g{1}, b{1}, a{1};
     float life;
 };
-
-struct ParticleEmitter {
-    vector4 minColor, maxColor;
-    vector3 minOffset, maxOffset;
-    vector3 minVelocity, maxVelocity;
-    vector3 minAccel, maxAccel;
-    float minLife, maxLife;
-
-    vector3 position;
-
-    float spawnInterval, timer;
-    uint32_t maxParticles;
-    unsigned particlesBuffer;
-    unsigned freelistBuffer;
-    unsigned texture;
-};
-
-namespace Test {
 
 class ParticlesTest {
 public:
@@ -42,15 +25,29 @@ public:
 
     void init();
     void update( const float dt );
+    void render();
 
 private:
-    std::unique_ptr< ParticleEmitter > emitter;
-    std::unique_ptr< Program > emitterShader;
-    std::unique_ptr< Program > particleShader;
+    static inline const GLfloat vertexData[] = {
+        -0.5f, -0.5f, 0.0f, 0.5f, -0.5f, 0.0f,
+        -0.5f, 0.5f,  0.0f, 0.5f, 0.5f,  0.0f,
+    };
 
-    static constexpr size_t maxParticles = 10;
-    std::array< Particle, maxParticles > particles;
-    std::array< int, maxParticles > freeList;
+    static constexpr uint64_t MaxParticles = 64;
+
+    std::array< std::unique_ptr< Particle >, MaxParticles > particleList{
+        nullptr };
+
+    std::array< GLfloat, MaxParticles * 4 > particlePos;
+    std::array< GLubyte, MaxParticles * 4 > particleCol;
+
+    GLuint vertexBuffer;
+    GLuint particlePosBuffer;
+    GLuint particleColBuffer;
+
+    uint64_t ParticleCount = 1;
+
+    std::unique_ptr< Model > particleModel;
 };
 
 } // namespace Test

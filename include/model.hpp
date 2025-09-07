@@ -56,6 +56,8 @@ public:
      */
     void draw();
 
+    void drawInstanced( uint64_t count );
+
     /**
      * @brief Sets the mesh for this model.
      * @param t_mesh Pointer to the Mesh.
@@ -79,6 +81,10 @@ public:
      * @return The render method.
      */
     GLuint getRenderMethod() const;
+
+    void enableInstanced();
+
+    void bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count );
 
 private:
     std::unique_ptr< Mesh > m_mesh; //!< Pointer to the mesh.
