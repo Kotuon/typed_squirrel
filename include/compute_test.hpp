@@ -15,7 +15,7 @@ namespace Test {
 
 struct Particle {
     vector3 pos{ 0.f }, vel{ 0.f };
-    uint64_t r{1}, g{1}, b{1}, a{1};
+    vector4 col{ 1.f, 0.f, 0.f, 1.f };
     float life;
 };
 
@@ -39,7 +39,7 @@ private:
         nullptr };
 
     std::array< GLfloat, MaxParticles * 4 > particlePos;
-    std::array< GLubyte, MaxParticles * 4 > particleCol;
+    std::array< GLfloat, MaxParticles * 4 > particleCol;
 
     GLuint vertexBuffer;
     GLuint particlePosBuffer;

@@ -127,7 +127,6 @@ bool Mesh::read( std::string t_modelName ) {
     glBindVertexArray( vao );
 
     glGenBuffers( 1, &vbo );
-
     glBindBuffer( GL_ARRAY_BUFFER, vbo );
     glBufferData( GL_ARRAY_BUFFER, sizeof( Vertex ) * vertCount,
                   m_vertices.data(), GL_STATIC_DRAW );
@@ -211,6 +210,7 @@ void Mesh::drawInstanced( uint64_t count ) {
     for ( auto& shader : m_shaders ) {
         shader->use();
 
+        glUniform1f( shader->getLocation( "scale" ), 0.5f );
         // Sending data to the shaders
         glUniformMatrix4fv( shader->getLocation( "projection" ), 1, GL_FALSE,
                             &camera->projectionMatrix()[0][0] );
@@ -225,7 +225,6 @@ void Mesh::drawInstanced( uint64_t count ) {
     }
 
     glUseProgram( 0 );
-
     glBindVertexArray( 0 );
 }
 
@@ -284,25 +283,25 @@ void Mesh::enabledInstanced() {
     glGenBuffers( 1, &( colVBO ) );
     glBindBuffer( GL_ARRAY_BUFFER, colVBO );
     glBufferData( GL_ARRAY_BUFFER,
-                  sizeof( GLubyte ) * INSTANCE_STRIDE * MAX_INSTANCES, NULL,
+                  sizeof( GLfloat ) * INSTANCE_STRIDE * MAX_INSTANCES, NULL,
                   GL_STREAM_DRAW );
     glEnableVertexAttribArray( 4 );
     glVertexAttribPointer( 4, 4, GL_FLOAT, GL_FALSE,
-                           INSTANCE_STRIDE * sizeof( float ), ( void* )0 );
+                           INSTANCE_STRIDE * sizeof( GLfloat ), ( void* )0 );
     glVertexAttribDivisor( 4, 1 );
 
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
     glBindVertexArray( 0 );
 }
 
-void Mesh::bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count ) {
+void Mesh::bindInstanced( GLfloat* posData, GLfloat* colData, uint64_t count ) {
     glBindBuffer( GL_ARRAY_BUFFER, posVBO );
     glBufferSubData( GL_ARRAY_BUFFER, 0,
                      sizeof( GLfloat ) * INSTANCE_STRIDE * count, posData );
 
     glBindBuffer( GL_ARRAY_BUFFER, colVBO );
     glBufferSubData( GL_ARRAY_BUFFER, 0,
-                     sizeof( GLubyte ) * INSTANCE_STRIDE * count, colData );
+                     sizeof( GLfloat ) * INSTANCE_STRIDE * count, colData );
 
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
 }

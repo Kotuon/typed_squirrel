@@ -84,7 +84,7 @@ public:
 
     void enableInstanced();
 
-    void bindInstanced( GLfloat* posData, GLubyte* colData, uint64_t count );
+    void bindInstanced( GLfloat* posData, GLfloat* colData, uint64_t count );
 
 private:
     std::unique_ptr< Mesh > m_mesh; //!< Pointer to the mesh.

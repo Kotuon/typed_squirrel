@@ -102,7 +102,7 @@ GLuint Model::getRenderMethod() const { return m_renderMethod; }
 
 void Model::enableInstanced() { m_mesh->enabledInstanced(); }
 
-void Model::bindInstanced( GLfloat* posData, GLubyte* colData,
+void Model::bindInstanced( GLfloat* posData, GLfloat* colData,
                            uint64_t count ) {
     m_mesh->bindInstanced( posData, colData, count );
 }
