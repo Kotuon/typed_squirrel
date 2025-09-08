@@ -14,7 +14,7 @@ namespace SquirrelEngine {
 namespace Test {
 
 struct Particle {
-    vector3 pos{ 0.f }, vel{ 0.f };
+    vector3 pos{ 0.f, 0.f, 10.f }, vel{ 0.f };
     vector4 col{ 1.f, 0.f, 0.f, 1.f };
     float life;
 };
@@ -40,10 +40,6 @@ private:
 
     std::array< GLfloat, MaxParticles * 4 > particlePos;
     std::array< GLfloat, MaxParticles * 4 > particleCol;
-
-    GLuint vertexBuffer;
-    GLuint particlePosBuffer;
-    GLuint particleColBuffer;
 
     uint64_t ParticleCount = 1;
 
