@@ -132,25 +132,6 @@ void Engine::update() {
     World* world = World::instance();
     Entity* camera = world->findEntity( "Main camera" );
 
-    // Texture test ////////////////////////////////////////////////////////////
-    // Program compute( { "shaders/test.comp" } );
-
-    const unsigned TEXTURE_WIDTH = 1000, TEXTURE_HEGIHT = 1000;
-    unsigned texture;
-    glGenTextures( 1, &texture );
-    glActiveTexture( GL_TEXTURE0 );
-    glBindTexture( GL_TEXTURE_2D, texture );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-    glTexImage2D( GL_TEXTURE_2D, 0, GL_RGBA32F, TEXTURE_WIDTH, TEXTURE_HEGIHT,
-                  0, GL_RGBA, GL_FLOAT, NULL );
-
-    glBindImageTexture( 0, texture, 0, GL_FALSE, 0, GL_READ_ONLY, GL_RGBA32F );
-
-    glActiveTexture( GL_TEXTURE0 );
-    glBindTexture( GL_TEXTURE_2D, texture );
     ////////////////////////////////////////////////////////////////////////////
     // particle system test
     Test::ParticlesTest pTest;
@@ -162,14 +143,18 @@ void Engine::update() {
         // Increment time values
         timeManager->increment();
 
+        glfwSetWindowTitle( m_window->getHandle(),
+                            fmt::format( "FPS : {:0.2f} | Time : {:5.2f}",
+                                         1.0f / timeManager->getDeltaTime(),
+                                         timeManager->getTotalTime() )
+                                .c_str() );
+
         // Gather inputs
         m_window->pollEvents();
 
         if ( inputSystem->getActionState( "close window" ) ) {
             glfwSetWindowShouldClose( m_window->getHandle(), GL_TRUE );
         }
-
-        moveCamera( camera, timeManager, inputSystem );
 
         // Fixed update loop
         while ( timeManager->needsFixedUpdate() ) {
@@ -183,17 +168,11 @@ void Engine::update() {
         for ( auto& func : updateCallbacks ) {
             func( timeManager->getDeltaTime() );
         }
-
-        // Compute test ////////////////////////////////////////////////////////
-        // compute.use();
-        // compute.setFloat( "t", timeManager->getTotalTime() );
-        // glDispatchCompute( TEXTURE_WIDTH / 10, TEXTURE_HEGIHT / 10, 1 );
-        // glMemoryBarrier( GL_SHADER_IMAGE_ACCESS_BARRIER_BIT );
+        moveCamera( camera, timeManager, inputSystem );
 
         ////////////////////////////////////////////////////////////////////////
         // particle system test
         pTest.update( timeManager->getDeltaTime() );
-
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         pTest.render();
         // }

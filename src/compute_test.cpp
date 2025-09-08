@@ -14,6 +14,7 @@ void ParticlesTest::init() {
     particleModel->initMesh( "models/sphere.obj" );
     particleModel->initShader( "shaders/instance.vert",
                                "shaders/instance.frag" );
+    particleModel->enableInstanced();
 
     for ( uint64_t i = 0; i < MaxParticles; ++i ) {
         if ( !particleList[i] )
@@ -35,10 +36,10 @@ void ParticlesTest::update( const float ) {
         particlePos[posCounter++] = p->pos.z;
         particlePos[posCounter++] = 0.f;
 
-        particleCol[colCounter++] = static_cast< GLubyte >( p->col.r );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->col.g );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->col.b );
-        particleCol[colCounter++] = static_cast< GLubyte >( p->col.a );
+        particleCol[colCounter++] = p->col.r;
+        particleCol[colCounter++] = p->col.g;
+        particleCol[colCounter++] = p->col.b;
+        particleCol[colCounter++] = p->col.a;
     }
 
     particleModel->bindInstanced( particlePos.data(), particleCol.data(),

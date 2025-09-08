@@ -268,6 +268,9 @@ void Mesh::loadShader( const std::string& vertName, const std::string& geomName,
 std::string Mesh::getModelName() const { return m_modelName; }
 
 void Mesh::enabledInstanced() {
+
+    glBindVertexArray( vao );
+
     // Position
     glGenBuffers( 1, &( posVBO ) );
     glBindBuffer( GL_ARRAY_BUFFER, posVBO );
@@ -298,11 +301,11 @@ void Mesh::bindInstanced( GLfloat* posData, GLfloat* colData, uint64_t count ) {
     glBindBuffer( GL_ARRAY_BUFFER, posVBO );
     glBufferSubData( GL_ARRAY_BUFFER, 0,
                      sizeof( GLfloat ) * INSTANCE_STRIDE * count, posData );
+    glBindBuffer( GL_ARRAY_BUFFER, 0 );
 
     glBindBuffer( GL_ARRAY_BUFFER, colVBO );
     glBufferSubData( GL_ARRAY_BUFFER, 0,
                      sizeof( GLfloat ) * INSTANCE_STRIDE * count, colData );
-
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
 }
 
