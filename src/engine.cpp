@@ -14,6 +14,7 @@
 #include "core.hpp"
 #include <memory>
 #include "compute_test.hpp"
+#include "particle_emitter.hpp"
 
 namespace SquirrelEngine {
 
@@ -134,8 +135,12 @@ void Engine::update() {
 
     ////////////////////////////////////////////////////////////////////////////
     // particle system test
-    Test::ParticlesTest pTest;
-    pTest.init();
+    // Test::ParticlesTest pTest;
+    // pTest.init();
+    Entity* cube = world->findEntity( "Cube01" );
+    ParticleEmitter* emitter = cube->createComponent< ParticleEmitter >();
+    emitter->initialize();
+
     ////////////////////////////////////////////////////////////////////////////
 
     // Main update loop
@@ -172,9 +177,12 @@ void Engine::update() {
 
         ////////////////////////////////////////////////////////////////////////
         // particle system test
-        pTest.update( timeManager->getDeltaTime() );
+        // pTest.update( timeManager->getDeltaTime() );
+        emitter->update( timeManager->getDeltaTime() );
+
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-        pTest.render();
+        // pTest.render();
+        emitter->render();
         // }
         ////////////////////////////////////////////////////////////////////////
         // TODO: call render function

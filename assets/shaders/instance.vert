@@ -28,6 +28,7 @@ void main()
     mat4 model = translationMatrix(instancePosition.xyz);
     fragmentPos = vec3(model * vec4(vertexPos, 1.0));
     fragmentVertexNormal = mat3(transpose(inverse(model))) * vertexNormal;
+
     fragmentColor = instanceColor;
 
     gl_Position = projection * view * vec4(fragmentPos, 1.0);

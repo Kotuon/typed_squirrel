@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\build\\Visual Studio Community 2022 Release - amd64\\Debug\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A034B9D-D0CE-3757-8611-CC2957825E4D}|typed_squirrel.vcxproj|C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\particle_emitter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A034B9D-D0CE-3757-8611-CC2957825E4D}|typed_squirrel.vcxproj|C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\compute_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -18,15 +21,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "particle_emitter.cpp",
+              "DocumentMoniker": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\particle_emitter.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\src\\particle_emitter.cpp",
+              "ToolTip": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\particle_emitter.cpp",
+              "RelativeToolTip": "..\\..\\..\\src\\particle_emitter.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-09T21:07:34.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "compute_test.cpp",
               "DocumentMoniker": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\compute_test.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\src\\compute_test.cpp",
-              "ToolTip": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\compute_test.cpp*",
-              "RelativeToolTip": "..\\..\\..\\src\\compute_test.cpp*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Kelson\\Documents\\Projects\\typed_squirrel\\src\\compute_test.cpp",
+              "RelativeToolTip": "..\\..\\..\\src\\compute_test.cpp",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-07T23:21:23.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-07T23:21:23.502Z"
             }
           ]
         }

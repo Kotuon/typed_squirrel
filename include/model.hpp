@@ -14,6 +14,8 @@
 
 #include <memory>
 
+#include <glad/glad.h>
+
 #include "component.hpp"
 
 namespace SquirrelEngine {
