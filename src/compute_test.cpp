@@ -19,10 +19,12 @@ void ParticlesTest::init() {
     for ( uint64_t i = 0; i < MaxParticles; ++i ) {
         if ( !particleList[i] )
             particleList[i] = std::make_unique< Particle >();
+
+        particleList[i]->pos = vector3{ 2.f * i, 0.f, 0.f };
     }
 }
 
-void ParticlesTest::update( const float ) {
+void ParticlesTest::update( const float dt ) {
     if ( ParticleCount <= 0 ) return;
 
     int posCounter = 0;
@@ -30,6 +32,12 @@ void ParticlesTest::update( const float ) {
 
     for ( uint64_t i = 0; i < ParticleCount; ++i ) {
         Particle* p = particleList[i].get();
+
+        vector3 start{ 2.f * i, 0.f, 0.f };
+
+        p->pos += p->vel * dt;
+        if ( glm::distance( start, p->pos ) > 10.f )
+            p->vel = ( start - p->pos );
 
         particlePos[posCounter++] = p->pos.x;
         particlePos[posCounter++] = p->pos.y;
