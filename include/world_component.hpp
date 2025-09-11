@@ -4,7 +4,7 @@
 #pragma once
 
 #include "component.hpp"
-#include "transform.hpp"
+#include "local_transform.hpp"
 
 namespace SquirrelEngine {
 class Entity;
@@ -15,7 +15,7 @@ public:
 
     virtual ~WorldComponent() = default;
 
-    Transform* getLocalTransform();
+    LocalTransform* getLocalTransform();
 
     const vector3 forwardVector() const;
 
@@ -24,7 +24,7 @@ public:
     const vector3 upVector() const;
 
 protected:
-    Transform m_localTransform;
+    LocalTransform m_localTransform;
 };
 
 } // namespace SquirrelEngine

@@ -42,7 +42,7 @@ public:
      * @brief Gets the position of the transform.
      * @return The current position.
      */
-    const vector3 getPosition() const;
+    const vector3& getPosition() const;
 
     vector3& getPosition();
 
@@ -57,6 +57,8 @@ public:
      * @return The current scale.
      */
     const vector3& getScale() const;
+
+    vector3& getScale();
 
     /**
      * @brief Sets the rotation of the transform.
@@ -131,7 +133,7 @@ public:
      */
     const matrix4& matrix();
 
-private:
+protected:
     matrix4 m_matrix;   //!< Cached transformation matrix.
     vector3 m_position; //!< Position vector.
     vector3 m_scale;    //!< Scale vector.

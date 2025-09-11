@@ -28,11 +28,12 @@ CameraComponent::CameraComponent( Entity* t_parent )
  * @return The view matrix as a matrix4.
  */
 matrix4 CameraComponent::viewMatrix() {
-    vector3 position =
-        owner->transform.getPosition() + m_localTransform.getPosition();
+    vector3 position = m_localTransform.getWorldPosition();
+        // owner->transform.getPosition() + m_localTransform.getPosition();
 
     if ( m_rotationIsDirty ) {
-        m_localTransform.setRotation( m_eulerRotation );
+        // m_localTransform.setRotation( m_eulerRotation );
+        m_localTransform.setLocalRotation( m_eulerRotation );
         m_rotationIsDirty = false;
     }
 

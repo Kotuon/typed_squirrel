@@ -31,6 +31,9 @@
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\keyboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\local_transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

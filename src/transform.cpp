@@ -34,7 +34,7 @@ void Transform::setPosition( const vector3& t_position ) {
  * @brief Gets the position of the transform.
  * @return The current position.
  */
-const vector3 Transform::getPosition() const { return m_position; }
+const vector3& Transform::getPosition() const { return m_position; }
 
 vector3& Transform::getPosition() {
     m_isDirty = true;
@@ -66,6 +66,8 @@ void Transform::setScale( const vector3& t_scale ) {
  * @return The current scale.
  */
 const vector3& Transform::getScale() const { return m_scale; }
+
+vector3& Transform::getScale() { return m_scale; }
 
 /**
  * @brief Scales the transform by a factor.
