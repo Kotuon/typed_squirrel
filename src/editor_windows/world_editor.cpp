@@ -9,6 +9,7 @@
 #include "editor.hpp"
 #include "engine.hpp"
 #include "entity.hpp"
+#include "local_transform.hpp"
 #include "world.hpp"
 
 namespace SquirrelEngine {
@@ -108,10 +109,10 @@ void WorldEditor::showComponents( Entity* entity ) {
         if ( camera ) {
             ImGui::SeparatorText( "Camera Component" );
 
-            Transform* cTransform = camera->getLocalTransform();
+            LocalTransform* cTransform = camera->getLocalTransform();
 
             //// Position
-            const vector3 position = cTransform->getPosition();
+            const vector3 position = cTransform->getLocalPosition();
 
             ImGui::Text( "Position" );
             ImGui::Text( "%f", position.x );
@@ -121,7 +122,7 @@ void WorldEditor::showComponents( Entity* entity ) {
             ImGui::Text( "%f", position.z );
 
             //// Rotation
-            const quat& rotation = cTransform->getRotation();
+            const quat& rotation = cTransform->getLocalRotation();
             const vector3 eulerRotation = camera->getEulerRotation();
             const vector3 convertRotation = glm::eulerAngles( rotation );
 

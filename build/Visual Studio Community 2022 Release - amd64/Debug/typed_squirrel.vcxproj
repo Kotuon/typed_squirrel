@@ -335,6 +335,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputAction.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\inputSystem.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\keyboard.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\local_transform.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\main.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\mesh.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\typed_squirrel\src\model.cpp" />

@@ -36,8 +36,8 @@ void ParticleEmitter::update( const float dt ) {
 
         Particle* newParticle = particleList[particleCount].get();
 
-        newParticle->pos =
-            owner->transform.getPosition() + m_localTransform.getPosition();
+        newParticle->pos = m_localTransform.getWorldPosition();
+            // owner->transform.getPosition() + m_localTransform.getPosition();
         newParticle->vel = vector3{ 0.f, 10.f, 0.f };
         newParticle->isAlive = true;
 
