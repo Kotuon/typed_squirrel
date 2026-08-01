@@ -118,7 +118,7 @@ const vector3& CameraComponent::getEulerRotation() const {
  * @brief Gets the camera's sensitivity value.
  * @return The sensitivity as a float.
  */
-const float CameraComponent::getSensitivity() const { return m_sensitivity; }
+float CameraComponent::getSensitivity() const { return m_sensitivity; }
 
 /**
  * @brief Sets the camera's sensitivity value.

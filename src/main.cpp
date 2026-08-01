@@ -7,7 +7,9 @@
 int main( int, char** ) {
     using namespace SquirrelEngine;
 
+    #ifdef _WIN32
     setupDump();
+    #endif
 
     Engine* engineInstance = Engine::instance();
     if ( engineInstance->initialize() != StartupErrors::SE_Success ) {

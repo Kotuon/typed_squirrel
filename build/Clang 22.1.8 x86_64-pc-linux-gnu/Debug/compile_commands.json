@@ -1,0 +1,398 @@
+[
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/cameraComponent.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/cameraComponent.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/cameraComponent.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/cameraComponent.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/component.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/component.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/component.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/component.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/compute_test.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/compute_test.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/compute_test.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/compute_test.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/editor.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/editor.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/editor.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/editor.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/editor_windows/world_editor.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/editor_windows/world_editor.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/engine.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/engine.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/engine.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/engine.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/eventSystem.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/eventSystem.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/eventSystem.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/eventSystem.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/inputAction.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/inputAction.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/inputAction.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/inputAction.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/inputSystem.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/inputSystem.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/inputSystem.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/inputSystem.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/keyboard.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/keyboard.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/keyboard.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/keyboard.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/local_transform.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/local_transform.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/local_transform.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/local_transform.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/main.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/main.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/main.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/mesh.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/mesh.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/mesh.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/mesh.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/model.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/model.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/model.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/model.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/mouse.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/mouse.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/mouse.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/mouse.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/objectRenderer.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/objectRenderer.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/objectRenderer.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/objectRenderer.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/particle.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/particle.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/particle.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/particle.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/particle_emitter.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/particle_emitter.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/shader.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/shader.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/shader.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/shader.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/system.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/system.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/system.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/system.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/tests/glmQuaternionTests.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/tests/glmQuaternionTests.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/tests/glmQuaternionTests.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/tests/glmQuaternionTests.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/transform.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/transform.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/transform.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/transform.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/utils/crash_handler.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/utils/crash_handler.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/utils/crash_handler.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/utils/crash_handler.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/utils/profiler.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/utils/profiler.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/utils/profiler.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/utils/profiler.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/utils/time_manager.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/utils/time_manager.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/utils/time_manager.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/utils/time_manager.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/utils/timer.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/utils/timer.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/utils/timer.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/utils/timer.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/utils/trace.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/utils/trace.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/utils/trace.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/utils/trace.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/window.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/window.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/window.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/window.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/world.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/world.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/world.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/world.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/src/world_component.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/src/world_component.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/src/world_component.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/src/world_component.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui -g -o CMakeFiles/typed_squirrel.dir/libraries/glad/src/glad.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/src/glad.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glad/src/glad.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_demo.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_demo.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_demo.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_draw.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_draw.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_draw.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_glfw.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_impl_glfw.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_impl_glfw.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_opengl3.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_impl_opengl3.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_impl_opengl3.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_tables.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_tables.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_tables.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glad/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm/include -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/glm -isystem /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_widgets.cpp.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_widgets.cpp",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/imgui/imgui_widgets.cpp",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o libraries/fmt/CMakeFiles/fmt.dir/src/format.cc.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/src/format.cc",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/src/format.cc",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/fmt/CMakeFiles/fmt.dir/src/format.cc.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang++ -I/home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/include  -Wall -Wextra -Wpedantic -std=c++20 -g -std=gnu++20 -o libraries/fmt/CMakeFiles/fmt.dir/src/os.cc.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/src/os.cc",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/fmt/src/os.cc",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/fmt/CMakeFiles/fmt.dir/src/os.cc.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/context.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/context.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/context.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/init.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/init.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/init.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/input.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/input.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/input.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/monitor.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/monitor.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/monitor.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/platform.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/platform.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/platform.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/vulkan.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/vulkan.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/window.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/window.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/window.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/egl_context.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/egl_context.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/osmesa_context.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/osmesa_context.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/null_init.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_init.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_init.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_monitor.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_monitor.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/null_window.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_window.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_window.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_joystick.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/null_joystick.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_module.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_module.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_time.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_time.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_thread.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_thread.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_init.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_init.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_monitor.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_monitor.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_window.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/x11_window.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/xkb_unicode.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/xkb_unicode.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/glx_context.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/glx_context.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_init.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_init.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_monitor.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_monitor.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_window.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/wl_window.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/linux_joystick.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/linux_joystick.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug",
+  "command": "/usr/bin/clang -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11 -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/include -I/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src -I\"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src\" -g -std=c99 -fPIC -Wall -o libraries/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o -c /home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_poll.c",
+  "file": "/home/kotuon/Documents/projects/typed_squirrel/libraries/glfw/src/posix_poll.c",
+  "output": "/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o"
+}
+]

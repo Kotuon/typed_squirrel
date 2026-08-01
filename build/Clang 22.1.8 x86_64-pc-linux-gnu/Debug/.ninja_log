@@ -1,0 +1,144 @@
+# ninja log v7
+2	7	1785603146103859828	libraries/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	7a18eb22c05ed903
+2	7	1785603146103859828	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h	7a18eb22c05ed903
+2	11	1785603146107859858	libraries/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	a46e0f4c98b01eb4
+2	11	1785603146107859858	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h	a46e0f4c98b01eb4
+1	12	1785603146108528217	libraries/glfw/src/viewporter-client-protocol.h	75f36054a0b1c492
+1	12	1785603146108528217	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/viewporter-client-protocol.h	75f36054a0b1c492
+1	17	1785603146112859895	libraries/glfw/src/xdg-shell-client-protocol.h	49084498e5b4a11d
+1	17	1785603146112859895	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-shell-client-protocol.h	49084498e5b4a11d
+1	21	1785603146115233878	libraries/glfw/src/viewporter-client-protocol-code.h	2a526eefea918645
+1	21	1785603146115233878	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/viewporter-client-protocol-code.h	2a526eefea918645
+1	21	1785603146109859873	libraries/glfw/src/xdg-shell-client-protocol-code.h	2fe8c03327d14388
+1	21	1785603146109859873	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-shell-client-protocol-code.h	2fe8c03327d14388
+1	21	1785603146115233878	libraries/glfw/src/idle-inhibit-unstable-v1-client-protocol.h	df71b00042d90a36
+1	21	1785603146115233878	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/idle-inhibit-unstable-v1-client-protocol.h	df71b00042d90a36
+2	23	1785603146115233878	libraries/glfw/src/pointer-constraints-unstable-v1-client-protocol.h	fe853b3b31bafba4
+2	23	1785603146115233878	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/pointer-constraints-unstable-v1-client-protocol.h	fe853b3b31bafba4
+12	23	1785603146117308968	libraries/glfw/src/fractional-scale-v1-client-protocol.h	d5798701548b114f
+12	23	1785603146117308968	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/fractional-scale-v1-client-protocol.h	d5798701548b114f
+1	24	1785603146118077071	libraries/glfw/src/wayland-client-protocol-code.h	bf2649354c5a6052
+1	24	1785603146118077071	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/wayland-client-protocol-code.h	bf2649354c5a6052
+7	26	1785603146117774648	libraries/glfw/src/relative-pointer-unstable-v1-client-protocol.h	8813829798d22452
+7	26	1785603146117774648	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/relative-pointer-unstable-v1-client-protocol.h	8813829798d22452
+18	26	1785603146120647447	libraries/glfw/src/fractional-scale-v1-client-protocol-code.h	9d88da074249764e
+18	26	1785603146120647447	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/fractional-scale-v1-client-protocol-code.h	9d88da074249764e
+1	26	1785603146121549870	libraries/glfw/src/wayland-client-protocol.h	66353c5d2f140a6c
+1	26	1785603146121549870	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/wayland-client-protocol.h	66353c5d2f140a6c
+11	26	1785603146121859962	libraries/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2d40b0dba44cb39a
+11	26	1785603146121859962	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h	2d40b0dba44cb39a
+21	26	1785603146122759710	libraries/glfw/src/xdg-activation-v1-client-protocol-code.h	abf97c470a5ce615
+21	26	1785603146122759710	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-activation-v1-client-protocol-code.h	abf97c470a5ce615
+21	27	1785603146124051999	libraries/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	f48d07babc04fc2f
+21	27	1785603146124051999	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-decoration-unstable-v1-client-protocol.h	f48d07babc04fc2f
+23	28	1785603146124051999	libraries/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h	bfc681ebf02faef0
+23	28	1785603146124051999	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h	bfc681ebf02faef0
+21	31	1785603146128276007	libraries/glfw/src/xdg-activation-v1-client-protocol.h	d4f74b2adf58ca29
+21	31	1785603146128276007	/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/xdg-activation-v1-client-protocol.h	d4f74b2adf58ca29
+33	147	1785603146129860021	libraries/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o	a59af1c26832722d
+32	172	1785603146129416800	libraries/glfw/src/CMakeFiles/glfw.dir/platform.c.o	3ba713c4d23d045b
+32	179	1785603146128860014	libraries/glfw/src/CMakeFiles/glfw.dir/monitor.c.o	bc451b62f85c4dda
+34	189	1785603146130860029	libraries/glfw/src/CMakeFiles/glfw.dir/window.c.o	f2bb90a701fb811d
+31	199	1785603146128276007	libraries/glfw/src/CMakeFiles/glfw.dir/context.c.o	aa1417cf06b732dd
+36	201	1785603146132860044	libraries/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o	3f94a23611a972a9
+31	216	1785603146128751731	libraries/glfw/src/CMakeFiles/glfw.dir/init.c.o	39f85faa4b95ca8c
+31	257	1785603146128846356	libraries/glfw/src/CMakeFiles/glfw.dir/input.c.o	777b18c82e444a31
+147	288	1785603146244421927	libraries/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o	ee94dd593cfd7313
+172	301	1785603146268861057	libraries/glfw/src/CMakeFiles/glfw.dir/null_init.c.o	be09f9dafb125715
+216	311	1785603146312861385	libraries/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o	7c1719093e8fc8dc
+201	327	1785603146297861273	libraries/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o	94ce94c27ffd76b
+179	330	1785603146276674144	libraries/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o	38024638230968d6
+190	355	1785603146287612835	libraries/glfw/src/CMakeFiles/glfw.dir/null_window.c.o	d29d92dd083f8c2c
+199	357	1785603146295861258	libraries/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o	aada16e3be566e16
+257	406	1785603146353861690	libraries/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o	712f3ca9ba551865
+327	455	1785603146423862212	libraries/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o	4fa731e9672a720d
+288	456	1785603146384861921	libraries/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o	c1a4a300e097495a
+330	489	1785603146426862234	libraries/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o	70e7725a38cd3447
+302	496	1785603146398862025	libraries/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o	4c43c1aa1477f74d
+357	562	1785603146453862435	libraries/glfw/src/CMakeFiles/glfw.dir/wl_monitor.c.o	1c692ae9c1673162
+457	570	1785603146553863180	libraries/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o	6f39398c11c4dba8
+355	601	1785603146451862420	libraries/glfw/src/CMakeFiles/glfw.dir/wl_init.c.o	4d16417b8b132bbf
+315	623	1785603146411862122	libraries/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o	1f1181df78c96e8d
+455	671	1785603146551863165	libraries/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o	a6f69721831a46cc
+408	743	1785603146504862815	libraries/glfw/src/CMakeFiles/glfw.dir/wl_window.c.o	f5d800f8bac74d98
+24	1078	1785603146121549870	libraries/fmt/CMakeFiles/fmt.dir/src/os.cc.o	d6ba48ca79c9bb31
+3	1086	1785603642741396221	CMakeFiles/typed_squirrel.dir/src/editor.cpp.o	b6ddd075f02881c3
+3	1269	1785603642741282268	CMakeFiles/typed_squirrel.dir/src/compute_test.cpp.o	86f288f66585c588
+23	2072	1785603146120455057	libraries/fmt/CMakeFiles/fmt.dir/src/format.cc.o	a9c621f4705c96aa
+3	1604	1785603642741528131	CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o	20de26baf12e5b1b
+4	2332	1785603642742008124	CMakeFiles/typed_squirrel.dir/src/engine.cpp.o	2e741bb4c4527c21
+2	1565	1785603663180846022	CMakeFiles/typed_squirrel.dir/src/keyboard.cpp.o	b5208d8db609bf3
+3	2361	1785603663180990155	CMakeFiles/typed_squirrel.dir/src/main.cpp.o	ee6fe902c1d0e5e9
+3	2463	1785603663181194504	CMakeFiles/typed_squirrel.dir/src/model.cpp.o	dc1242ccddbff80c
+3	2395	1785603663181099742	CMakeFiles/typed_squirrel.dir/src/mesh.cpp.o	d83f368ef10a14c1
+5	450	1785603642742376958	CMakeFiles/typed_squirrel.dir/src/inputAction.cpp.o	2f1eb154f54fa576
+3	1108	1785603642740376967	CMakeFiles/typed_squirrel.dir/src/component.cpp.o	f7ad5655b66efb29
+4	1227	1785603642742321852	CMakeFiles/typed_squirrel.dir/src/eventSystem.cpp.o	ffa77f1da0ed9729
+2	1489	1785603642739376971	CMakeFiles/typed_squirrel.dir/src/cameraComponent.cpp.o	fc23d356cb0836a0
+450	1506	1785603643187375109	CMakeFiles/typed_squirrel.dir/src/local_transform.cpp.o	a19de383e6f6df07
+4	741	1785603663182275477	CMakeFiles/typed_squirrel.dir/src/particle.cpp.o	54dcc303eff0ecb4
+741	1667	1785603663918293186	CMakeFiles/typed_squirrel.dir/src/system.cpp.o	7044b78a3c00241c
+5	1669	1785603663182295955	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+3	2092	1785603663181397176	CMakeFiles/typed_squirrel.dir/src/objectRenderer.cpp.o	6f1f84614882d7c8
+6	2232	1785603663183295951	CMakeFiles/typed_squirrel.dir/src/shader.cpp.o	ac67f401f69aa9b6
+3	23	1785603695058066430	CMakeFiles/typed_squirrel.dir/src/utils/crash_handler.cpp.o	2d87134abfea77b3
+5	740	1785603695059185164	CMakeFiles/typed_squirrel.dir/src/utils/trace.cpp.o	6dff51721bf5383b
+5	963	1785603695060268735	CMakeFiles/typed_squirrel.dir/src/window.cpp.o	ea46cdc209db41b2
+2	1159	1785603695057743975	CMakeFiles/typed_squirrel.dir/src/mouse.cpp.o	dc2ead6cbb07a22b
+3	1303	1785603695057968901	CMakeFiles/typed_squirrel.dir/src/transform.cpp.o	644defcd03ec5821
+23	1378	1785603695077185107	CMakeFiles/typed_squirrel.dir/src/world.cpp.o	f751b247e57909f
+3	1646	1785603695058464148	CMakeFiles/typed_squirrel.dir/src/utils/timer.cpp.o	da1e7eaf30deefa7
+2	38	1785603705529664157	CMakeFiles/typed_squirrel.dir/src/tests/glmQuaternionTests.cpp.o	3fdf56b30b75f6fd
+6	213	1785603705533450532	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_glfw.cpp.o	8d5f9ef66f18482d
+39	242	1785603705565152634	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_impl_opengl3.cpp.o	909709f661ed895a
+4	417	1785603705530152739	CMakeFiles/typed_squirrel.dir/libraries/glad/src/glad.c.o	a0dfa157d165dfb3
+421	489	1785603705947151486	libraries/fmt/libfmtd.a	3008164cf518d94f
+490	558	1785603706016151278	libraries/glfw/src/libglfw3.a	afe61f2869ac9c76
+4	990	1785603705531431585	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_demo.cpp.o	a679d183cffdcce4
+3	1096	1785603705529992534	CMakeFiles/typed_squirrel.dir/src/world_component.cpp.o	c8647f7d2bdb1b3b
+6	1291	1785603705532152733	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_draw.cpp.o	61a845d20ff98e49
+213	1324	1785603705739152111	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_tables.cpp.o	f46c96270b4165a4
+242	1614	1785603705768152024	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui_widgets.cpp.o	e5201f6f43bb3159
+4	1705	1785603705531163198	CMakeFiles/typed_squirrel.dir/libraries/imgui/imgui.cpp.o	793118f6a30c4612
+3	870	1785603723307186143	CMakeFiles/typed_squirrel.dir/src/utils/time_manager.cpp.o	4d1e350213df7476
+3	617	1785603733444075446	CMakeFiles/typed_squirrel.dir/src/inputSystem.cpp.o	16a0bb8b584a5dfd
+3	17	1785603756380021507	CMakeFiles/typed_squirrel.dir/src/utils/profiler.cpp.o	1b5e6256b41dadb8
+17	174	1785603756394021477	typed_squirrel	79a5feabe51b7e53
+2	753	1785605793194781759	CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o	20de26baf12e5b1b
+753	932	1785605793945784121	typed_squirrel	79a5feabe51b7e53
+5	782	1785605817604859742	CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o	20de26baf12e5b1b
+782	935	1785605818381862265	typed_squirrel	79a5feabe51b7e53
+3	629	1785605904592156490	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+629	784	1785605905218158724	typed_squirrel	79a5feabe51b7e53
+3	649	1785606067902780367	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+649	798	1785606068548782981	typed_squirrel	79a5feabe51b7e53
+2	769	1785606098337904640	CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o	20de26baf12e5b1b
+769	923	1785606099104907801	typed_squirrel	79a5feabe51b7e53
+3	1170	1785606196611320104	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+1170	1323	1785606197778325157	typed_squirrel	79a5feabe51b7e53
+3	1169	1785606227594455129	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+1169	1314	1785606228760460245	typed_squirrel	79a5feabe51b7e53
+3	1181	1785606247769543994	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+1182	1358	1785606248948549209	typed_squirrel	79a5feabe51b7e53
+3	1242	1785606365438075638	CMakeFiles/typed_squirrel.dir/src/editor.cpp.o	b6ddd075f02881c3
+3	1473	1785606365439541074	CMakeFiles/typed_squirrel.dir/src/keyboard.cpp.o	b5208d8db609bf3
+4	1674	1785606365440549161	CMakeFiles/typed_squirrel.dir/src/mouse.cpp.o	dc2ead6cbb07a22b
+3	1740	1785606365439458108	CMakeFiles/typed_squirrel.dir/src/inputSystem.cpp.o	16a0bb8b584a5dfd
+3	1774	1785606365439227375	CMakeFiles/typed_squirrel.dir/src/editor_windows/world_editor.cpp.o	20de26baf12e5b1b
+3	2446	1785606365439723378	CMakeFiles/typed_squirrel.dir/src/mesh.cpp.o	d83f368ef10a14c1
+4	2621	1785606365440413894	CMakeFiles/typed_squirrel.dir/src/model.cpp.o	dc1242ccddbff80c
+1774	2744	1785606367210083803	CMakeFiles/typed_squirrel.dir/src/window.cpp.o	ea46cdc209db41b2
+1674	2786	1785606367109083337	CMakeFiles/typed_squirrel.dir/src/system.cpp.o	7044b78a3c00241c
+3	2889	1785606365439337807	CMakeFiles/typed_squirrel.dir/src/engine.cpp.o	2e741bb4c4527c21
+3	2917	1785606365439637059	CMakeFiles/typed_squirrel.dir/src/main.cpp.o	ee6fe902c1d0e5e9
+4	2917	1785606365440628935	CMakeFiles/typed_squirrel.dir/src/objectRenderer.cpp.o	6f1f84614882d7c8
+1473	3372	1785606366908082411	CMakeFiles/typed_squirrel.dir/src/shader.cpp.o	ac67f401f69aa9b6
+1242	3500	1785606366677081346	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+3	446	1785606390661542111	CMakeFiles/typed_squirrel.dir/src/utils/trace.cpp.o	6dff51721bf5383b
+3	1252	1785606390660192246	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+1252	1406	1785606391909198043	typed_squirrel	79a5feabe51b7e53
+3	387	1785607332170906323	CMakeFiles/typed_squirrel.dir/src/particle.cpp.o	54dcc303eff0ecb4
+3	1232	1785607332172648374	CMakeFiles/typed_squirrel.dir/src/particle_emitter.cpp.o	e3e9d475b7f423ec
+1232	1389	1785607333399912724	typed_squirrel	79a5feabe51b7e53
+3	390	1785607378749149133	CMakeFiles/typed_squirrel.dir/src/particle.cpp.o	54dcc303eff0ecb4
+390	542	1785607379136151152	typed_squirrel	79a5feabe51b7e53

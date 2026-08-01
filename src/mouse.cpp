@@ -75,7 +75,7 @@ void Mouse::initialize() {
  * @param button The button index.
  * @return The state of the button as a float.
  */
-const float Mouse::getButtonState( const int button ) {
+float Mouse::getButtonState( const int button ) {
     if ( button < 0 || BUTTON_MOUSE_LAST < button ) {
         Trace::message( "Button outside of range." );
         return 0.f;

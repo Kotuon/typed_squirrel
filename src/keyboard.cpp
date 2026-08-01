@@ -152,7 +152,7 @@ void Keyboard::initialize() {
  * @param button The button index.
  * @return The state of the button as a float.
  */
-const float Keyboard::getButtonState( const int button ) {
+float Keyboard::getButtonState( const int button ) {
     if ( button < 0 || KEY_LAST <= button ) {
         Trace::message( "Button outside of range." );
         return 0.f;

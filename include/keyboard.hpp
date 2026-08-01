@@ -38,27 +38,27 @@ public:
     /**
      * @brief Initializes the keyboard device.
      */
-    void initialize();
+    void initialize() override;
 
     /**
      * @brief Gets the state of a keyboard button.
      * @param button The button index.
      * @return The state of the button as a float.
      */
-    const float getButtonState( const int button );
+    float getButtonState( const int button ) override;
 
     /**
      * @brief Sets the state of a keyboard button.
      * @param button The button index.
      * @param state The new state of the button.
      */
-    void setButtonState( const int button, const float state );
+    void setButtonState( const int button, const float state ) override;
 
     /**
      * @brief Gets the type of the input device.
      * @return The device type as an int.
      */
-    const int getType() override { return InputDeviceType::UD_Keyboard; }
+    int getType() override { return InputDeviceType::UD_Keyboard; }
 
 protected:
     std::array< int, KEY_LAST > m_keyStates = { 0 }; //!< Array of key states.

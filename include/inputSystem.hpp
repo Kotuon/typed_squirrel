@@ -110,7 +110,7 @@ public:
      * @param action Name of the action.
      * @return The state of the action as a float.
      */
-    const float getActionState( const std::string action );
+    float getActionState( const std::string action );
 
 protected:
     /**

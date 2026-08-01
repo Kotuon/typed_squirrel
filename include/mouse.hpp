@@ -48,27 +48,27 @@ public:
     /**
      * @brief Initializes the mouse device.
      */
-    void initialize();
+    void initialize() override;
 
     /**
      * @brief Gets the state of a mouse button.
      * @param button The button index.
      * @return The state of the button as a float.
      */
-    const float getButtonState( const int button );
+    float getButtonState( const int button ) override;
 
     /**
      * @brief Sets the state of a mouse button.
      * @param button The button index.
      * @param state The new state of the button.
      */
-    void setButtonState( const int button, const float state );
+    void setButtonState( const int button, const float state ) override;
 
     /**
      * @brief Gets the type of the input device.
      * @return The device type as an int.
      */
-    const int getType() override { return InputDeviceType::UD_Mouse; }
+    int getType() override { return InputDeviceType::UD_Mouse; }
 
     /**
      * @brief Gets the current cursor position.

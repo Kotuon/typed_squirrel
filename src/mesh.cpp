@@ -67,9 +67,8 @@ bool Mesh::read( std::string t_modelName ) {
     // Setting the name of the file (used in model_data_manager)
     m_modelName = t_modelName;
 
-    FILE* file;
-    errno_t err = fopen_s( &file, m_modelName.c_str(), "r" );
-    if ( err != 0 ) {
+    FILE* file = fopen( m_modelName.c_str(), "r" );
+    if ( !file ) {
         Trace::message( fmt::format( "Unable to open {}.", m_modelName ) );
         return false;
     }
@@ -85,9 +84,9 @@ bool Mesh::read( std::string t_modelName ) {
     char* temp;
     while ( fgets( line, 64, file ) ) {
         char* words[4];
-        words[0] = strtok_s( line, " ", &temp );
+        words[0] = strtok_r( line, " ", &temp );
         for ( int i = 1; i < 4; ++i ) {
-            words[i] = strtok_s( nullptr, " ", &temp );
+            words[i] = strtok_r( nullptr, " ", &temp );
         }
 
         if ( strcmp( words[0], "v" ) == 0 ) {
@@ -103,17 +102,17 @@ bool Mesh::read( std::string t_modelName ) {
             char* v2[3];
             char* v3[3];
 
-            v1[0] = strtok_s( words[1], "/", &temp );
-            v1[1] = strtok_s( nullptr, "/", &temp );
-            v1[2] = strtok_s( nullptr, "/", &temp );
+            v1[0] = strtok_r( words[1], "/", &temp );
+            v1[1] = strtok_r( nullptr, "/", &temp );
+            v1[2] = strtok_r( nullptr, "/", &temp );
 
-            v2[0] = strtok_s( words[2], "/", &temp );
-            v2[1] = strtok_s( nullptr, "/", &temp );
-            v2[2] = strtok_s( nullptr, "/", &temp );
+            v2[0] = strtok_r( words[2], "/", &temp );
+            v2[1] = strtok_r( nullptr, "/", &temp );
+            v2[2] = strtok_r( nullptr, "/", &temp );
 
-            v3[0] = strtok_s( words[3], "/", &temp );
-            v3[1] = strtok_s( nullptr, "/", &temp );
-            v3[2] = strtok_s( nullptr, "/", &temp );
+            v3[0] = strtok_r( words[3], "/", &temp );
+            v3[1] = strtok_r( nullptr, "/", &temp );
+            v3[2] = strtok_r( nullptr, "/", &temp );
 
             insertData( v1, tempVertices, tempUvs, tempNormals );
             insertData( v2, tempVertices, tempUvs, tempNormals );

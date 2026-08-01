@@ -47,7 +47,7 @@ public:
      * @param button The button index.
      * @return The state of the button as a float.
      */
-    virtual const float getButtonState( const int button ) = 0;
+    virtual float getButtonState( const int button ) = 0;
 
     /**
      * @brief Sets the state of a button.
@@ -60,7 +60,7 @@ public:
      * @brief Gets the type of the input device.
      * @return The device type as an int.
      */
-    virtual const int getType() = 0;
+    virtual int getType() = 0;
 
 protected:
     /**

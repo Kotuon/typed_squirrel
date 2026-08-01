@@ -56,16 +56,16 @@ public:
      *
      * @return const float
      */
-    const float getFixedDt() const;
+    float getFixedDt() const;
 
     /**
      * @brief Return last non-fixed delta time
      *
      * @return const float
      */
-    const float getDeltaTime() const;
+    float getDeltaTime() const;
 
-    const float getTotalTime() const;
+    float getTotalTime() const;
 
     /**
      * @brief Sleeps main thread for given time in milliseconds

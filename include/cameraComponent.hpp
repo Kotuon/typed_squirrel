@@ -101,7 +101,7 @@ public:
      * @brief Gets the camera's sensitivity value.
      * @return The sensitivity as a float.
      */
-    const float getSensitivity() const;
+    float getSensitivity() const;
 
     /**
      * @brief Sets the camera's sensitivity value.

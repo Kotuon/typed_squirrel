@@ -16,7 +16,7 @@ namespace SquirrelEngine {
 
 WorldEditor::WorldEditor() {
     getSystem< Editor >()->addDisplayMenuCallback(
-        std::bind( &WorldEditor::update, this ) );
+        std::bind( &WorldEditor::display, this ) );
 }
 
 StartupErrors WorldEditor::initialize( Engine* ) {
@@ -25,7 +25,7 @@ StartupErrors WorldEditor::initialize( Engine* ) {
     return StartupErrors::SE_Success;
 }
 
-void WorldEditor::update() {
+void WorldEditor::display( ) {
     auto& entityList = m_world->getEntityList();
 
     showObjects( entityList );
@@ -85,11 +85,16 @@ void WorldEditor::showComponents( Entity* entity ) {
             ImGui::Text( "%f", rotation[3] );
 
             ImGui::Text( "Euler Rotation" );
-            ImGui::Text( "%f", eulerRotation.x );
-            ImGui::SameLine();
-            ImGui::Text( "%f", eulerRotation.y );
-            ImGui::SameLine();
-            ImGui::Text( "%f", eulerRotation.z );
+            vector3 newRotation = eulerRotation;
+            ImGui::SliderFloat("x##2", &newRotation.x, -6.5f, 6.5f);
+            ImGui::SliderFloat("y##2", &newRotation.y, -6.5f, 6.5f);
+            ImGui::SliderFloat("z##2", &newRotation.z, -6.5f, 6.5f);
+            transform->setRotation(quat(newRotation));
+            // ImGui::Text( "%f", eulerRotation.x );
+            // ImGui::SameLine();
+            // ImGui::Text( "%f", eulerRotation.y );
+            // ImGui::SameLine();
+            // ImGui::Text( "%f", eulerRotation.z );
 
             //// Transform matrix
             const matrix4 matrix = transform->matrix();

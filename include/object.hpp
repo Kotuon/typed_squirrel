@@ -12,6 +12,7 @@
 #define OBJECT_HPP
 #pragma once
 
+#include <stdint.h>
 #include <string>
 
 namespace SquirrelEngine {

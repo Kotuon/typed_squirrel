@@ -15,14 +15,11 @@
 // Engine includes //
 #include "utils/trace.hpp"
 
-namespace SquirrelEngine {
-
 /**
  * @brief Construct a new Trace:: Trace object
  *
  */
-Trace::Trace() {
-    TraceStream.open( "trace.log", std::ofstream::out );
+Trace::Trace() : TraceStream( "trace.log", std::ofstream::out ) {
     if ( !TraceStream ) std::cout << "Trace file wasn't opened successfully.\n";
 
     std::source_location Src = std::source_location::current();
@@ -47,8 +44,8 @@ void Trace::message( std::string Message, std::source_location Src ) {
     size_t startPos = Filename.find_last_of( '\\' );
     if ( startPos == std::string::npos ) startPos = 0;
 
-    std::string output = Filename.substr( startPos + 1, std::string::npos ) +
-                         "( " + std::to_string( Src.line() ) + ":" +
+    std::string output = Filename.substr( startPos, std::string::npos ) + "( " +
+                         std::to_string( Src.line() ) + ":" +
                          std::to_string( Src.column() ) + " )" + ": " + Message;
 
     TraceInstance.TraceStream << output << "\n";
@@ -62,5 +59,3 @@ void Trace::message( std::string Message, std::source_location Src ) {
 Trace::~Trace() {
     if ( TraceStream ) TraceStream.close();
 }
-
-} // namespace SquirrelEngine

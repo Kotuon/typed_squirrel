@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/cmake_install.cmake",
+		"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/fmt/cmake_install.cmake",
+		"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/cmake_install.cmake",
+		"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/src/cmake_install.cmake",
+		"/home/kotuon/Documents/projects/typed_squirrel/build/Clang 22.1.8 x86_64-pc-linux-gnu/Debug/libraries/glfw/docs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

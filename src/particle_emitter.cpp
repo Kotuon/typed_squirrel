@@ -5,6 +5,8 @@
 #include "particle.hpp"
 #include "shader.hpp"
 
+#include "core.hpp"
+
 namespace SquirrelEngine {
 
 ParticleEmitter::ParticleEmitter( Entity* t_parent )
@@ -35,11 +37,8 @@ void ParticleEmitter::update( const float dt ) {
         timer = 0.f;
 
         Particle* newParticle = particleList[particleCount].get();
-
-        newParticle->pos = m_localTransform.getWorldPosition();
-            // owner->transform.getPosition() + m_localTransform.getPosition();
-        newParticle->vel = vector3{ 0.f, 10.f, 0.f };
-        newParticle->isAlive = true;
+        newParticle->initialize( m_localTransform.getWorldPosition(),
+                                 owner->transform.upVector() * 10.f );
 
         particleCount += 1;
     }
@@ -50,7 +49,7 @@ void ParticleEmitter::update( const float dt ) {
     int posCounter = 0;
     int colCounter = 0;
 
-    for ( int i = 0; i < particleCount; ++i ) {
+    for ( uint64_t i = 0; i < particleCount; ++i ) {
         Particle* p = particleList[i].get();
 
         if ( !p->isAlive ) continue;
@@ -63,6 +62,7 @@ void ParticleEmitter::update( const float dt ) {
         if ( p->life <= 0.f ) {
             p->isAlive = false;
             std::swap( particleList[i], particleList[particleCount - 1] );
+            particleCount -= 1;
             i -= 1;
             continue;
         }

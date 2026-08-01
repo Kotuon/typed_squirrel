@@ -8,6 +8,8 @@
  *
  */
 
+#ifdef _WIN32
+
 #include <Windows.h>
 #include <dbghelp.h>
 
@@ -230,3 +232,5 @@ void Profiler::closeFile() {
 }
 
 } // namespace SquirrelEngine
+
+#endif

@@ -61,16 +61,16 @@ void TimeManager::resetLastTime() { m_lastTime = steady_clock::now(); }
  *
  * @return const float
  */
-const float TimeManager::getFixedDt() const { return m_fixedDt; }
+float TimeManager::getFixedDt() const { return m_fixedDt; }
 
 /**
  * @brief Return last non-fixed delta time
  *
  * @return const float
  */
-const float TimeManager::getDeltaTime() const { return m_deltaTime; }
+float TimeManager::getDeltaTime() const { return m_deltaTime; }
 
-const float TimeManager::getTotalTime() const { return m_time; }
+float TimeManager::getTotalTime() const { return m_time; }
 
 /**
  * @brief Sleeps main thread for given time in milliseconds

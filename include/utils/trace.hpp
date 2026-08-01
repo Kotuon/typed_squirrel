@@ -12,15 +12,23 @@
 #define TRACE_HPP
 #pragma once
 
-#define FILENAME __FILE__
-#define LINENUMBER __LINE__
+#include "fmt/format.h"
+#include "fmt/ranges.h"
 
 // std includes //
-#include <string>
 #include <fstream>
+#include <iostream>
 #include <source_location>
+#include <string>
 
-namespace SquirrelEngine {
+struct FormatWithSource {
+    const char* str;
+    std::source_location src;
+
+    FormatWithSource( const char* str_, std::source_location src_ =
+                                            std::source_location::current() )
+        : str( str_ ), src( src_ ) {}
+};
 
 /*! Trace class */
 class Trace {
@@ -35,6 +43,27 @@ public:
     static void
     message( std::string Message,
              std::source_location Src = std::source_location::current() );
+
+    template < typename... Args >
+    static void message( FormatWithSource fmt, Args&&... args ) {
+        Trace& TraceInstance = Trace::getInstance();
+        if ( !TraceInstance.TraceStream ) return;
+
+        std::string Filename = std::string( fmt.src.file_name() );
+
+        size_t startPos = Filename.find_last_of( '\\' );
+        if ( startPos == std::string::npos ) startPos = 0;
+
+        std::string Message = fmt::format( fmt::runtime( fmt.str ), args... );
+
+        std::string output = Filename.substr( startPos, std::string::npos ) +
+                             "( " + std::to_string( fmt.src.line() ) + ":" +
+                             std::to_string( fmt.src.column() ) + " )" + ": " +
+                             Message;
+
+        TraceInstance.TraceStream << output << "\n";
+        std::cout << output << "\n";
+    }
 
     /**
      * @brief Close output file
@@ -62,7 +91,5 @@ private:
 private:
     std::fstream TraceStream; //!< Output file
 };
-
-} // namespace SquirrelEngine
 
 #endif

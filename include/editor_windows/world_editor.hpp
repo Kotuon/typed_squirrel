@@ -18,7 +18,7 @@ public:
 
     virtual StartupErrors initialize( Engine* t_owner );
 
-    virtual void update();
+    void display();
 
 private:
     void showObjects( std::vector< std::unique_ptr< Entity > >& entityList );

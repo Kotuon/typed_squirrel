@@ -21,4 +21,4 @@ void setupDump();
 
 } // namespace SquirrelEngine
 
-#endif CRASH_HANDLER
+#endif

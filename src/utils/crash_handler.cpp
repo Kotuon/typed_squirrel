@@ -8,6 +8,8 @@
  *
  */
 
+ #ifdef _WIN32
+
 #include <Windows.h>
 #include <dbghelp.h>
 
@@ -51,3 +53,5 @@ void setupDump() {
 }
 
 } // namespace SquirrelEngine
+
+#endif

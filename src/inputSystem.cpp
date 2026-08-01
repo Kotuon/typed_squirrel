@@ -98,7 +98,7 @@ void InputSystem::triggerAction( InputDevice* device, const int button,
  * @param action Name of the action.
  * @return The state of the action as a float.
  */
-const float InputSystem::getActionState( const std::string action ) {
+float InputSystem::getActionState( const std::string action ) {
     auto thisAction = m_actions.find( action );
     if ( thisAction == m_actions.end() ) {
         return 0.f;
