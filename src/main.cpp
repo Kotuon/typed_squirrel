@@ -49,7 +49,7 @@ int main( int, char** ) {
 
     cameraComp->aspect = static_cast< float >( frameWidth ) /
                          static_cast< float >( frameHeight );
-    camera->transform.setPosition( vector3( 0.f, 0.f, 15.f ) );
+    camera->transform.setPosition( vector3( 8.f, 0.f, 40.f ) );
 
     Entity* cube = worldInstance->createEntity( "Cube01" );
     Model* cubeModel = cube->createComponent< Model >();
@@ -59,7 +59,10 @@ int main( int, char** ) {
                            "shaders/geoTest.frag" );
     cube->transform.setPosition( vector3(-5.f, 0.f, 0.f) );
 
+    // Update loop
     engineInstance->update();
+
+    // Shutdown systems
     engineInstance->shutdown();
 
     return EXIT_SUCCESS;

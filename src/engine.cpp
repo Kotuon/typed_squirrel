@@ -135,11 +135,11 @@ void Engine::update() {
 
     ////////////////////////////////////////////////////////////////////////////
     // particle system test
-    // Test::ParticlesTest pTest;
-    // pTest.init();
-    Entity* cube = world->findEntity( "Cube01" );
-    ParticleEmitter* emitter = cube->createComponent< ParticleEmitter >();
-    emitter->initialize();
+    Test::ParticlesTest pTest;
+    pTest.init();
+    // Entity* cube = world->findEntity( "Cube01" );
+    // ParticleEmitter* emitter = cube->createComponent< ParticleEmitter >();
+    // emitter->initialize();
 
     ////////////////////////////////////////////////////////////////////////////
 
@@ -177,12 +177,12 @@ void Engine::update() {
 
         ////////////////////////////////////////////////////////////////////////
         // particle system test
-        // pTest.update( timeManager->getDeltaTime() );
-        emitter->update( timeManager->getDeltaTime() );
+        pTest.update( timeManager->getDeltaTime() );
+        // emitter->update( timeManager->getDeltaTime() );
 
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-        // pTest.render();
-        emitter->render();
+        pTest.render();
+        // emitter->render();
         // }
         ////////////////////////////////////////////////////////////////////////
         // TODO: call render function

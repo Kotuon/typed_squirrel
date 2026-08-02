@@ -13,6 +13,9 @@ namespace SquirrelEngine {
 
 namespace Test {
 
+#define NUM_PARTICES = 1024 * 1024;
+#define WORK_GROUP_SIZE = 128;
+
 struct Particle {
     vector3 pos{ 0.f, 0.f, 0.f }, vel{ 0.f, 100.f, 0.f };
     vector4 col{ 1.f, 0.f, 0.f, 1.f };
@@ -38,12 +41,18 @@ private:
     std::array< std::unique_ptr< Particle >, MaxParticles > particleList{
         nullptr };
 
-    std::array< GLfloat, MaxParticles * 4 > particlePos;
-    std::array< GLfloat, MaxParticles * 4 > particleCol;
+    vector4* posList;
 
-    uint64_t ParticleCount = 10;
+    // std::array< GLfloat, MaxParticles * 4 > particlePos;
+    // std::array< GLfloat, MaxParticles * 4 > particleCol;
+
+    // uint64_t ParticleCount = 10;
 
     std::unique_ptr< Model > particleModel;
+
+    GLuint posSSBO;
+    GLuint velSSBO;
+    GLuint colSSBO;
 };
 
 } // namespace Test

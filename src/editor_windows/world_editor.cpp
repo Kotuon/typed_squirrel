@@ -66,9 +66,9 @@ void WorldEditor::showComponents( Entity* entity ) {
             vector3& position = transform->getPosition();
 
             ImGui::Text( "Position" );
-            ImGui::SliderFloat( "x", &position.x, -20.f, 20.f );
-            ImGui::SliderFloat( "y", &position.y, -20.f, 20.f );
-            ImGui::SliderFloat( "z", &position.z, -20.f, 20.f );
+            ImGui::SliderFloat( "x", &position.x, -40.f, 40.f );
+            ImGui::SliderFloat( "y", &position.y, -40.f, 40.f );
+            ImGui::SliderFloat( "z", &position.z, -40.f, 40.f );
 
             //// Rotation
             const quat& rotation = transform->getRotation();
